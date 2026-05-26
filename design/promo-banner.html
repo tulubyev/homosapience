@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 440px; height: 280px; overflow: hidden;
+    font-family: Inter, system-ui, sans-serif;
+    background: linear-gradient(135deg, #0f0720 0%, #1a0a38 40%, #0d1a2e 100%);
+    position: relative;
+  }
+
+  /* Background grid */
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(124,58,237,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,58,237,0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* Glow orbs */
+  .orb1 {
+    position: absolute; width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 70%);
+    top: -60px; left: -40px;
+  }
+  .orb2 {
+    position: absolute; width: 180px; height: 180px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(6,182,212,0.2) 0%, transparent 70%);
+    bottom: -40px; right: -20px;
+  }
+  .orb3 {
+    position: absolute; width: 120px; height: 120px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(219,39,119,0.15) 0%, transparent 70%);
+    top: 60px; right: 100px;
+  }
+
+  /* Content */
+  .content {
+    position: relative; z-index: 10;
+    display: flex; height: 100%; align-items: center;
+    padding: 0 36px;
+    gap: 32px;
+  }
+
+  /* Left: shield icon */
+  .shield {
+    flex-shrink: 0;
+    width: 88px; height: 100px;
+    position: relative;
+  }
+  .shield svg { width: 100%; height: 100%; }
+
+  /* Right: text */
+  .text { flex: 1; }
+
+  .logo-line {
+    font-size: 13px; font-weight: 900; letter-spacing: 0.12em;
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .logo-apt { color: #f1f5f9; }
+  .logo-o   { color: #06b6d4; }
+  .logo-gon {
+    background: linear-gradient(90deg, #7c3aed, #db2777);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .logo-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: #10b981; flex-shrink: 0;
+  }
+
+  .headline {
+    font-size: 22px; font-weight: 900; color: #f1f5f9;
+    line-height: 1.2; margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .headline em {
+    font-style: normal;
+    background: linear-gradient(90deg, #7c3aed, #06b6d4);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+
+  .sub {
+    font-size: 11px; color: #94a3b8; line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  /* Badge row */
+  .badges {
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .site-badge {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 99px;
+    padding: 3px 9px;
+    font-size: 9.5px; font-weight: 600;
+    color: #cbd5e1;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .site-badge .dot { color: #06b6d4; font-size: 8px; }
+
+  /* Human badge sample */
+  .human-badge-demo {
+    position: absolute;
+    top: 22px; right: 28px;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 11px; font-weight: 800; color: white;
+    display: flex; align-items: center; gap: 5px;
+    box-shadow: 0 4px 20px rgba(124,58,237,0.5);
+    z-index: 20;
+  }
+
+  /* Bottom tagline */
+  .tagline {
+    position: absolute;
+    bottom: 14px; right: 28px;
+    font-size: 9px; font-weight: 600;
+    color: #475569; letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="orb1"></div>
+  <div class="orb2"></div>
+  <div class="orb3"></div>
+
+  <div class="human-badge-demo">✦ Human</div>
+
+  <div class="content">
+    <!-- Shield SVG -->
+    <div class="shield">
+      <svg viewBox="0 0 88 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sg" x1="0" y1="0" x2="88" y2="100" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#7c3aed"/>
+            <stop offset="100%" stop-color="#06b6d4"/>
+          </linearGradient>
+          <linearGradient id="sg2" x1="0" y1="0" x2="88" y2="100" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="rgba(124,58,237,0.3)"/>
+            <stop offset="100%" stop-color="rgba(6,182,212,0.3)"/>
+          </linearGradient>
+        </defs>
+        <!-- Shield outline -->
+        <path d="M44 4L8 18V48C8 68 24 84 44 96C64 84 80 68 80 48V18L44 4Z"
+              fill="url(#sg2)" stroke="url(#sg)" stroke-width="2"/>
+        <!-- Person silhouette -->
+        <circle cx="44" cy="38" r="11" fill="#10b981"/>
+        <path d="M24 72C24 60 33 52 44 52C55 52 64 60 64 72" fill="#10b981"/>
+        <!-- Check mark -->
+        <circle cx="62" cy="62" r="12" fill="#0f0720" stroke="#10b981" stroke-width="2"/>
+        <path d="M56 62L60 66L68 58" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="text">
+      <div class="logo-line">
+        <span class="logo-apt">APT</span><span class="logo-o">O</span><span class="logo-gon">GON</span>
+        <div class="logo-dot"></div>
+        <span style="color:#64748b;font-size:10px;font-weight:600;letter-spacing:0.05em;">VERIFIED HUMAN</span>
+      </div>
+
+      <div class="headline">
+        Prove you're<br><em>human</em>, not a bot
+      </div>
+
+      <div class="sub">
+        10-second gesture · Ed25519 DID · Aptos blockchain<br>
+        No email · No password · No documents
+      </div>
+
+      <div class="badges">
+        <div class="site-badge"><span class="dot">✦</span> GitHub</div>
+        <div class="site-badge"><span class="dot">✦</span> Reddit</div>
+        <div class="site-badge"><span class="dot">✦</span> X</div>
+        <div class="site-badge"><span class="dot">✦</span> LinkedIn</div>
+        <div class="site-badge"><span class="dot">✦</span> +20 more</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tagline">homosapience.org</div>
+</body>
+</html>

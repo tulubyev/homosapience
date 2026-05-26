@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Aptogon DID key exports
+aptogon-key-*.json
+*-key-*.json
+
+# Extension distribution archives (build artifacts — rebuild via zip command)
+aptogon-verified-human-*.zip
+
+# Local-only — not for public repo
+docs/
+outreach/
+proposal.md
+.claude/
+memory/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Aptos
+.aptos/
+
+# SQLite (dev artefact — production uses PostgreSQL)
+*.db
+*.sqlite
+*.sqlite3
+
+# MaxMind GeoLite2 databases (download separately, not in git)
+backend/data/*.mmdb
+
+# Visual brainstorm companion (local mockups)
+.superpowers/

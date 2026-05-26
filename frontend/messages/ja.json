@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "ジェスチャーで人間であることを証明する。パスワード不要、メール不要、追跡なし。"
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "プロジェクト",
+    "community": "コミュニティ",
+    "copyright": "© 2025 Homo Sapience Internet · オープンソース · MIT License",
+    "version": "v0.2.0 · Gonka AI · Aptos Testnet",
+    "links": {
+      "manifest": "マニフェスト",
+      "developers": "開発者",
+      "donate": "寄付",
+      "verify": "認証"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · Gonka AI · did:key · Aptos Testnet",
+    "headline": "インターネットのための人間ファイアウォール",
+    "subheadline": "ジェスチャーで人間であることを証明する。パスワード不要、メール不要、追跡なし。",
+    "cta_verify": "✍️ 今すぐ認証",
+    "cta_chat": "💬 チャット",
+    "tech_title": "テクノロジー",
+    "tech_subtitle": "カードをクリックして詳細を確認",
+    "how_title": "認証の仕組み",
+    "how_subtitle": "4ステップ · 10秒 · 個人データゼロ",
+    "step": "ステップ",
+    "join_title": "参加する",
+    "join_subtitle": "人間のためのインターネットの公共インフラを構築しています",
+    "cards": {
+      "gesture": {
+        "title": "ジェスチャー",
+        "subtitle": "人間の表現",
+        "modal_title": "証明としてのジェスチャー",
+        "modal_body": "マウスや指で線を描きます。AIは形ではなく、バイオメトリック運動パラメータを分析します：速度の変動、間隔、修正、リズムの不規則性。ボットは完璧に動く — 人間はそうではない。"
+      },
+      "ai": {
+        "title": "Gonka AI",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "パターン分析",
+        "modal_body": "Qwen3-14B（OpenRouter経由）は統計的なジェスチャーベクトルのみを受け取ります — 座標なし、個人データなし。8つのパラメータを評価し、is_human、confidence（0–1）、reasoningを返します。閾値：85%。"
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "W3C標準",
+        "modal_title": "分散型識別子",
+        "modal_body": "ブラウザ内でEd25519鍵ペアが生成されます。公開鍵はW3C標準に従ってdid:keyとしてエンコードされます。サーバー不要、登録不要 — 鍵はブラウザのlocalStorageにのみ存在します。"
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "ブロックチェーン",
+        "modal_title": "オンチェーン記録",
+        "modal_body": "証明（ExpressionProof）のSHA3-256ハッシュがAptos上のMoveスマートコントラクトに書き込まれます。ハッシュには個人データが含まれません — ジェスチャーの統計情報、session_id、および1時間のタイムバケットのみ。不変かつ検証可能。"
+      },
+      "privacy": {
+        "title": "プライバシー",
+        "subtitle": "ゼロPII",
+        "modal_title": "ゼロ個人データ",
+        "modal_body": "生の座標はデバイス上でのみ処理されます。統計ベクトル（8つの数値）のみがサーバーに送信されます。ハッシュのみがオンチェーンに送られます。名前、メール、IPは収集・保存されません。"
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "人間ネットワーク",
+        "modal_title": "ヒューマンボンドシステム",
+        "modal_body": "認証された人間はHSI Bondを通じて互いに保証できます。各保証はHumanCredentialを強化します。ボットは実在する人物から保証を受けることができません — これは追加の保護レイヤーです。"
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "ジェスチャーを描く",
+        "desc": "画面上の線または形 — 速度、間隔、リズム"
+      },
+      "s02": {
+        "title": "Gonka AIが分析",
+        "desc": "8つのバイオメトリックパラメータ — ボットは完璧に動く"
+      },
+      "s03": {
+        "title": "DIDが生成される",
+        "desc": "ブラウザ内のEd25519鍵 — サーバー不要"
+      },
+      "s04": {
+        "title": "Aptosに記録される",
+        "desc": "ExpressionProofハッシュ — 匿名かつ永続的"
+      }
+    },
+    "manifest_card": {
+      "title": "マニフェスト",
+      "body": "HSIを構築する理由、それがインターネットをどう変えるか、そして各人間がそこでどんな役割を持つか。",
+      "cta": "読む →"
+    },
+    "developers_card": {
+      "title": "開発者",
+      "body": "REST API、SDK、統合例。1時間でアプリに人間認証を追加。",
+      "cta": "ドキュメント →"
+    },
+    "donate_card": {
+      "title": "サポート",
+      "body": "ベンチャー資金なしのオープンプロジェクト。公共インフラの開発を支援してください。",
+      "cta": "寄付する →"
+    }
+  },
+  "manifest": {
+    "nav_label": "マニフェスト",
+    "hero_label": "homosapience.org",
+    "hero_title": "Homo Sapience マニフェスト",
+    "hero_subtitle": "インターネットは人々によって — 人々のために作られた。守る時が来た。",
+    "s1_title": "問題",
+    "s1_p1": "2025年までに、インターネットトラフィックの大部分は人間ではなく、ボットによって生成されます。ボットはコメントを書き、投票を水増しし、レビューを残し、アカウントを登録し、調査に参加します。デジタル空間はその主要な特性を失いました — 人間的でなくなったのです。",
+    "s1_p2": "問題は見た目より深刻です。既存のソリューション — CAPTCHA、SMS認証、KYC — は簡単に回避されるか、身元の開示が必要です。匿名で人間性を証明できるオープンな標準は存在しません。",
+    "s1_p3": "誰でも千のアカウントを作れます。どんなボットでも「私は人間だ」と書けます。今日どのサービスも、パスポートなし、監視なし、中央集権的なデータベースなしでこの主張を検証できません。",
+    "s2_title": "解決策：プロトコルとしてのHSI",
+    "s2_p1": "HSI（Homo Sapience Internet）はインターネットの代替ではありません。HTTPの上のHTTPSのように、IPの上のプロトコルです。新しいプリミティブを一つ追加します：HumanCredential — 生きた人間がアクションの背後にいることの暗号的に検証された証明です。",
+    "s2_p2": "認証は身元ではなく、動作バイオメトリクスに基づいています。AIはジェスチャーを分析します — 座標でも形でもなく、統計を：速度の変動、ポーズのエントロピー、修正の数、リズムの不規則性。これがボットが十分に模倣できないものです。",
+    "s2_how_label": "仕組み",
+    "s2_steps": [
+      "ユーザーがジェスチャーを描く → デバイスで統計処理",
+      "匿名特徴ベクトル（座標なし）がGonka Network上のSapiXに送信される",
+      "結果：is_human + confidence — 個人データなし",
+      "成功時、ブラウザでEd25519 DIDが生成",
+      "証明のSHA3-256ハッシュをAptosに書き込み"
+    ],
+    "s3_title": "実用的なアプリケーション",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "フォーラムとプラットフォーム",
+        "desc": "SDKは2行のコードで統合できます。スパムは消えます — ブロックされるのではなく、書く人がいなくなるから。評価、投票、いいねが再び実際の人間の意見を反映します。"
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAOと投票",
+        "desc": "一人の人間、一票。シビルアタックなし、票の水増しなし。ガバナンストークンは数量だけでなく、人間性の証明によっても保護されます。"
+      },
+      {
+        "icon": "💬",
+        "title": "チャットとコメント",
+        "desc": "実在する人物には認証済みHumanバッジが表示されます。ディスカッションの質が即座に変わります — 検閲ではなく、ソースへの信頼を通じて。"
+      },
+      {
+        "icon": "🛒",
+        "title": "マーケットプレイス",
+        "desc": "レビューは競合他社のボットではなく、実際の購入者によって残されます。評価が品質指標として再び機能します。"
+      },
+      {
+        "icon": "🎓",
+        "title": "教育",
+        "desc": "試験を受けたのはGPTではなく、人間です。誰が取得したかの証明がある場合、オンライン学位に意味があります。"
+      },
+      {
+        "icon": "🤖",
+        "title": "AIエージェント",
+        "desc": "逆説：HSIはAIエージェントが正しく行動するのを助けます。エージェントは認証済み人間の代わりに、明示的な許可を得て行動していることを証明できます。"
+      }
+    ],
+    "s4_title": "収益化と持続可能性",
+    "s4_p1": "HSIはいくつかの階層を持つオープンプロトコルとして存在します。人間の認証は常に無料です。これは原則です：人間は自分の人間性を証明するために支払うべきではありません。",
+    "tiers": [
+      {
+        "title": "無料",
+        "sub": "人間向け",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "プラットフォーム向け",
+        "icon": "🔌"
+      },
+      {
+        "title": "エンタープライズ",
+        "sub": "オンプレミスSDK",
+        "icon": "🏢"
+      },
+      {
+        "title": "GNKトークン",
+        "sub": "ガバナンス",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "プラットフォームはユーザーの認証に対して支払います — 現在reCAPTCHAや不正検出に支払うのと同様ですが、より誠実で透明であり、第三者にデータを共有しません。",
+    "s5_title": "コミュニティの成長",
+    "s5_p1": "アーリーアダプターはすでにボットに悩まされているコミュニティです。GitHubの開発者、Redditの著者、Web3のDAOメンバー、フォーラムのモデレーター。彼らにとって認証は障壁ではなく特権です。",
+    "s5_p2": "プロフィールの認証済みHumanバッジは、購入できない新しいブルーチェックマークです。偽造も譲渡もできません。名声ではなく — 存在を証明します。",
+    "s5_p3": "ネットワークはHSI Bondを通じて成長します：認証された人間がお互いを保証し合い、資格情報を強化します。APTOGON Chatは最初のライブ展開 — 部屋、DM、ファイル共有を備えた人間専用のリアルタイム空間で、HumanCredentialでアクセスできます。",
+    "quote": "\"インターネットは壊れていない — ただあなたが誰かを知らないだけだ。APTOGONがそれを解決する。\"",
+    "cta_verify": "✍️ 認証",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ 開発者",
+    "cta_home": "← ホーム"
+  },
+  "developers": {
+    "nav_label": "開発者",
+    "hero_title": "開発者向け",
+    "hero_subtitle": "Add human verification to your app with a drop-in snippet. Create a key in the console, embed the verifier, and confirm each session server-side with your secret key.",
+    "quickstart_title": "クイックスタート",
+    "quickstart_subtitle": "最小限の統合 — 3ステップ",
+    "step1_title": "GestureCanvasを埋め込む",
+    "step2_title": "認証のためにジェスチャーを送信",
+    "step3_title": "HumanCredentialを使用 + Chatにアクセス",
+    "api_title": "APIリファレンス",
+    "ep1_desc": "ジェスチャー認証。HumanCredentialを返す。",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "DIDによる認証ステータス。",
+    "ep2_params": "did（クエリ）",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "最後の認証試行（デバッグ用）。",
+    "ep3_params": "last=20（クエリ）",
+    "ep3_returns": "ジェスチャーパターンとAI結果を含むattempts[]",
+    "ep4_desc": "認証なしでDIDを作成（テスト用）。",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "機能",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "ゼロPII",
+        "desc": "生のジェスチャー座標はブラウザから出ません。統計のみがサーバーに送られます。"
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "did:key標準に準拠。あらゆるIDシステムと連携。"
+      },
+      {
+        "icon": "⛓️",
+        "title": "オンチェーン証明",
+        "desc": "Aptos上のMoveコントラクト。当社サーバー不要で検証 — 完全分散型。"
+      },
+      {
+        "icon": "♿",
+        "title": "アクセシビリティ",
+        "desc": "運動障害を考慮。震えのある人もブロックされません。"
+      },
+      {
+        "icon": "⚡",
+        "title": "高速",
+        "desc": "中央値800ms。フォールバック付きGonka AI — サービス停止時も動作。"
+      },
+      {
+        "icon": "📋",
+        "title": "検証可能クレデンシャル",
+        "desc": "W3C VCフォーマット。Ed25519署名。30日で期限切れ、自動更新。"
+      }
+    ],
+    "cta_title": "統合する準備はできましたか？",
+    "cta_subtitle": "Create a key in the console to get started. Contact us for higher quotas or enterprise integration.",
+    "cta_email": "📩 メールを送る",
+    "cta_try": "🧪 ライブで試す",
+    "cta_home": "← ホーム",
+    "ep_chat_msg_desc": "Fetch recent messages from a chat room (public rooms require no auth)",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "Upload a file to a room (max 10 MB). File is stored 5 days then auto-deleted.",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — real-time room stream. Connect and receive/send JSON messages.",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "Bondリクエストを作成 — 3人のGoldメンバーが新しいユーザーを保証します。",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "Bondリクエストの状態を確認。status = approved になるまで2〜5秒ごとに確認。",
+    "ep_bond_st_params": "request_id（パス）",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "保証人がBondリクエストを承認します（Ed25519署名が必要）。",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash（閾値到達時）"
+  },
+  "donate": {
+    "nav_label": "寄付",
+    "hero_title": "プロジェクトを支援する",
+    "hero_subtitle": "APTOGONはベンチャー資金なしのオープンプロジェクトです。人間のためのインターネットの公共インフラを構築しています。",
+    "funds_title": "資金の使途",
+    "funds": [
+      {
+        "icon": "🧠",
+        "title": "Gonka AI推論",
+        "desc": "Gonka NetworkでのSapiX推論 — ジェスチャー生体認証分析専用AIコンピューティング",
+        "pct": 45
+      },
+      {
+        "icon": "🖥️",
+        "title": "ホスティングとインフラ",
+        "desc": "FastAPIバックエンド、Aptosトランザクション、フロントエンドCDN",
+        "pct": 30
+      },
+      {
+        "icon": "👩‍💻",
+        "title": "開発",
+        "desc": "SDK、ドキュメント、新しい認証機能",
+        "pct": 25
+      }
+    ],
+    "tiers_title": "サポート階層",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "コーヒー",
+        "desc": "約2,500回の認証",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "サポーター",
+        "desc": "約10,000回の認証",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "パートナー",
+        "desc": "コントリビューターへの記載 + 優先API",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "スポンサー",
+        "desc": "サイトにロゴ掲載 + 直接サポート",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "ロシアからの支払い",
+    "russia_desc": "Tinkoff Pay、SBP、またはロシアの銀行カードで素早く送金",
+    "crypto_title": "暗号通貨",
+    "crypto_eth_desc": "hello@homosapience.orgにご連絡ください — アドレスをお送りします",
+    "contact_title": "パートナーシップや統合をご希望ですか？",
+    "contact_desc": "条件について話し合い、早期APIアクセスを提供し、あなたのプロダクトへの認証統合をサポートします",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← ホーム"
+  },
+  "verify": {
+    "nav_label": "認証",
+    "hero_badge": "🛡️ Gonka AI · Aptos Testnet",
+    "hero_title": "あなたが",
+    "hero_human": "人間",
+    "hero_subtitle": "パスポート不要 · カメラ不要 · 個人データ不要",
+    "steps_label": "認証の仕組み",
+    "steps": [
+      {
+        "num": "1",
+        "title": "記号を描く",
+        "desc": "何でも — 文字、数字、渦巻き。AIは何を描くかではなく、どう描くかを見ます"
+      },
+      {
+        "num": "2",
+        "title": "Gonka AI",
+        "desc": "リズム、速度、間隔を分析。ボットは動きが滑らかすぎる — それが見破られる理由"
+      },
+      {
+        "num": "3",
+        "title": "あなたのDID",
+        "desc": "ブラウザ内にデジタルキーが作成されます。あなたの匿名ID — 名前のないパスポートのようなもの"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "認証の事実がブロックチェーンに書き込まれます。データではなく — 暗号的な証明のみ"
+      }
+    ],
+    "canvas_title": "何かを描いてください",
+    "canvas_subtitle": "マウスまたは指で — どんな記号でも",
+    "tags": [
+      "リズム",
+      "速度",
+      "間隔",
+      "筆圧",
+      "修正"
+    ],
+    "analyzing_title": "Gonka AIが分析中...",
+    "analyzing_subtitle": "モデルがあなたのジェスチャーパターンを解析しています",
+    "analyzing_checks": [
+      "速度の変動",
+      "ポーズのエントロピー",
+      "修正の数",
+      "リズムの不規則性",
+      "ExpressionProof生成"
+    ],
+    "success_title": "あなたは人間です ✓",
+    "success_subtitle": "Gonka AIが認証を確認しました",
+    "confidence_label": "AI信頼度",
+    "threshold_0": "0%",
+    "threshold_70": "閾値 70%",
+    "threshold_85": "85%+ 優秀",
+    "threshold_100": "100%",
+    "did_title": "あなたのデジタルIDが作成されました",
+    "did_subtitle": "W3C did:key — 国際標準",
+    "did_id_label": "識別子（DID）：",
+    "did_what_label": "これは何？",
+    "did_what_value": "デジタルで完全に匿名なパスポートのようなもの",
+    "did_where_label": "どこに保存？",
+    "did_where_value": "あなたのブラウザのみ（localStorage）。サーバーにはなし",
+    "did_key_label": "秘密鍵",
+    "did_key_value": "あなただけのもの。誰も使用できません",
+    "did_gen_label": "生成場所",
+    "did_gen_value": "ブラウザ内で即時生成、サーバーリクエストなし",
+    "aptos_title": "Aptosブロックチェーンへの記録",
+    "aptos_onchain": "オンチェーン ✓",
+    "aptos_local": "ローカル保存",
+    "aptos_tx_label": "トランザクションハッシュ：",
+    "aptos_no_key": "クレデンシャルはローカルに保存されました。オンチェーン記録にはAPTOS_PRIVATE_KEYを追加してください。",
+    "aptos_note": "📌 オンチェーンに記録されるのは認証の事実のみ — 個人データなし、ハッシュのみ",
+    "bond_title": "最後のステップ — 保証",
+    "bond_subtitle": "3人の認証済み人間があなたを確認します",
+    "bond_desc": "これはジェスチャーテストをパスしたボットから守ります。保証人はHSIネットワークの実在する人物で、自分の評判を賭けて保証します。",
+    "bond_cta": "🤝 保証を依頼する →",
+    "bonding_title": "保証人を待っています...",
+    "bonding_subtitle": "Gonka BondMatcherがネットワーク評判で人物を選定中",
+    "bonding_vouched": "保証済み",
+    "bonding_waiting": "...",
+    "bonding_progress": "/ 3",
+    "complete_title": "認証完了！",
+    "complete_subtitle": "あなたはHSIネットワークの正式メンバーです",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "Gonka AI",
+        "desc": "ジェスチャー認証済み"
+      },
+      {
+        "emoji": "🔑",
+        "title": "DID作成",
+        "desc": "ブラウザ内で"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "事実記録済み"
+      }
+    ],
+    "stored_title": "ブラウザに保存されるもの",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "あなたの匿名識別子"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "秘密鍵（あなただけのもの）"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "認証の確認"
+      }
+    ],
+    "cta_chat": "💬 セキュアチャット",
+    "cta_bond": "🤝 保証する",
+    "failed_title": "不合格",
+    "failed_tip": "💡 ヒント：より長く（1〜3秒）描き、ポイント間で一時停止してください — リズムの不規則性が人間であることを示します",
+    "fallback_label": "（フォールバック）",
+    "debug_title": "🔬 パターンデータ（デバッグ）",
+    "error_backend": "バックエンドが利用できません",
+    "footer_note": "🔒 座標はブラウザで破棄 · 数学のみがネットワークへ · バイオメトリクスなし"
+  },
+  "chat": {
+    "nav_label": "チャット",
+    "channels": "チャンネル",
+    "room_tech_label": "テクノロジー",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "ガバナンス",
+    "room_gov_desc": "HSI 投票",
+    "room_phil_label": "哲学",
+    "room_phil_desc": "マニフェスト · アイデア",
+    "verified_only": "認証済み人間のみ書き込み可能",
+    "verify_link": "認証する",
+    "placeholder": "#{{room}} にメッセージを送信…",
+    "ai_moderator": "AI モデレーター",
+    "ai_active": "🛡️ 有効",
+    "filter_spam": "スパムフィルター",
+    "filter_toxic": "毒性検出",
+    "filter_flood": "フラッド制御",
+    "filter_did": "DID 検証",
+    "rules": "ルール",
+    "rule_respect": "参加者への敬意",
+    "rule_humans": "実在する人間のみ",
+    "rule_no_spam": "スパム・広告禁止",
+    "rule_no_toxic": "暴言・侮辱禁止",
+    "rule_no_bots": "ボット・自動化禁止",
+    "welcome_msg": "🛡️ APTOGON Chat へようこそ — 認証済み人間専用のスペースです。",
+    "tech_welcome": "⚡ 技術的な議論のチャンネル：Aptos、did:key、Gonka AI、WebSocket。",
+    "trust_levels": "トラストレベル",
+    "trust_trusted_desc": "7件以上の保証",
+    "trust_community_desc": "3〜6件の保証",
+    "trust_newcomer_desc": "最大3件の保証",
+    "privacy_title": "🔒 プライバシー",
+    "privacy_desc": "あなたのDIDは公開されません。ハッシュの末尾8文字のみ表示されます。",
+    "online_count": "人が認証済みでオンライン",
+    "read_mode": "読み取り専用モード",
+    "read_mode_banner": "読み取り専用 — 参加するには認証が必要です",
+    "reaction": "リアクション",
+    "reply": "返信",
+    "room_agora_label": "Main",
+    "room_agora_desc": "一般チャンネル",
+    "offline_demo": "デモモード — バックエンドが利用できません。表示されているメッセージはサンプルです。",
+    "loading_msgs": "メッセージを読み込み中…",
+    "empty_room": "まだメッセージがありません",
+    "empty_room_hint": "最初に何か書いてみましょう！"
+  },
+  "lang_switcher": {
+    "label": "言語"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — P2P 保証",
+    "hero_subtitle": "認証済みの人間がお互いを保証します。社会的信頼が暗号学的に検証可能になります。",
+    "cta_verify_short": "✍️ 認証する",
+    "cta_request": "🤝 保証をリクエスト ↓",
+    "how_title": "保証の仕組み",
+    "how_subtitle": "初心者から信頼できるネットワークメンバーへの3ステップ",
+    "step1_title": "認証を受ける",
+    "step1_desc": "ジェスチャーを描く — Gonka AI があなたが人間であることを確認します。DID と trust_score 10% を取得します。",
+    "step2_title": "保証をリクエスト",
+    "step2_desc": "3人の認証済みネットワークメンバーがあなたを確認します。Trust スコアが 50% に上がります。",
+    "step3_title": "保証人になる",
+    "step3_desc": "trust_score ≥ 50% で他の人を保証できます。ネットワークの成長を助けてください。",
+    "trust_algo_title": "Trust Score アルゴリズム",
+    "trust_algo_subtitle": "保証のたびに信頼が高まります",
+    "after_bonds": "{n} 件の保証後",
+    "level_newcomer": "新規メンバー",
+    "level_community": "コミュニティ認定",
+    "level_trusted": "信頼済み",
+    "risks_title": "⚠️ 保証人のリスク",
+    "risks_note": "trust_score ≥ 50%（3+ bonds）のメンバーのみ保証できます。これが実際の人のみを推薦する経済的インセンティブを作ります。",
+    "penalty1": "保証した人の中にボットが検出された",
+    "penalty2": "同じ保証人からの繰り返しボット",
+    "reward1": "新たな成功した保証",
+    "reward2": "あなたの被保証人が自力で 100% に達した",
+    "incoming_title": "🔔 受信リクエスト",
+    "incoming_subtitle": "あなたに保証人になるよう依頼しています",
+    "vouch_btn": "✓ 保証する",
+    "requester_role": "👤 リクエスター",
+    "you_guarantor": "🤝 あなた",
+    "ask_placeholder": "質問する…",
+    "request_title": "保証をリクエスト",
+    "request_subtitle_1": "選択する",
+    "request_subtitle_2": "10人以上のメンバー",
+    "request_subtitle_3": "— そのうち3人の同意が必要",
+    "selected": " 選択済み",
+    "send_requests": "🤝 リクエストを送信",
+    "privacy_title": "🔒 匿名性とプライバシー",
+    "privacy_body": "保証人は匿名の DID ハッシュと AI 信頼レベルのみを見ます。名前、メール、IP — 誰とも共有されません。",
+    "manifest_link": "📜 マニフェスト",
+    "home_link": "← ホーム",
+    "done_title": "保証を受け取りました！",
+    "done_auto_msg": "✅ AI 信頼度が高い — システム保証人による自動承認",
+    "done_human_msg": "3人があなたを保証しました",
+    "done_blockchain": "HumanCredential が Aptos ブロックチェーンに記録されました",
+    "done_chat": "💬 チャットに参加",
+    "failed_title": "保証を集めることができませんでした",
+    "failed_desc_1": "すべての",
+    "failed_desc_2": "回の送信試みが終了しました。現在オンラインの保証人が少ないです。",
+    "failed_hint": "後で試すか、Telegram でお問い合わせください — 手動でサポートします。",
+    "retry_btn": "🔄 もう一度試す",
+    "waiting_sending": "リクエストを送信中…",
+    "waiting_ai": "✅ AI が確認中…",
+    "waiting_title": "保証人を待っています",
+    "retry_label": "再送信 #{n}",
+    "requests_sent": "HSI ネットワークメンバーにリクエストを送信しました",
+    "vouched": "保証済み",
+    "awaiting": "待機中",
+    "vouches_needed": "/3 件の保証",
+    "ai_auto_approve": "Gonka AI: 信頼度 ≥ 95% — 自動承認",
+    "anon_chat": "💬 保証人との匿名チャット",
+    "write_placeholder": "保証人に書く…",
+    "you_requester": "👤 あなた",
+    "days_ago": "{n}日前",
+    "no_candidates_title": "オンラインの保証人はまだいません",
+    "no_candidates_hint": "リクエストは創設 Gold Members に自動送信されます — 操作は不要です。",
+    "cancel": "キャンセル",
+    "days_short": "日",
+    "known_dids_title": "💌 私を知っている人",
+    "known_dids_subtitle": "HSIのメンバーで個人的にあなたを知っている方がいれば、そのDIDを入力してください — 直接保証の招待が届きます。",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "任意 · 最大3件 · did:key:z6Mkで始まる必要があります"
+  },
+  "governance": {
+    "home_link": "← ホーム",
+    "subtitle": "1人の認証済み人間 = 1票",
+    "create_btn": "+ 提案を作成",
+    "new_proposal": "新しい提案",
+    "title_placeholder": "提案タイトル",
+    "desc_placeholder": "詳細説明...",
+    "create": "作成",
+    "creating": "作成中...",
+    "cancel": "キャンセル",
+    "vote_btn": "🗳 投票する",
+    "vote_cancel": "キャンセル",
+    "vote_yes": "✓ 賛成",
+    "vote_no": "✗ 反対",
+    "vote_abstain": "— 棄権",
+    "vote_veto": "⚡ 拒否権",
+    "yes_label": "✓ 賛成",
+    "no_label": "✗ 反対",
+    "veto_label": "⚡ 拒否権",
+    "total_label": "合計",
+    "supporters_of": "サポーター: {count}/100 で投票開始",
+    "voting_status": "🗳 投票中 · {days}日",
+    "type_text": "テキスト",
+    "type_parameter": "パラメータ",
+    "type_ai_model": "AIモデル",
+    "type_upgrade": "アップグレード",
+    "type_constitution": "憲法",
+    "days_unit": "日"
+  }
+}

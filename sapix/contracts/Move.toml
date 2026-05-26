@@ -1,0 +1,12 @@
+[package]
+name = "HSIFirewall"
+version = "0.2.0"
+authors = ["APTOGON Team <hello@homosapience.org>"]
+
+[addresses]
+hsi = "_"   # filled at deploy time: --named-addresses hsi=0xYOUR_ADDRESS
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"

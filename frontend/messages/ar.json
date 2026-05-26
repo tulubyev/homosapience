@@ -1,0 +1,612 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "أثبت أنك إنسان — بإيماءة. بدون كلمة مرور، بدون بريد إلكتروني، بدون تتبع."
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "المشروع",
+    "community": "المجتمع",
+    "copyright": "© 2025 Homo Sapience Internet · مفتوح المصدر · MIT License",
+    "version": "v0.2.0 · Gonka AI · Aptos Testnet",
+    "links": {
+      "manifest": "البيان",
+      "developers": "المطورون",
+      "donate": "تبرع",
+      "verify": "تحقق"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · Gonka AI · did:key · Aptos Testnet",
+    "headline": "جدار الحماية البشري للإنترنت",
+    "subheadline": "أثبت أنك إنسان — بإيماءة. بدون كلمة مرور، بدون بريد إلكتروني، بدون تتبع.",
+    "cta_verify": "✍️ تحقق الآن",
+    "cta_chat": "💬 دردشة",
+    "tech_title": "التقنيات",
+    "tech_subtitle": "انقر على بطاقة لمعرفة المزيد",
+    "how_title": "كيف يعمل التحقق",
+    "how_subtitle": "4 خطوات · 10 ثوانٍ · صفر بيانات شخصية",
+    "step": "الخطوة",
+    "join_title": "انضم",
+    "join_subtitle": "نحن نبني بنية تحتية عامة لإنترنت إنساني",
+    "cards": {
+      "gesture": {
+        "title": "الإيماءة",
+        "subtitle": "التعبير البشري",
+        "modal_title": "الإيماءة كدليل",
+        "modal_body": "ترسم خطاً بالماوس أو الإصبع. يحلل الذكاء الاصطناعي ليس الشكل بل معاملات الحركة البيومترية: تباين السرعة، التوقفات، التصحيحات، عدم انتظام الإيقاع. الروبوتات تتحرك بشكل مثالي — البشر لا."
+      },
+      "ai": {
+        "title": "Gonka AI",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "تحليل الأنماط",
+        "modal_body": "يستقبل Qwen3-14B (عبر OpenRouter) فقط المتجه الإحصائي للإيماءة — بدون إحداثيات، بدون بيانات شخصية. يقيّم 8 معاملات ويعيد: is_human وconfidence (0–1) وreasoning. العتبة: 85%."
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "معيار W3C",
+        "modal_title": "المعرف اللامركزي",
+        "modal_body": "يتم توليد زوج مفاتيح Ed25519 في المتصفح. يتم تشفير المفتاح العام كـ did:key وفقاً لمعيار W3C. لا خوادم، لا تسجيل — المفتاح يعيش فقط في localStorage متصفحك."
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "بلوكتشين",
+        "modal_title": "السجل على السلسلة",
+        "modal_body": "يُكتب هاش SHA3-256 للدليل (ExpressionProof) في عقد ذكي Move على Aptos. لا يحتوي الهاش على بيانات شخصية — فقط إحصاءات الإيماءة وsession_id وفترة زمنية مدتها ساعة. غير قابل للتغيير وقابل للتحقق."
+      },
+      "privacy": {
+        "title": "الخصوصية",
+        "subtitle": "صفر PII",
+        "modal_title": "صفر بيانات شخصية",
+        "modal_body": "تتم معالجة الإحداثيات الخام على الجهاز فقط. فقط المتجه الإحصائي (8 أرقام) يُرسل إلى الخادم. فقط الهاش يذهب على السلسلة. لا يتم جمع أو تخزين الاسم أو البريد الإلكتروني أو IP."
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "شبكة بشرية",
+        "modal_title": "نظام الرابطة البشرية",
+        "modal_body": "يمكن للبشر الموثقين أن يكفلوا بعضهم البعض عبر HSI Bond. كل كفالة تعزز HumanCredential. لا يمكن للروبوتات الحصول على كفالة من أشخاص حقيقيين — وهذه طبقة حماية إضافية."
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "ارسم إيماءة",
+        "desc": "خط أو شكل على الشاشة — السرعة، التوقفات، الإيقاع"
+      },
+      "s02": {
+        "title": "Gonka AI يحلل",
+        "desc": "8 معاملات بيومترية — الروبوتات تتحرك بشكل مثالي"
+      },
+      "s03": {
+        "title": "تم توليد DID",
+        "desc": "مفتاح Ed25519 في متصفحك — بدون خوادم"
+      },
+      "s04": {
+        "title": "مسجل على Aptos",
+        "desc": "هاش ExpressionProof — مجهول ودائم"
+      }
+    },
+    "manifest_card": {
+      "title": "البيان",
+      "body": "لماذا نبني HSI، وكيف سيغير الإنترنت، وما المكانة التي سيحتلها كل إنسان فيه.",
+      "cta": "اقرأ →"
+    },
+    "developers_card": {
+      "title": "المطورون",
+      "body": "REST API وSDK وأمثلة التكامل. أضف التحقق البشري إلى تطبيقك في ساعة واحدة.",
+      "cta": "التوثيق →"
+    },
+    "donate_card": {
+      "title": "الدعم",
+      "body": "مشروع مفتوح بدون تمويل من رأس المال المخاطر. ساعدنا في تطوير البنية التحتية العامة.",
+      "cta": "تبرع →"
+    }
+  },
+  "manifest": {
+    "nav_label": "البيان",
+    "hero_label": "homosapience.org",
+    "hero_title": "بيان Homo Sapience",
+    "hero_subtitle": "الإنترنت بُني من قِبل الناس — للناس. حان الوقت لحمايته.",
+    "s1_title": "المشكلة",
+    "s1_p1": "بحلول عام 2025، معظم حركة مرور الإنترنت لا يولّدها البشر. تكتب الروبوتات التعليقات، وتضخّم الأصوات، وتترك المراجعات، وتسجّل الحسابات، وتشارك في الاستطلاعات. فقد الفضاء الرقمي خاصيته الأساسية — لم يعد إنسانياً.",
+    "s1_p2": "المشكلة أعمق مما تبدو. الحلول الموجودة — CAPTCHA، التحقق عبر الرسائل القصيرة، KYC — إما يمكن تجاوزها بسهولة أو تتطلب الكشف عن الهوية. لا يوجد معيار مفتوح يتيح إثبات الإنسانية بشكل مجهول.",
+    "s1_p3": "يمكن لأي شخص إنشاء ألف حساب. يمكن لأي روبوت كتابة 'أنا إنسان'. لا يمكن لأي خدمة اليوم التحقق من هذا الادعاء — بدون جواز سفر، بدون مراقبة، بدون قاعدة بيانات مركزية.",
+    "s2_title": "الحل: HSI كبروتوكول",
+    "s2_p1": "HSI (Homo Sapience Internet) ليس بديلاً للإنترنت. إنه بروتوكول فوق IP، مثل HTTPS فوق HTTP. يضيف بدائية جديدة واحدة: HumanCredential — دليل مُتحقق منه تشفيرياً على أن إنساناً حياً يقف وراء إجراء ما.",
+    "s2_p2": "يعتمد التحقق على قياسات حركة الجسم، وليس على الهوية. يحلل الذكاء الاصطناعي الإيماءة — ليس الإحداثيات، ليس الشكل، بل الإحصاءات: تباين السرعة، إنتروبيا التوقفات، عدد التصحيحات، عدم انتظام الإيقاع. هذا ما لا تستطيع الروبوتات تقليده بشكل كافٍ.",
+    "s2_how_label": "كيف يعمل",
+    "s2_steps": [
+      "يرسم المستخدم إيماءة → تُعالج الإحصاءات على الجهاز",
+      "متجه الميزات المجهول (بدون إحداثيات) يُرسل إلى SapiX على شبكة Gonka",
+      "النتيجة: is_human + confidence — بدون بيانات شخصية",
+      "عند النجاح، يُولَّد Ed25519 DID في المتصفح",
+      "يُكتب هاش SHA3-256 للدليل في Aptos"
+    ],
+    "s3_title": "التطبيقات العملية",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "المنتديات والمنصات",
+        "desc": "يتكامل SDK في سطرين من الكود. يختفي البريد المزعج — ليس لأنه محظور، بل لأنه لا أحد يكتبه. تعكس التقييمات والأصوات والإعجابات الرأي الإنساني الحقيقي مجدداً."
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAO والتصويت",
+        "desc": "إنسان واحد، صوت واحد. لا هجمات Sybil، لا تزوير في صناديق الاقتراع. رموز الحوكمة محمية ليس فقط بالكمية، بل بدليل الإنسانية."
+      },
+      {
+        "icon": "💬",
+        "title": "المحادثات والتعليقات",
+        "desc": "تظهر شارة Human المُتحقق منها للأشخاص الحقيقيين. تتغير جودة النقاش فوراً — ليس من خلال الرقابة، بل من خلال الثقة في المصدر."
+      },
+      {
+        "icon": "🛒",
+        "title": "الأسواق",
+        "desc": "المراجعات يتركها مشترون حقيقيون، وليس روبوتات المنافسين. تعمل التقييمات مجدداً كمؤشر للجودة."
+      },
+      {
+        "icon": "🎓",
+        "title": "التعليم",
+        "desc": "الامتحان اجتازه إنسان، وليس GPT. الدبلوم الإلكتروني له معنى عندما يوجد دليل على من حصل عليه."
+      },
+      {
+        "icon": "🤖",
+        "title": "وكلاء الذكاء الاصطناعي",
+        "desc": "المفارقة: HSI يساعد وكلاء الذكاء الاصطناعي على التصرف بشكل صحيح. يمكن للوكيل إثبات أنه يتصرف نيابةً عن إنسان مُتحقق منه — بإذن صريح منه."
+      }
+    ],
+    "s4_title": "تحقيق الدخل والاستدامة",
+    "s4_p1": "يوجد HSI كبروتوكول مفتوح بعدة مستويات. التحقق للبشر مجاني دائماً. هذا مبدأ: لا ينبغي أن يدفع الإنسان لإثبات إنسانيته.",
+    "tiers": [
+      {
+        "title": "مجاني",
+        "sub": "للبشر",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "للمنصات",
+        "icon": "🔌"
+      },
+      {
+        "title": "Enterprise",
+        "sub": "SDK محلي",
+        "icon": "🏢"
+      },
+      {
+        "title": "رمز GNK",
+        "sub": "الحوكمة",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "تدفع المنصات مقابل التحقق من مستخدميها — تماماً كما تدفع الآن مقابل reCAPTCHA وكشف الاحتيال، لكن بشكل أكثر أمانة وشفافية ودون مشاركة البيانات مع أطراف ثالثة.",
+    "s5_title": "تنمية المجتمع",
+    "s5_p1": "المتبنون الأوائل هم المجتمعات التي تعاني بالفعل من الروبوتات. المطورون على GitHub، والمؤلفون على Reddit، وأعضاء DAO في Web3، ومشرفو المنتديات. بالنسبة لهم، التحقق ليس عائقاً — بل امتياز.",
+    "s5_p2": "شارة Verified Human على الملف الشخصي هي علامة الصح الزرقاء الجديدة التي لا يمكن شراؤها. لا يمكن تزويرها أو نقلها. تثبت ليس الشهرة — بل الوجود.",
+    "s5_p3": "تنمو الشبكة من خلال HSI Bond: يتضامن البشر الموثّقون في ضمان بعضهم البعض، مما يعزز بيانات اعتمادهم. APTOGON Chat هو أول تطبيق حي — فضاء آني حصري للبشر مع غرف ورسائل خاصة ومشاركة ملفات، متاح عبر HumanCredential الخاص بك.",
+    "quote": "\"الإنترنت ليس معطلاً — إنه ببساطة لا يعرف من أنت. APTOGON يعالج ذلك.\"",
+    "cta_verify": "✍️ تحقق",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ المطورون",
+    "cta_home": "← الرئيسية"
+  },
+  "developers": {
+    "nav_label": "المطورون",
+    "hero_title": "للمطورين",
+    "hero_subtitle": "Add human verification to your app with a drop-in snippet. Create a key in the console, embed the verifier, and confirm each session server-side with your secret key.",
+    "quickstart_title": "البداية السريعة",
+    "quickstart_subtitle": "تكامل أدنى — 3 خطوات",
+    "step1_title": "تضمين GestureCanvas",
+    "step2_title": "إرسال الإيماءة للتحقق",
+    "step3_title": "استخدام HumanCredential + الدخول إلى Chat",
+    "api_title": "مرجع API",
+    "ep1_desc": "التحقق من الإيماءة. يُعيد HumanCredential.",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "حالة التحقق عبر DID.",
+    "ep2_params": "did (query)",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "آخر محاولات التحقق (للتصحيح).",
+    "ep3_params": "last=20 (query)",
+    "ep3_returns": "attempts[] مع نمط الإيماءة ونتيجة الذكاء الاصطناعي",
+    "ep4_desc": "إنشاء DID بدون تحقق (للاختبار).",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "الميزات",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "صفر PII",
+        "desc": "إحداثيات الإيماءة الخام لا تغادر المتصفح أبداً. تذهب الإحصاءات فقط إلى الخادم."
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "متوافق مع معيار did:key. يعمل مع أي نظام هوية."
+      },
+      {
+        "icon": "⛓️",
+        "title": "دليل على السلسلة",
+        "desc": "عقد Move على Aptos. التحقق بدون خادمنا — لامركزي تماماً."
+      },
+      {
+        "icon": "♿",
+        "title": "إمكانية الوصول",
+        "desc": "يأخذ في الاعتبار الإعاقات الحركية. الأشخاص المصابون بالرعشة لا يُحجبون أبداً."
+      },
+      {
+        "icon": "⚡",
+        "title": "سريع",
+        "desc": "الوسيط 800ms. Gonka AI مع احتياطي — يعمل حتى عند عدم توفر الخدمة."
+      },
+      {
+        "icon": "📋",
+        "title": "بيانات اعتماد قابلة للتحقق",
+        "desc": "تنسيق W3C VC. موقّع بـ Ed25519. تنتهي صلاحيته في 30 يوماً، ويتجدد تلقائياً."
+      }
+    ],
+    "cta_title": "هل أنت مستعد للتكامل؟",
+    "cta_subtitle": "Create a key in the console to get started. Contact us for higher quotas or enterprise integration.",
+    "cta_email": "📩 راسلنا",
+    "cta_try": "🧪 جرّب مباشرة",
+    "cta_home": "← الرئيسية",
+    "ep_chat_msg_desc": "Fetch recent messages from a chat room (public rooms require no auth)",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "Upload a file to a room (max 10 MB). File is stored 5 days then auto-deleted.",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — real-time room stream. Connect and receive/send JSON messages.",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "إنشاء طلب ضمان — سيتعهد 3 أعضاء ذهبيين بضمان المستخدم الجديد.",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "استطلاع حالة طلب الضمان. استطلع كل 2–5 ثوانٍ حتى status = approved.",
+    "ep_bond_st_params": "request_id (مسار)",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "يوافق الضامن على طلب الضمان (يلزم توقيع Ed25519).",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash (عند الوصول للحد)"
+  },
+  "donate": {
+    "nav_label": "تبرع",
+    "hero_title": "ادعم المشروع",
+    "hero_subtitle": "APTOGON مشروع مفتوح بدون تمويل مخاطر. نحن نبني بنية تحتية عامة لإنترنت إنساني.",
+    "funds_title": "أين تذهب الأموال",
+    "funds": [
+      {
+        "icon": "🧠",
+        "title": "استدلال Gonka AI",
+        "desc": "استنتاج SapiX على شبكة Gonka — حوسبة ذكاء اصطناعي مخصصة لتحليل القياسات الحيوية الحركية",
+        "pct": 45
+      },
+      {
+        "icon": "🖥️",
+        "title": "الاستضافة والبنية التحتية",
+        "desc": "خلفية FastAPI، معاملات Aptos، CDN للواجهة الأمامية",
+        "pct": 30
+      },
+      {
+        "icon": "👩‍💻",
+        "title": "التطوير",
+        "desc": "SDK، التوثيق، ميزات تحقق جديدة",
+        "pct": 25
+      }
+    ],
+    "tiers_title": "مستويات الدعم",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "قهوة",
+        "desc": "~2,500 تحقق",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "داعم",
+        "desc": "~10,000 تحقق",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "شريك",
+        "desc": "اسم في المساهمين + API ذو أولوية",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "راعٍ",
+        "desc": "شعار على الموقع + دعم مباشر",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "الدفع من روسيا",
+    "russia_desc": "تحويل سريع عبر Tinkoff Pay أو SBP أو أي بطاقة بنكية روسية",
+    "crypto_title": "العملة المشفرة",
+    "crypto_eth_desc": "اكتب إلى hello@homosapience.org — سنرسل العنوان",
+    "contact_title": "هل تريد شراكة أو تكاملاً؟",
+    "contact_desc": "سنناقش الشروط، ونوفر وصولاً مبكراً إلى API، ونساعد في دمج التحقق في منتجك",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← الرئيسية"
+  },
+  "verify": {
+    "nav_label": "تحقق",
+    "hero_badge": "🛡️ Gonka AI · Aptos Testnet",
+    "hero_title": "أثبت أنك",
+    "hero_human": "إنسان",
+    "hero_subtitle": "بدون جواز سفر · بدون كاميرا · بدون بيانات شخصية",
+    "steps_label": "كيف يعمل التحقق",
+    "steps": [
+      {
+        "num": "1",
+        "title": "ارسم رمزاً",
+        "desc": "أي شيء — حرف، رقم، منحنى. يراقب الذكاء الاصطناعي كيف ترسم، وليس ماذا"
+      },
+      {
+        "num": "2",
+        "title": "Gonka AI",
+        "desc": "يحلل الإيقاع والسرعة والتوقفات. الروبوتات تتحرك بسلاسة شديدة — هذا يكشفها"
+      },
+      {
+        "num": "3",
+        "title": "DID الخاص بك",
+        "desc": "يُنشأ مفتاح رقمي في متصفحك. معرّفك المجهول — مثل جواز السفر لكن بدون اسم"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "تُكتب حقيقة التحقق في البلوكتشين. ليست بيانات — مجرد دليل تشفيري"
+      }
+    ],
+    "canvas_title": "ارسم شيئاً",
+    "canvas_subtitle": "بالماوس أو الإصبع — أي رمز",
+    "tags": [
+      "إيقاع",
+      "سرعة",
+      "توقفات",
+      "ضغط",
+      "تصحيحات"
+    ],
+    "analyzing_title": "Gonka AI يحلل...",
+    "analyzing_subtitle": "النموذج يدرس نمط إيماءتك",
+    "analyzing_checks": [
+      "تباين السرعة",
+      "إنتروبيا التوقفات",
+      "عدد التصحيحات",
+      "عدم انتظام الإيقاع",
+      "توليد ExpressionProof"
+    ],
+    "success_title": "أنت إنسان ✓",
+    "success_subtitle": "أكد Gonka AI التحقق",
+    "confidence_label": "ثقة الذكاء الاصطناعي",
+    "threshold_0": "0%",
+    "threshold_70": "العتبة 70%",
+    "threshold_85": "85%+ ممتاز",
+    "threshold_100": "100%",
+    "did_title": "تم إنشاء هويتك الرقمية",
+    "did_subtitle": "W3C did:key — معيار دولي",
+    "did_id_label": "المعرّف (DID):",
+    "did_what_label": "ما هذا؟",
+    "did_what_value": "مثل جواز السفر لكنه رقمي ومجهول تماماً",
+    "did_where_label": "أين يُحفظ؟",
+    "did_where_value": "فقط في متصفحك (localStorage). لا شيء على الخوادم",
+    "did_key_label": "المفتاح الخاص",
+    "did_key_value": "ملكك وحدك. لا أحد يستطيع استخدامه",
+    "did_gen_label": "تم التوليد",
+    "did_gen_value": "مباشرة في المتصفح، في 1ms، بدون طلب خادم",
+    "aptos_title": "تسجيل في بلوكتشين Aptos",
+    "aptos_onchain": "على السلسلة ✓",
+    "aptos_local": "مخزن محلي",
+    "aptos_tx_label": "هاش المعاملة:",
+    "aptos_no_key": "تم حفظ Credential محلياً. أضف APTOS_PRIVATE_KEY للتسجيل على السلسلة.",
+    "aptos_note": "📌 يُسجَّل على السلسلة فقط حقيقة التحقق — لا بيانات شخصية، مجرد هاش",
+    "bond_title": "الخطوة الأخيرة — الكفالة",
+    "bond_subtitle": "3 بشر مُتحقق منهم يؤكدونك",
+    "bond_desc": "هذا يحمي من الروبوتات التي اجتازت اختبار الإيماءة. الكفلاء أشخاص حقيقيون من شبكة HSI يكفلون بسمعتهم.",
+    "bond_cta": "🤝 طلب كفالة →",
+    "bonding_title": "في انتظار الكفلاء...",
+    "bonding_subtitle": "Gonka BondMatcher يختار الأشخاص حسب السمعة في الشبكة",
+    "bonding_vouched": "تمت الكفالة",
+    "bonding_waiting": "...",
+    "bonding_progress": "من 3",
+    "complete_title": "اكتمل التحقق!",
+    "complete_subtitle": "أنت عضو كامل في شبكة HSI",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "Gonka AI",
+        "desc": "تم التحقق من الإيماءة"
+      },
+      {
+        "emoji": "🔑",
+        "title": "تم إنشاء DID",
+        "desc": "في المتصفح"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "تم تسجيل الحقيقة"
+      }
+    ],
+    "stored_title": "ما يُحفظ في المتصفح",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "معرّفك المجهول"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "المفتاح الخاص (ملكك وحدك)"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "تأكيد التحقق"
+      }
+    ],
+    "cta_chat": "💬 محادثة آمنة",
+    "cta_bond": "🤝 كفالة",
+    "failed_title": "لم يجتز",
+    "failed_tip": "💡 نصيحة: ارسم لفترة أطول (1–3 ثانية)، توقف بين النقاط — عدم انتظام الإيقاع يُشير إلى إنسان",
+    "fallback_label": "(احتياطي)",
+    "debug_title": "🔬 بيانات النمط (تصحيح الأخطاء)",
+    "error_backend": "الخلفية غير متاحة",
+    "footer_note": "🔒 تُدمَّر الإحداثيات في المتصفح · تذهب الرياضيات فقط إلى الشبكة · لا قياسات حيوية"
+  },
+  "chat": {
+    "nav_label": "دردشة",
+    "channels": "القنوات",
+    "room_tech_label": "التكنولوجيا",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "الحوكمة",
+    "room_gov_desc": "تصويتات HSI",
+    "room_phil_label": "الفلسفة",
+    "room_phil_desc": "البيان · الأفكار",
+    "verified_only": "يمكن للبشر الموثقين فقط الكتابة",
+    "verify_link": "التحقق",
+    "placeholder": "رسالة في #{{room}}…",
+    "ai_moderator": "مشرف الذكاء الاصطناعي",
+    "ai_active": "🛡️ نشط",
+    "filter_spam": "فلتر البريد المزعج",
+    "filter_toxic": "السمية",
+    "filter_flood": "التحكم في الفيضان",
+    "filter_did": "التحقق من DID",
+    "rules": "القواعد",
+    "rule_respect": "احترام المشاركين",
+    "rule_humans": "البشر الحقيقيون فقط",
+    "rule_no_spam": "لا بريد مزعج أو إعلانات",
+    "rule_no_toxic": "لا سمية أو إهانات",
+    "rule_no_bots": "لا روبوتات أو أتمتة",
+    "welcome_msg": "🛡️ مرحبًا بك في APTOGON Chat — مساحة للبشر الموثقين فقط.",
+    "tech_welcome": "⚡ قناة للنقاشات التقنية: Aptos، did:key، Gonka AI، WebSocket.",
+    "trust_levels": "مستويات الثقة",
+    "trust_trusted_desc": "٧+ تزكيات",
+    "trust_community_desc": "٣–٦ تزكيات",
+    "trust_newcomer_desc": "حتى ٣ تزكيات",
+    "privacy_title": "🔒 الخصوصية",
+    "privacy_desc": "لا يتم الكشف عن هويتك DID. يُعرض فقط آخر 8 أحرف من الهاش.",
+    "online_count": "متحقق منهم على الإنترنت",
+    "read_mode": "وضع القراءة فقط",
+    "read_mode_banner": "وضع القراءة — التحقق مطلوب للمشاركة",
+    "reaction": "تفاعل",
+    "reply": "رد",
+    "room_agora_label": "Main",
+    "room_agora_desc": "القناة العامة",
+    "offline_demo": "وضع العرض التوضيحي — الخادم غير متاح. الرسائل المعروضة أمثلة فقط.",
+    "loading_msgs": "جارٍ تحميل الرسائل…",
+    "empty_room": "لا توجد رسائل حتى الآن",
+    "empty_room_hint": "كن أول من يكتب!"
+  },
+  "lang_switcher": {
+    "label": "اللغة"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — كفالة P2P",
+    "hero_subtitle": "البشر المتحقق منهم يكفل بعضهم. تصبح الثقة الاجتماعية قابلة للتحقق تشفيريًا.",
+    "cta_verify_short": "✍️ التحقق",
+    "cta_request": "🤝 طلب كفالة ↓",
+    "how_title": "كيف تعمل الكفالة",
+    "how_subtitle": "ثلاث خطوات من المبتدئ إلى العضو الموثوق",
+    "step1_title": "التحقق",
+    "step1_desc": "ارسم إيماءة — تؤكد Gonka AI أنك إنسان. تحصل على DID و trust_score 10%.",
+    "step2_title": "طلب كفالات",
+    "step2_desc": "3 أعضاء متحقق منهم يؤكدونك. يرتفع Trust score إلى 50%.",
+    "step3_title": "تصبح كفيلاً",
+    "step3_desc": "عند trust_score ≥ 50% يمكنك الكفالة للآخرين. ساعد الشبكة على النمو.",
+    "trust_algo_title": "خوارزمية Trust Score",
+    "trust_algo_subtitle": "تنمو الثقة مع كل كفالة",
+    "after_bonds": "بعد {n} كفالات",
+    "level_newcomer": "مبتدئ",
+    "level_community": "معترف به من المجتمع",
+    "level_trusted": "موثوق",
+    "risks_title": "⚠️ مخاطر الكفيل",
+    "risks_note": "فقط الأعضاء ذوو trust_score ≥ 50% (3+ bonds) يمكنهم الكفالة. هذا يخلق حافزًا اقتصاديًا لتوصية الأشخاص الحقيقيين فقط.",
+    "penalty1": "تم اكتشاف بوت بين من كفلتهم",
+    "penalty2": "بوت متكرر من نفس الكفيل",
+    "reward1": "كفالة ناجحة جديدة",
+    "reward2": "وصل مكفولك بنفسه إلى 100%",
+    "incoming_title": "🔔 الطلبات الواردة",
+    "incoming_subtitle": "يطلب منك أشخاص أن تكون كفيلهم",
+    "vouch_btn": "✓ كفالة",
+    "requester_role": "👤 الطالب",
+    "you_guarantor": "🤝 أنت",
+    "ask_placeholder": "طرح سؤال…",
+    "request_title": "طلب كفالة",
+    "request_subtitle_1": "اختر",
+    "request_subtitle_2": "10+ أعضاء",
+    "request_subtitle_3": "— تحتاج موافقة 3 منهم",
+    "selected": " محدد",
+    "send_requests": "🤝 إرسال الطلبات",
+    "privacy_title": "🔒 الانامية والخصوصية",
+    "privacy_body": "يرى الكفلاء فقط هاش DID المجهول ومستوى ثقة AI. الاسم، البريد، IP — لا يُشارك مع أحد.",
+    "manifest_link": "📜 البيان",
+    "home_link": "← الرئيسية",
+    "done_title": "تمت الكفالة!",
+    "done_auto_msg": "✅ ثقة AI عالية — موافقة تلقائية من كفلاء النظام",
+    "done_human_msg": "3 أشخاص كفلوا لك",
+    "done_blockchain": "تم تسجيل HumanCredential في بلوكتشين Aptos",
+    "done_chat": "💬 الدخول للمحادثة",
+    "failed_title": "تعذر جمع الكفالات",
+    "failed_desc_1": "جميع",
+    "failed_desc_2": "محاولات الإرسال استُنفدت. عدد قليل من الكفلاء متصل الآن.",
+    "failed_hint": "حاول لاحقًا أو تواصل معنا عبر Telegram — سنساعدك يدويًا.",
+    "retry_btn": "🔄 حاول مرة أخرى",
+    "waiting_sending": "جارٍ إرسال الطلبات…",
+    "waiting_ai": "✅ AI يتحقق…",
+    "waiting_title": "انتظار الكفلاء",
+    "retry_label": "إعادة الإرسال #{n}",
+    "requests_sent": "تم إرسال الطلبات لأعضاء شبكة HSI",
+    "vouched": "كُفل",
+    "awaiting": "انتظار",
+    "vouches_needed": "/3 كفالات",
+    "ai_auto_approve": "Gonka AI: ثقة ≥ 95% — موافقة تلقائية",
+    "anon_chat": "💬 دردشة مجهولة مع الكفلاء",
+    "write_placeholder": "الكتابة للكفلاء…",
+    "you_requester": "👤 أنت",
+    "days_ago": "منذ {n}أيام",
+    "cancel": "إلغاء",
+    "days_short": "ي",
+    "known_dids_title": "💌 أشخاص يعرفونني",
+    "known_dids_subtitle": "إذا كان هناك أعضاء في HSI يعرفونك شخصيًا، أدخل معرفاتهم الرقمية — سيتلقون دعوة مباشرة للتزكية.",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "اختياري · حتى 3 · يجب أن يبدأ بـ did:key:z6Mk"
+  },
+  "governance": {
+    "home_link": "← الرئيسية",
+    "subtitle": "1 إنسان متحقق = 1 صوت",
+    "create_btn": "+ إنشاء مقترح",
+    "new_proposal": "مقترح جديد",
+    "title_placeholder": "عنوان المقترح",
+    "desc_placeholder": "وصف تفصيلي...",
+    "create": "إنشاء",
+    "creating": "جارٍ الإنشاء...",
+    "cancel": "إلغاء",
+    "vote_btn": "🗳 التصويت",
+    "vote_cancel": "إلغاء",
+    "vote_yes": "✓ نعم",
+    "vote_no": "✗ لا",
+    "vote_abstain": "— امتناع",
+    "vote_veto": "⚡ فيتو",
+    "yes_label": "✓ نعم",
+    "no_label": "✗ لا",
+    "veto_label": "⚡ فيتو",
+    "total_label": "المجموع",
+    "supporters_of": "الداعمون: {count}/100 لبدء التصويت",
+    "voting_status": "🗳 تصويت · {days}أيام",
+    "type_text": "نصي",
+    "type_parameter": "معاملات",
+    "type_ai_model": "نموذج AI",
+    "type_upgrade": "تحديث",
+    "type_constitution": "الدستور",
+    "days_unit": "ي"
+  }
+}

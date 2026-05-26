@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "साबित करें कि आप इंसान हैं — एक इशारे से। कोई पासवर्ड नहीं, कोई ईमेल नहीं, कोई ट्रैकिंग नहीं।"
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "प्रोजेक्ट",
+    "community": "समुदाय",
+    "copyright": "© 2025 Homo Sapience Internet · ओपन सोर्स · MIT License",
+    "version": "v0.2.0 · Gonka AI · Aptos Testnet",
+    "links": {
+      "manifest": "घोषणापत्र",
+      "developers": "डेवलपर्स",
+      "donate": "दान करें",
+      "verify": "सत्यापित करें"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · Gonka AI · did:key · Aptos Testnet",
+    "headline": "इंटरनेट के लिए मानव फ़ायरवॉल",
+    "subheadline": "साबित करें कि आप इंसान हैं — एक इशारे से। कोई पासवर्ड नहीं, कोई ईमेल नहीं, कोई ट्रैकिंग नहीं।",
+    "cta_verify": "✍️ अभी सत्यापित करें",
+    "cta_chat": "💬 चैट",
+    "tech_title": "तकनीकें",
+    "tech_subtitle": "अधिक जानने के लिए एक कार्ड पर क्लिक करें",
+    "how_title": "सत्यापन कैसे काम करता है",
+    "how_subtitle": "4 चरण · 10 सेकंड · शून्य व्यक्तिगत डेटा",
+    "step": "चरण",
+    "join_title": "जुड़ें",
+    "join_subtitle": "हम एक मानवीय इंटरनेट के लिए सार्वजनिक बुनियादी ढाँचा बना रहे हैं",
+    "cards": {
+      "gesture": {
+        "title": "इशारा",
+        "subtitle": "मानवीय अभिव्यक्ति",
+        "modal_title": "प्रमाण के रूप में इशारा",
+        "modal_body": "आप माउस या उँगली से एक रेखा खींचते हैं। AI आकृति का नहीं बल्कि बायोमेट्रिक गति मापदंडों का विश्लेषण करता है: गति परिवर्तनशीलता, रुकावट, सुधार, लय की अनियमितता।"
+      },
+      "ai": {
+        "title": "Gonka AI",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "पैटर्न विश्लेषण",
+        "modal_body": "Qwen3-14B (OpenRouter के माध्यम से) केवल सांख्यिकीय इशारा वेक्टर प्राप्त करता है। 8 मापदंडों का मूल्यांकन करता है और लौटाता है: is_human, confidence (0–1), reasoning। सीमा: 85%।"
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "W3C मानक",
+        "modal_title": "विकेंद्रीकृत पहचानकर्ता",
+        "modal_body": "ब्राउज़र में Ed25519 की-जोड़ी उत्पन्न होती है। सार्वजनिक कुंजी को W3C मानक के अनुसार did:key के रूप में एन्कोड किया जाता है। कोई सर्वर नहीं, कोई पंजीकरण नहीं।"
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "ब्लॉकचेन",
+        "modal_title": "ऑन-चेन रिकॉर्ड",
+        "modal_body": "प्रमाण (ExpressionProof) का SHA3-256 हैश Aptos पर एक Move स्मार्ट कॉन्ट्रैक्ट में लिखा जाता है। हैश में कोई व्यक्तिगत डेटा नहीं है। अपरिवर्तनीय और सत्यापन योग्य।"
+      },
+      "privacy": {
+        "title": "गोपनीयता",
+        "subtitle": "शून्य PII",
+        "modal_title": "शून्य व्यक्तिगत डेटा",
+        "modal_body": "कच्चे निर्देशांक केवल डिवाइस पर प्रोसेस होते हैं। केवल सांख्यिकीय वेक्टर (8 नंबर) सर्वर को भेजा जाता है। कोई नाम, ईमेल या IP एकत्र नहीं किया जाता।"
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "मानव नेटवर्क",
+        "modal_title": "मानव बंधन प्रणाली",
+        "modal_body": "सत्यापित इंसान HSI Bond के माध्यम से एक-दूसरे की जमानत दे सकते हैं। प्रत्येक जमानत HumanCredential को मजबूत करती है। बॉट्स असली लोगों से जमानत नहीं पा सकते।"
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "एक इशारा बनाएं",
+        "desc": "स्क्रीन पर एक रेखा या आकृति — गति, रुकावट, लय"
+      },
+      "s02": {
+        "title": "Gonka AI विश्लेषण करता है",
+        "desc": "8 बायोमेट्रिक मापदंड — बॉट्स पूरी तरह चलते हैं"
+      },
+      "s03": {
+        "title": "DID उत्पन्न",
+        "desc": "आपके ब्राउज़र में Ed25519 कुंजी — कोई सर्वर नहीं"
+      },
+      "s04": {
+        "title": "Aptos पर दर्ज",
+        "desc": "ExpressionProof हैश — गुमनाम और स्थायी"
+      }
+    },
+    "manifest_card": {
+      "title": "घोषणापत्र",
+      "body": "हम HSI क्यों बना रहे हैं, यह इंटरनेट को कैसे बदलेगा और इसमें हर इंसान का क्या स्थान होगा।",
+      "cta": "पढ़ें →"
+    },
+    "developers_card": {
+      "title": "डेवलपर्स",
+      "body": "REST API, SDK, इंटीग्रेशन उदाहरण। एक घंटे में अपने ऐप में मानव सत्यापन जोड़ें।",
+      "cta": "डॉक्स →"
+    },
+    "donate_card": {
+      "title": "समर्थन",
+      "body": "वेंचर फंडिंग के बिना एक खुला प्रोजेक्ट। सार्वजनिक बुनियादी ढाँचा विकसित करने में मदद करें।",
+      "cta": "दान करें →"
+    }
+  },
+  "manifest": {
+    "nav_label": "घोषणापत्र",
+    "hero_label": "homosapience.org",
+    "hero_title": "Homo Sapience घोषणापत्र",
+    "hero_subtitle": "इंटरनेट लोगों द्वारा बनाया गया था — लोगों के लिए। इसे बचाने का समय आ गया है।",
+    "s1_title": "समस्या",
+    "s1_p1": "2025 तक, अधिकांश इंटरनेट ट्रैफ़िक इंसानों द्वारा नहीं बल्कि बॉट्स द्वारा उत्पन्न होता है। बॉट्स टिप्पणियाँ लिखते हैं, वोट बढ़ाते हैं, समीक्षाएँ छोड़ते हैं, खाते पंजीकृत करते हैं। डिजिटल स्थान ने अपनी मुख्य विशेषता खो दी है।",
+    "s1_p2": "समस्या जितनी दिखती है उससे गहरी है। मौजूदा समाधान — CAPTCHA, SMS सत्यापन, KYC — या तो आसानी से दरकिनार हो जाते हैं या पहचान उजागर करने की आवश्यकता होती है।",
+    "s1_p3": "कोई भी हजार खाते बना सकता है। कोई भी बॉट 'मैं इंसान हूँ' लिख सकता है। आज कोई भी सेवा इस दावे को बिना पासपोर्ट, बिना निगरानी के सत्यापित नहीं कर सकती।",
+    "s2_title": "समाधान: HSI एक प्रोटोकॉल के रूप में",
+    "s2_p1": "HSI (Homo Sapience Internet) इंटरनेट का प्रतिस्थापन नहीं है। यह IP के ऊपर एक प्रोटोकॉल है, जैसे HTTP के ऊपर HTTPS। यह एक नया प्रिमिटिव जोड़ता है: HumanCredential — एक क्रिप्टोग्राफिक रूप से सत्यापित प्रमाण।",
+    "s2_p2": "सत्यापन पहचान पर नहीं बल्कि गति बायोमेट्रिक्स पर आधारित है। AI इशारे का विश्लेषण करता है — निर्देशांक नहीं, आकार नहीं, बल्कि सांख्यिकी। यही वह है जो बॉट पर्याप्त रूप से नकल नहीं कर सकते।",
+    "s2_how_label": "यह कैसे काम करता है",
+    "s2_steps": [
+      "उपयोगकर्ता इशारा खींचता है → डिवाइस पर सांख्यिकी प्रोसेस होती है",
+      "अनाम फीचर वेक्टर (बिना निर्देशांक) SapiX को Gonka Network पर भेजा जाता है",
+      "परिणाम: is_human + confidence — कोई व्यक्तिगत डेटा नहीं",
+      "सफलता पर, ब्राउज़र में Ed25519 DID उत्पन्न होता है",
+      "प्रमाण का SHA3-256 हैश Aptos में लिखा जाता है"
+    ],
+    "s3_title": "व्यावहारिक अनुप्रयोग",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "फ़ोरम और प्लेटफ़ॉर्म",
+        "desc": "SDK 2 कोड लाइनों में एकीकृत होता है। स्पैम गायब हो जाता है — क्योंकि इसे लिखने वाला कोई नहीं होता।"
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAO और मतदान",
+        "desc": "एक इंसान, एक वोट। Sybil हमले नहीं, मतदान धोखाधड़ी नहीं। मानवता के प्रमाण से सुरक्षित।"
+      },
+      {
+        "icon": "💬",
+        "title": "चैट और टिप्पणियाँ",
+        "desc": "असली लोगों के लिए सत्यापित Human बैज दिखाई देता है। चर्चा की गुणवत्ता तुरंत बदलती है।"
+      },
+      {
+        "icon": "🛒",
+        "title": "मार्केटप्लेस",
+        "desc": "समीक्षाएँ असली खरीदारों द्वारा छोड़ी जाती हैं, प्रतिस्पर्धी बॉट्स द्वारा नहीं।"
+      },
+      {
+        "icon": "🎓",
+        "title": "शिक्षा",
+        "desc": "परीक्षा एक इंसान ने पास की, GPT ने नहीं। ऑनलाइन डिप्लोमा का अर्थ है जब प्रमाण हो।"
+      },
+      {
+        "icon": "🤖",
+        "title": "AI एजेंट",
+        "desc": "विरोधाभास: HSI AI एजेंटों को सही ढंग से कार्य करने में मदद करता है। एजेंट साबित कर सकता है कि वह किसी सत्यापित इंसान की ओर से कार्य कर रहा है।"
+      }
+    ],
+    "s4_title": "मुद्रीकरण और स्थिरता",
+    "s4_p1": "HSI एक खुले प्रोटोकॉल के रूप में कई स्तरों के साथ मौजूद है। इंसानों के लिए सत्यापन हमेशा मुफ़्त है। यह एक सिद्धांत है: एक इंसान को अपनी मानवता साबित करने के लिए भुगतान नहीं करना चाहिए।",
+    "tiers": [
+      {
+        "title": "मुफ़्त",
+        "sub": "इंसानों के लिए",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "प्लेटफ़ॉर्म के लिए",
+        "icon": "🔌"
+      },
+      {
+        "title": "Enterprise",
+        "sub": "On-Premise SDK",
+        "icon": "🏢"
+      },
+      {
+        "title": "GNK टोकन",
+        "sub": "Governance",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "प्लेटफ़ॉर्म अपने उपयोगकर्ताओं के सत्यापन के लिए भुगतान करते हैं — जैसे वे अभी reCAPTCHA के लिए भुगतान करते हैं, लेकिन अधिक ईमानदारी से, पारदर्शी रूप से।",
+    "s5_title": "समुदाय का विस्तार",
+    "s5_p1": "शुरुआती अपनाने वाले वे समुदाय हैं जो पहले से बॉट्स से परेशान हैं। GitHub पर डेवलपर्स, Reddit पर लेखक, Web3 में DAO सदस्य। उनके लिए सत्यापन एक विशेषाधिकार है।",
+    "s5_p2": "प्रोफ़ाइल पर Verified Human बैज नया ब्लू टिक है जिसे खरीदा नहीं जा सकता। इसे नकली नहीं बनाया जा सकता। यह प्रसिद्धि नहीं — अस्तित्व साबित करता है।",
+    "s5_p3": "नेटवर्क HSI Bond के माध्यम से बढ़ता है: सत्यापित इंसान एक-दूसरे की गारंटी देते हैं, अपने credential को मजबूत करते हैं। APTOGON Chat पहला लाइव डिप्लॉयमेंट है — रूम, DM और फ़ाइल शेयरिंग के साथ एक रियल-टाइम ह्यूमन-ओनली स्पेस, आपके HumanCredential से सुलभ।",
+    "quote": "\"इंटरनेट टूटा नहीं है — यह बस नहीं जानता कि आप कौन हैं। APTOGON इसे ठीक करता है।\"",
+    "cta_verify": "✍️ सत्यापित करें",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ डेवलपर्स",
+    "cta_home": "← होम"
+  },
+  "developers": {
+    "nav_label": "डेवलपर्स",
+    "hero_title": "डेवलपर्स के लिए",
+    "hero_subtitle": "Add human verification to your app with a drop-in snippet. Create a key in the console, embed the verifier, and confirm each session server-side with your secret key.",
+    "quickstart_title": "त्वरित शुरुआत",
+    "quickstart_subtitle": "न्यूनतम एकीकरण — 3 चरण",
+    "step1_title": "GestureCanvas एम्बेड करें",
+    "step2_title": "सत्यापन के लिए इशारा भेजें",
+    "step3_title": "HumanCredential उपयोग करें + Chat एक्सेस करें",
+    "api_title": "API संदर्भ",
+    "ep1_desc": "इशारा सत्यापन। HumanCredential लौटाता है।",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "DID द्वारा सत्यापन स्थिति।",
+    "ep2_params": "did (query)",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "अंतिम सत्यापन प्रयास (डीबगिंग के लिए)।",
+    "ep3_params": "last=20 (query)",
+    "ep3_returns": "इशारा पैटर्न और AI परिणाम के साथ attempts[]",
+    "ep4_desc": "सत्यापन के बिना DID बनाएं (परीक्षण के लिए)।",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "विशेषताएं",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "Zero PII",
+        "desc": "कच्चे इशारे के निर्देशांक कभी ब्राउज़र नहीं छोड़ते। केवल सांख्यिकी सर्वर को जाती है।"
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "did:key मानक के साथ संगत। किसी भी पहचान प्रणाली के साथ काम करता है।"
+      },
+      {
+        "icon": "⛓️",
+        "title": "On-chain proof",
+        "desc": "Aptos पर Move कॉन्ट्रैक्ट। हमारे सर्वर के बिना सत्यापन — पूरी तरह विकेंद्रीकृत।"
+      },
+      {
+        "icon": "♿",
+        "title": "सुलभता",
+        "desc": "मोटर विकलांगता को ध्यान में रखता है। कंपन वाले लोग कभी ब्लॉक नहीं होते।"
+      },
+      {
+        "icon": "⚡",
+        "title": "तेज़",
+        "desc": "माध्यिका 800ms। Gonka AI fallback के साथ — सेवा अनुपलब्ध होने पर भी काम करता है।"
+      },
+      {
+        "icon": "📋",
+        "title": "Verifiable Credential",
+        "desc": "W3C VC फ़ॉर्मेट। Ed25519 के साथ हस्ताक्षरित। 30 दिनों में समाप्त, स्वचालित नवीनीकरण।"
+      }
+    ],
+    "cta_title": "एकीकरण के लिए तैयार?",
+    "cta_subtitle": "Create a key in the console to get started. Contact us for higher quotas or enterprise integration.",
+    "cta_email": "📩 हमें लिखें",
+    "cta_try": "🧪 लाइव आज़माएं",
+    "cta_home": "← होम",
+    "ep_chat_msg_desc": "Fetch recent messages from a chat room (public rooms require no auth)",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "Upload a file to a room (max 10 MB). File is stored 5 days then auto-deleted.",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — real-time room stream. Connect and receive/send JSON messages.",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "Bond अनुरोध बनाएं — 3 Gold सदस्य नए उपयोगकर्ता की गारंटी देंगे।",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "Bond अनुरोध स्थिति जाँचें। हर 2–5 सेकंड में जाँचें जब तक status = approved।",
+    "ep_bond_st_params": "request_id (पथ)",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "गारंटर Bond अनुरोध स्वीकृत करता है (Ed25519 हस्ताक्षर आवश्यक)।",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash (सीमा पर)"
+  },
+  "donate": {
+    "nav_label": "दान करें",
+    "hero_title": "प्रोजेक्ट का समर्थन करें",
+    "hero_subtitle": "APTOGON वेंचर फंडिंग के बिना एक खुला प्रोजेक्ट है। हम एक मानवीय इंटरनेट के लिए सार्वजनिक बुनियादी ढाँचा बना रहे हैं।",
+    "funds_title": "फंड कहाँ जाते हैं",
+    "funds": [
+      {
+        "icon": "🧠",
+        "title": "Gonka AI इन्फेरेंस",
+        "desc": "Gonka Network पर SapiX इंफरेंस — जेस्चर बायोमेट्रिक्स विश्लेषण के लिए समर्पित AI कम्प्यूट",
+        "pct": 45
+      },
+      {
+        "icon": "🖥️",
+        "title": "होस्टिंग और बुनियादी ढाँचा",
+        "desc": "FastAPI बैकएंड, Aptos लेनदेन, फ्रंटएंड के लिए CDN",
+        "pct": 30
+      },
+      {
+        "icon": "👩‍💻",
+        "title": "विकास",
+        "desc": "SDK, दस्तावेज़ीकरण, नई सत्यापन सुविधाएँ",
+        "pct": 25
+      }
+    ],
+    "tiers_title": "समर्थन स्तर",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "कॉफ़ी",
+        "desc": "~2,500 सत्यापन",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "समर्थक",
+        "desc": "~10,000 सत्यापन",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "भागीदार",
+        "desc": "योगदानकर्ताओं में नाम + प्राथमिकता API",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "प्रायोजक",
+        "desc": "साइट पर लोगो + सीधा समर्थन",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "रूस से भुगतान",
+    "russia_desc": "Tinkoff Pay, SBP या किसी भी रूसी बैंक कार्ड के माध्यम से त्वरित हस्तांतरण",
+    "crypto_title": "क्रिप्टोकरेंसी",
+    "crypto_eth_desc": "hello@homosapience.org पर लिखें — हम पता भेजेंगे",
+    "contact_title": "साझेदारी या एकीकरण चाहते हैं?",
+    "contact_desc": "हम शर्तों पर चर्चा करेंगे, प्रारंभिक API एक्सेस प्रदान करेंगे और आपके उत्पाद में सत्यापन एकीकृत करने में मदद करेंगे",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← होम"
+  },
+  "verify": {
+    "nav_label": "सत्यापित करें",
+    "hero_badge": "🛡️ Gonka AI · Aptos Testnet",
+    "hero_title": "साबित करें कि आप",
+    "hero_human": "इंसान हैं",
+    "hero_subtitle": "कोई पासपोर्ट नहीं · कोई कैमरा नहीं · कोई व्यक्तिगत डेटा नहीं",
+    "steps_label": "सत्यापन कैसे काम करता है",
+    "steps": [
+      {
+        "num": "1",
+        "title": "एक प्रतीक बनाएं",
+        "desc": "कुछ भी — एक अक्षर, अंक, घुमाव। AI देखता है कि आप कैसे बनाते हैं, क्या नहीं"
+      },
+      {
+        "num": "2",
+        "title": "Gonka AI",
+        "desc": "लय, गति, रुकावट का विश्लेषण करता है। बॉट बहुत सुचारू रूप से चलते हैं — यही उन्हें उजागर करता है"
+      },
+      {
+        "num": "3",
+        "title": "आपका DID",
+        "desc": "आपके ब्राउज़र में एक डिजिटल कुंजी बनाई जाती है। आपकी गुमनाम ID — बिना नाम के पासपोर्ट जैसी"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "सत्यापन का तथ्य ब्लॉकचेन में लिखा जाता है। डेटा नहीं — केवल क्रिप्टोग्राफिक प्रमाण"
+      }
+    ],
+    "canvas_title": "कुछ बनाएं",
+    "canvas_subtitle": "माउस या उँगली से — कोई भी प्रतीक",
+    "tags": [
+      "लय",
+      "गति",
+      "रुकावट",
+      "दबाव",
+      "सुधार"
+    ],
+    "analyzing_title": "Gonka AI विश्लेषण कर रहा है...",
+    "analyzing_subtitle": "मॉडल आपके इशारे के पैटर्न का अध्ययन कर रहा है",
+    "analyzing_checks": [
+      "गति परिवर्तनशीलता",
+      "रुकावट एंट्रॉपी",
+      "सुधार की संख्या",
+      "लय अनियमितता",
+      "ExpressionProof जनरेशन"
+    ],
+    "success_title": "आप इंसान हैं ✓",
+    "success_subtitle": "Gonka AI ने सत्यापन की पुष्टि की",
+    "confidence_label": "AI विश्वास",
+    "threshold_0": "0%",
+    "threshold_70": "सीमा 70%",
+    "threshold_85": "85%+ उत्कृष्ट",
+    "threshold_100": "100%",
+    "did_title": "आपकी डिजिटल ID बनाई गई",
+    "did_subtitle": "W3C did:key — अंतर्राष्ट्रीय मानक",
+    "did_id_label": "पहचानकर्ता (DID):",
+    "did_what_label": "यह क्या है?",
+    "did_what_value": "पासपोर्ट जैसा, लेकिन डिजिटल और पूरी तरह गुमनाम",
+    "did_where_label": "कहाँ संग्रहीत?",
+    "did_where_value": "केवल आपके ब्राउज़र में (localStorage)। किसी सर्वर पर नहीं",
+    "did_key_label": "निजी कुंजी",
+    "did_key_value": "केवल आपकी। कोई भी इसका उपयोग नहीं कर सकता",
+    "did_gen_label": "उत्पन्न",
+    "did_gen_value": "ब्राउज़र में ही, 1ms में, कोई सर्वर अनुरोध नहीं",
+    "aptos_title": "Aptos ब्लॉकचेन पर रिकॉर्ड",
+    "aptos_onchain": "on-chain ✓",
+    "aptos_local": "स्थानीय स्टोर",
+    "aptos_tx_label": "ट्रांजेक्शन हैश:",
+    "aptos_no_key": "Credential स्थानीय रूप से सहेजा गया। On-chain रिकॉर्डिंग के लिए APTOS_PRIVATE_KEY जोड़ें।",
+    "aptos_note": "📌 केवल सत्यापन का तथ्य on-chain दर्ज है — कोई व्यक्तिगत डेटा नहीं, केवल एक हैश",
+    "bond_title": "अंतिम चरण — जमानत",
+    "bond_subtitle": "3 सत्यापित इंसान आपकी पुष्टि करते हैं",
+    "bond_desc": "यह उन बॉट्स से बचाता है जो इशारा परीक्षण पास कर गए। जमानतदार HSI नेटवर्क के असली लोग हैं जो अपनी प्रतिष्ठा के साथ जिम्मेदारी लेते हैं।",
+    "bond_cta": "🤝 जमानत का अनुरोध करें →",
+    "bonding_title": "जमानतदारों का इंतजार...",
+    "bonding_subtitle": "Gonka BondMatcher नेटवर्क प्रतिष्ठा के आधार पर लोगों का चयन कर रहा है",
+    "bonding_vouched": "जमानत दी",
+    "bonding_waiting": "...",
+    "bonding_progress": "में से 3",
+    "complete_title": "सत्यापन पूर्ण!",
+    "complete_subtitle": "आप HSI नेटवर्क के पूर्ण सदस्य हैं",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "Gonka AI",
+        "desc": "इशारा सत्यापित"
+      },
+      {
+        "emoji": "🔑",
+        "title": "DID बनाया",
+        "desc": "ब्राउज़र में"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "तथ्य दर्ज"
+      }
+    ],
+    "stored_title": "ब्राउज़र में क्या सहेजा गया",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "आपका गुमनाम पहचानकर्ता"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "निजी कुंजी (केवल आपकी)"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "सत्यापन पुष्टि"
+      }
+    ],
+    "cta_chat": "💬 सुरक्षित चैट",
+    "cta_bond": "🤝 जमानत दें",
+    "failed_title": "पास नहीं हुआ",
+    "failed_tip": "💡 सुझाव: अधिक समय तक बनाएं (1–3 सेकंड), बिंदुओं के बीच रुकें — लय की अनियमितता इंसान का संकेत है",
+    "fallback_label": "(fallback)",
+    "debug_title": "🔬 पैटर्न डेटा (डीबग)",
+    "error_backend": "बैकएंड अनुपलब्ध",
+    "footer_note": "🔒 निर्देशांक ब्राउज़र में नष्ट होते हैं · केवल गणित नेटवर्क को जाती है · कोई बायोमेट्रिक्स नहीं"
+  },
+  "chat": {
+    "nav_label": "चैट",
+    "channels": "चैनल",
+    "room_tech_label": "तकनीक",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "प्रशासन",
+    "room_gov_desc": "HSI मतदान",
+    "room_phil_label": "दर्शन",
+    "room_phil_desc": "घोषणापत्र · विचार",
+    "verified_only": "केवल सत्यापित मनुष्य लिख सकते हैं",
+    "verify_link": "सत्यापित हों",
+    "placeholder": "#{{room}} में संदेश भेजें…",
+    "ai_moderator": "AI मॉडरेटर",
+    "ai_active": "🛡️ सक्रिय",
+    "filter_spam": "स्पैम फ़िल्टर",
+    "filter_toxic": "विषाक्तता",
+    "filter_flood": "फ्लड नियंत्रण",
+    "filter_did": "DID सत्यापन",
+    "rules": "नियम",
+    "rule_respect": "प्रतिभागियों का सम्मान",
+    "rule_humans": "केवल वास्तविक मनुष्य",
+    "rule_no_spam": "स्पैम या विज्ञापन नहीं",
+    "rule_no_toxic": "विषाक्तता या अपमान नहीं",
+    "rule_no_bots": "बॉट या स्वचालन नहीं",
+    "welcome_msg": "🛡️ APTOGON Chat में आपका स्वागत है — केवल सत्यापित मनुष्यों के लिए।",
+    "tech_welcome": "⚡ तकनीकी चर्चा चैनल: Aptos, did:key, Gonka AI, WebSocket।",
+    "trust_levels": "ट्रस्ट स्तर",
+    "trust_trusted_desc": "7+ समर्थन",
+    "trust_community_desc": "3–6 समर्थन",
+    "trust_newcomer_desc": "3 तक समर्थन",
+    "privacy_title": "🔒 गोपनीयता",
+    "privacy_desc": "आपका DID कभी प्रकट नहीं होता। केवल हैश के अंतिम 8 अक्षर दिखाए जाते हैं।",
+    "online_count": "सत्यापित ऑनलाइन",
+    "read_mode": "केवल पढ़ने का मोड",
+    "read_mode_banner": "केवल पढ़ने का मोड — भाग लेने के लिए सत्यापन आवश्यक है",
+    "reaction": "प्रतिक्रिया",
+    "reply": "उत्तर दें",
+    "room_agora_label": "Main",
+    "room_agora_desc": "सामान्य चैनल",
+    "offline_demo": "डेमो मोड — बैकएंड उपलब्ध नहीं। दिखाए गए संदेश केवल उदाहरण हैं।",
+    "loading_msgs": "संदेश लोड हो रहे हैं…",
+    "empty_room": "अभी तक कोई संदेश नहीं",
+    "empty_room_hint": "पहले कुछ लिखें!"
+  },
+  "lang_switcher": {
+    "label": "भाषा"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — P2P ज़मानत",
+    "hero_subtitle": "सत्यापित मनुष्य एक-दूसरे की ज़मानत लेते हैं। सामाजिक विश्वास क्रिप्टोग्राफिक रूप से सत्यापन योग्य बन जाता है।",
+    "cta_verify_short": "✍️ सत्यापित करें",
+    "cta_request": "🤝 ज़मानत का अनुरोध ↓",
+    "how_title": "ज़मानत कैसे काम करती है",
+    "how_subtitle": "नवागंतुक से भरोसेमंद नेटवर्क सदस्य तक तीन चरण",
+    "step1_title": "सत्यापित होएं",
+    "step1_desc": "एक इशारा बनाएं — Gonka AI पुष्टि करता है कि आप इंसान हैं। आपको DID और trust_score 10% मिलता है।",
+    "step2_title": "ज़मानत का अनुरोध करें",
+    "step2_desc": "3 सत्यापित नेटवर्क सदस्य आपकी पुष्टि करते हैं। Trust score 50% तक बढ़ता है।",
+    "step3_title": "ज़मानतदार बनें",
+    "step3_desc": "trust_score ≥ 50% पर आप दूसरों की ज़मानत ले सकते हैं। नेटवर्क को बढ़ने में मदद करें।",
+    "trust_algo_title": "Trust Score एल्गोरिदम",
+    "trust_algo_subtitle": "हर ज़मानत के साथ विश्वास बढ़ता है",
+    "after_bonds": "{n} ज़मानत के बाद",
+    "level_newcomer": "नवागंतुक",
+    "level_community": "समुदाय द्वारा मान्यता प्राप्त",
+    "level_trusted": "भरोसेमंद",
+    "risks_title": "⚠️ ज़मानतदार के जोखिम",
+    "risks_note": "केवल trust_score ≥ 50% (3+ bonds) वाले सदस्य ज़मानत दे सकते हैं। यह केवल वास्तविक लोगों को अनुशंसित करने का आर्थिक प्रोत्साहन बनाता है।",
+    "penalty1": "जिनकी आपने ज़मानत ली उनमें बॉट पाया गया",
+    "penalty2": "उसी ज़मानतदार से दोबारा बॉट",
+    "reward1": "नई सफल ज़मानत",
+    "reward2": "आपके प्रशिक्षु ने खुद 100% हासिल किया",
+    "incoming_title": "🔔 आने वाले अनुरोध",
+    "incoming_subtitle": "लोग आपसे अपना ज़मानतदार बनने का अनुरोध कर रहे हैं",
+    "vouch_btn": "✓ ज़मानत दें",
+    "requester_role": "👤 अनुरोधकर्ता",
+    "you_guarantor": "🤝 आप",
+    "ask_placeholder": "सवाल पूछें…",
+    "request_title": "ज़मानत का अनुरोध करें",
+    "request_subtitle_1": "चुनें",
+    "request_subtitle_2": "10+ सदस्य",
+    "request_subtitle_3": "— उनमें से 3 की सहमति चाहिए",
+    "selected": " चुने गए",
+    "send_requests": "🤝 अनुरोध भेजें",
+    "privacy_title": "🔒 गुमनामी और गोपनीयता",
+    "privacy_body": "ज़मानतदार केवल अनाम DID हैश और AI विश्वास स्तर देखते हैं। नाम, ईमेल, IP — किसी के साथ साझा नहीं किया जाता।",
+    "manifest_link": "📜 घोषणापत्र",
+    "home_link": "← मुखपृष्ठ",
+    "done_title": "ज़मानत मिली!",
+    "done_auto_msg": "✅ AI विश्वास उच्च — सिस्टम ज़मानतदारों द्वारा स्वत: स्वीकृत",
+    "done_human_msg": "3 लोगों ने आपकी ज़मानत ली",
+    "done_blockchain": "HumanCredential Aptos ब्लॉकचेन पर दर्ज",
+    "done_chat": "💬 चैट में जाएं",
+    "failed_title": "ज़मानत एकत्र नहीं हो सकी",
+    "failed_desc_1": "सभी",
+    "failed_desc_2": "भेजने के प्रयास समाप्त हो गए। अभी ऑनलाइन कम ज़मानतदार हैं।",
+    "failed_hint": "बाद में प्रयास करें या Telegram पर संपर्क करें — हम मैन्युअल सहायता करेंगे।",
+    "retry_btn": "🔄 फिर से प्रयास करें",
+    "waiting_sending": "अनुरोध भेजे जा रहे हैं…",
+    "waiting_ai": "✅ AI पुष्टि कर रहा है…",
+    "waiting_title": "ज़मानतदारों का इंतजार",
+    "retry_label": "पुनः भेजना #{n}",
+    "requests_sent": "HSI नेटवर्क सदस्यों को अनुरोध भेजे गए",
+    "vouched": "ज़मानत दी",
+    "awaiting": "प्रतीक्षा",
+    "vouches_needed": "/3 ज़मानत",
+    "ai_auto_approve": "Gonka AI: विश्वास ≥ 95% — स्वत: स्वीकृत",
+    "anon_chat": "💬 ज़मानतदारों के साथ गुमनाम चैट",
+    "write_placeholder": "ज़मानतदारों को लिखें…",
+    "you_requester": "👤 आप",
+    "days_ago": "{n} दिन पहले",
+    "no_candidates_title": "अभी कोई गारंटर ऑनलाइन नहीं है",
+    "no_candidates_hint": "आपका अनुरोध संस्थापक Gold Members को स्वतः भेज दिया जाएगा — कुछ करने की आवश्यकता नहीं।",
+    "cancel": "रद्द करें",
+    "days_short": "दिन",
+    "known_dids_title": "💌 जो लोग मुझे जानते हैं",
+    "known_dids_subtitle": "यदि HSI के कोई सदस्य आपको व्यक्तिगत रूप से जानते हैं, तो उनके DID दर्ज करें — उन्हें आपकी पुष्टि के लिए सीधा निमंत्रण मिलेगा।",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "वैकल्पिक · अधिकतम 3 · did:key:z6Mk से शुरू होना चाहिए"
+  },
+  "governance": {
+    "home_link": "← मुखपृष्ठ",
+    "subtitle": "1 सत्यापित मानव = 1 वोट",
+    "create_btn": "+ प्रस्ताव बनाएं",
+    "new_proposal": "नया प्रस्ताव",
+    "title_placeholder": "प्रस्ताव शीर्षक",
+    "desc_placeholder": "विस्तृत विवरण...",
+    "create": "बनाएं",
+    "creating": "बनाया जा रहा है...",
+    "cancel": "रद्द करें",
+    "vote_btn": "🗳 मतदान करें",
+    "vote_cancel": "रद्द करें",
+    "vote_yes": "✓ हां",
+    "vote_no": "✗ नहीं",
+    "vote_abstain": "— मतदान से दूर",
+    "vote_veto": "⚡ वीटो",
+    "yes_label": "✓ हां",
+    "no_label": "✗ नहीं",
+    "veto_label": "⚡ वीटो",
+    "total_label": "कुल",
+    "supporters_of": "समर्थक: {count}/100 मतदान शुरू करने के लिए",
+    "voting_status": "🗳 मतदान · {days}दिन",
+    "type_text": "पाठ",
+    "type_parameter": "पैरामीटर",
+    "type_ai_model": "AI मॉडल",
+    "type_upgrade": "अपग्रेड",
+    "type_constitution": "संविधान",
+    "days_unit": "दिन"
+  }
+}

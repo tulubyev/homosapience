@@ -1,0 +1,42 @@
+APTOGON
+Copyright (C) 2025-2026 Alexander K. Tulubyev. All rights reserved.
+
+This product includes software developed by the APTOGON project
+(https://homosapience.org / https://aptogon.com).
+
+"APTOGON", "HUVERNET", "Homo Sapience Internet", "Homo Sapience Protocol" and "SapiX"
+are trademarks and service marks of Alexander K. Tulubyev (trademark registrations pending).
+
+---
+
+THIRD-PARTY BRANDS AND INTELLECTUAL PROPERTY
+
+This software is built using technologies owned by third parties,
+each retaining their own copyrights and trademarks:
+
+Aptos SDK and infrastructure
+  Copyright (C) Aptos Foundation and Meta Platforms, Inc.
+  Licensed under the Innovation-Enabling Source Code License
+  (converts to Apache 2.0 after 4 years from code publication date)
+  "Aptos" is a trademark of Aptos Foundation.
+  APTOGON is not affiliated with or endorsed by Aptos Foundation.
+  Contact: copyright@aptosfoundation.org
+
+Gonka Network
+  "Gonka" and "Gonka AI" are brands of Product Science Inc. (gonka.ai),
+  backed by Coatue, Slow Ventures, Mantis VC and K5 Ventures.
+  APTOGON uses the Gonka Network as an external AI compute provider
+  for the SapiX inference engine (runtime dependency only).
+  APTOGON is not affiliated with or endorsed by Product Science Inc.
+  The SapiX engine name and brand are independent of Gonka.
+
+Next.js — Copyright (C) Vercel Inc. — MIT License
+FastAPI — Copyright (C) Sebastián Ramírez — MIT License
+PostgreSQL — Copyright (C) PostgreSQL Global Development Group — PostgreSQL License
+Redis — Copyright (C) Redis Ltd. — Redis Source Available License v2
+Traefik — Copyright (C) Traefik Labs — MIT License
+asyncpg — Copyright (C) MagicStack Inc. — Apache 2.0
+
+---
+
+Contact: alt@in2sys.fr

@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "APTOGON Verified Human",
+  "version": "0.2.6",
+  "description": "✦ Human badge on 24 sites: GitHub, Reddit, X, LinkedIn & more. Gesture-verified DID on Aptos. No email, no documents required.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "aptogon@homosapience.org",
+      "strict_min_version": "121.0"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://homosapience.org/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "badge.svg"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ]
+}

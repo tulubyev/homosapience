@@ -1,0 +1,32 @@
+# APTOGON v0.2.0 — docker-compose (backend only)
+# Frontend запускается через PM2: pm2 restart aptogon-frontend
+# БД — системный PostgreSQL на хосте (не в Docker)
+# Redis — Docker-контейнер
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - PYTHONPATH=/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app/backend
+      - ./sapix:/app/sapix
+    working_dir: /app/backend
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+

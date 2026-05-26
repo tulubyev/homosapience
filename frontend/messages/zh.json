@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "用一个手势证明你是人类。无需密码，无需邮箱，无需追踪。"
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "项目",
+    "community": "社区",
+    "copyright": "© 2025 Homo Sapience Internet · 开源 · MIT License",
+    "version": "v0.2.0 · Gonka AI · Aptos Testnet",
+    "links": {
+      "manifest": "宣言",
+      "developers": "开发者",
+      "donate": "捐赠",
+      "verify": "验证"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · Gonka AI · did:key · Aptos Testnet",
+    "headline": "互联网的人类防火墙",
+    "subheadline": "用一个手势证明你是人类。无需密码，无需邮箱，无需追踪。",
+    "cta_verify": "✍️ 立即验证",
+    "cta_chat": "💬 聊天",
+    "tech_title": "技术",
+    "tech_subtitle": "点击卡片了解更多",
+    "how_title": "验证如何运作",
+    "how_subtitle": "4步 · 10秒 · 零个人数据",
+    "step": "步骤",
+    "join_title": "加入我们",
+    "join_subtitle": "我们正在为人类互联网构建公共基础设施",
+    "cards": {
+      "gesture": {
+        "title": "手势",
+        "subtitle": "人类表达",
+        "modal_title": "手势作为证明",
+        "modal_body": "你用鼠标或手指画一条线。AI 分析的不是形状，而是生物特征运动参数：速度变化、停顿、纠正、节奏不规律性。机器人移动完美——人类则不然。"
+      },
+      "ai": {
+        "title": "Gonka AI",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "模式分析",
+        "modal_body": "Qwen3-14B（通过 OpenRouter）只接收统计手势向量——没有坐标，没有个人数据。评估8个参数并返回：is_human、confidence（0–1）、reasoning。阈值：85%。"
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "W3C 标准",
+        "modal_title": "去中心化标识符",
+        "modal_body": "浏览器中生成 Ed25519 密钥对。公钥按照 W3C 标准编码为 did:key。无需服务器，无需注册——密钥仅存在于浏览器的 localStorage 中。"
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "区块链",
+        "modal_title": "链上记录",
+        "modal_body": "证明（ExpressionProof）的 SHA3-256 哈希被写入 Aptos 上的 Move 智能合约。哈希不包含个人数据——仅包含手势统计信息、session_id 和1小时时间桶。不可篡改且可验证。"
+      },
+      "privacy": {
+        "title": "隐私",
+        "subtitle": "零 PII",
+        "modal_title": "零个人数据",
+        "modal_body": "原始坐标仅在设备上处理。只有统计向量（8个数字）发送到服务器。只有哈希上链。不收集或存储姓名、邮箱或 IP。"
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "人类网络",
+        "modal_title": "人类担保系统",
+        "modal_body": "经过验证的人类可以通过 HSI Bond 相互担保。每次担保都会加强 HumanCredential。机器人无法获得真实人类的担保——这是额外的保护层。"
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "画一个手势",
+        "desc": "屏幕上的一条线或形状——速度、停顿、节奏"
+      },
+      "s02": {
+        "title": "Gonka AI 分析",
+        "desc": "8个生物特征参数——机器人移动完美"
+      },
+      "s03": {
+        "title": "生成 DID",
+        "desc": "浏览器中的 Ed25519 密钥——无需服务器"
+      },
+      "s04": {
+        "title": "记录在 Aptos 上",
+        "desc": "ExpressionProof 哈希——匿名且永久"
+      }
+    },
+    "manifest_card": {
+      "title": "宣言",
+      "body": "我们为什么构建 HSI，它将如何改变互联网，以及每个人在其中的位置。",
+      "cta": "阅读 →"
+    },
+    "developers_card": {
+      "title": "开发者",
+      "body": "REST API、SDK、集成示例。一小时内为您的应用添加人类验证。",
+      "cta": "文档 →"
+    },
+    "donate_card": {
+      "title": "支持",
+      "body": "没有风险投资的开源项目。帮助我们发展公共基础设施。",
+      "cta": "捐赠 →"
+    }
+  },
+  "manifest": {
+    "nav_label": "宣言",
+    "hero_label": "homosapience.org",
+    "hero_title": "Homo Sapience 宣言",
+    "hero_subtitle": "互联网由人类建造——为人类服务。是时候保护它了。",
+    "s1_title": "问题",
+    "s1_p1": "到2025年，大多数互联网流量不是由人类产生的。机器人写评论、刷票、留评价、注册账户、参与调查。数字空间失去了其主要属性——它已不再是人类的空间。",
+    "s1_p2": "问题比看起来更深。现有解决方案——CAPTCHA、SMS验证、KYC——要么容易被绕过，要么需要披露身份。没有任何开放标准能够匿名证明人类身份。",
+    "s1_p3": "任何人都可以创建一千个账户。任何机器人都可以写\"我是人类\"。今天没有任何服务能够验证这一说法——无需护照、无需监控、无需中央数据库。",
+    "s2_title": "解决方案：HSI 作为协议",
+    "s2_p1": "HSI（Homo Sapience Internet）不是互联网的替代品。它是IP之上的协议，就像 HTTPS 在 HTTP 之上。它添加了一个新的原语：HumanCredential——一个经过密码学验证的证明，表明某个活生生的人在某个行为背后。",
+    "s2_p2": "验证基于运动生物特征，而非身份。AI 分析手势——不是坐标，不是形状，而是统计数据：速度变化、停顿熵、纠正次数、节奏不规律性。这是机器人无法充分模仿的。",
+    "s2_how_label": "工作原理",
+    "s2_steps": [
+      "用户绘制手势 → 统计数据在设备上处理",
+      "匿名特征向量（无坐标）发送至 Gonka 网络上的 SapiX",
+      "结果：is_human + confidence — 无个人数据",
+      "成功后，在浏览器中生成 Ed25519 DID",
+      "将证明的 SHA3-256 哈希写入 Aptos"
+    ],
+    "s3_title": "实际应用",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "论坛与平台",
+        "desc": "SDK 2行代码即可集成。垃圾邮件消失——不是因为被屏蔽，而是因为没有人来写。评分、投票和点赞再次反映真实的人类意见。"
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAO 与投票",
+        "desc": "一人一票。没有 Sybil 攻击，没有刷票。治理代币不仅受数量保护，还受人类证明保护。"
+      },
+      {
+        "icon": "💬",
+        "title": "聊天与评论",
+        "desc": "真实人类会出现经过验证的 Human 徽章。讨论质量立即改变——不是通过审查，而是通过对来源的信任。"
+      },
+      {
+        "icon": "🛒",
+        "title": "市场",
+        "desc": "评价由真实买家留下，而非竞争对手的机器人。评分再次作为质量指标发挥作用。"
+      },
+      {
+        "icon": "🎓",
+        "title": "教育",
+        "desc": "考试由人类通过，而非 GPT。当有证明谁获得了在线文凭时，在线文凭才有意义。"
+      },
+      {
+        "icon": "🤖",
+        "title": "AI 代理",
+        "desc": "悖论：HSI 帮助 AI 代理正确行动。代理可以证明它代表经过验证的人类行动——经其明确许可。"
+      }
+    ],
+    "s4_title": "货币化与可持续性",
+    "s4_p1": "HSI 作为具有多个层级的开放协议存在。对人类的验证始终是免费的。这是一个原则：人类不应该为证明自己的人类身份而付费。",
+    "tiers": [
+      {
+        "title": "免费",
+        "sub": "面向人类",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "面向平台",
+        "icon": "🔌"
+      },
+      {
+        "title": "Enterprise",
+        "sub": "本地部署 SDK",
+        "icon": "🏢"
+      },
+      {
+        "title": "GNK 代币",
+        "sub": "治理",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "平台为验证其用户付费——就像他们现在为 reCAPTCHA 和欺诈检测付费一样，但更诚实、更透明，且不与第三方共享数据。",
+    "s5_title": "发展社区",
+    "s5_p1": "早期采用者是已经受到机器人困扰的社区。GitHub 上的开发者、Reddit 上的作者、Web3 中的 DAO 成员、论坛版主。对他们来说，验证不是障碍——而是特权。",
+    "s5_p2": "个人资料上的 Verified Human 徽章是新的蓝色勾选标记，无法购买。它无法伪造或转让。它证明的不是名气——而是存在。",
+    "s5_p3": "网络通过 HSI Bond 成长：经过验证的真实用户相互担保，不断强化各自的凭证。APTOGON Chat 是首个正式上线的应用——一个仅限真人使用的实时空间，支持房间、私信和文件共享，凭您的 HumanCredential 即可访问。",
+    "quote": "\"互联网没有损坏——它只是不知道你是谁。APTOGON 解决了这个问题。\"",
+    "cta_verify": "✍️ 验证",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ 开发者",
+    "cta_home": "← 首页"
+  },
+  "developers": {
+    "nav_label": "开发者",
+    "hero_title": "面向开发者",
+    "hero_subtitle": "Add human verification to your app with a drop-in snippet. Create a key in the console, embed the verifier, and confirm each session server-side with your secret key.",
+    "quickstart_title": "快速开始",
+    "quickstart_subtitle": "最小集成——3个步骤",
+    "step1_title": "嵌入 GestureCanvas",
+    "step2_title": "发送手势进行验证",
+    "step3_title": "使用 HumanCredential + 访问 Chat",
+    "api_title": "API 参考",
+    "ep1_desc": "手势验证。返回 HumanCredential。",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "通过 DID 查询验证状态。",
+    "ep2_params": "did (query)",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "最近的验证尝试（用于调试）。",
+    "ep3_params": "last=20 (query)",
+    "ep3_returns": "attempts[]，包含手势模式和 AI 结果",
+    "ep4_desc": "无需验证创建 DID（用于测试）。",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "特性",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "零 PII",
+        "desc": "原始手势坐标永远不会离开浏览器。只有统计数据发送到服务器。"
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "兼容 did:key 标准。适用于任何身份系统。"
+      },
+      {
+        "icon": "⛓️",
+        "title": "链上证明",
+        "desc": "Aptos 上的 Move 合约。无需我们的服务器即可验证——完全去中心化。"
+      },
+      {
+        "icon": "♿",
+        "title": "无障碍",
+        "desc": "考虑到运动障碍。有震颤的人永远不会被屏蔽。"
+      },
+      {
+        "icon": "⚡",
+        "title": "快速",
+        "desc": "中位数 800ms。Gonka AI 带有回退——即使服务不可用也能工作。"
+      },
+      {
+        "icon": "📋",
+        "title": "可验证凭证",
+        "desc": "W3C VC 格式。用 Ed25519 签名。30天后过期，自动续期。"
+      }
+    ],
+    "cta_title": "准备好集成了吗？",
+    "cta_subtitle": "Create a key in the console to get started. Contact us for higher quotas or enterprise integration.",
+    "cta_email": "📩 发邮件给我们",
+    "cta_try": "🧪 在线试用",
+    "cta_home": "← 首页",
+    "ep_chat_msg_desc": "Fetch recent messages from a chat room (public rooms require no auth)",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "Upload a file to a room (max 10 MB). File is stored 5 days then auto-deleted.",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — real-time room stream. Connect and receive/send JSON messages.",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "创建 Bond 请求 — 3 位 Gold Member 为新用户背书。",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "轮询 Bond 请求状态。每 2–5 秒查询一次，直到 status = approved。",
+    "ep_bond_st_params": "request_id（路径参数）",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "担保人批准 Bond 请求（需要 Ed25519 签名）。",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash（达到阈值时）"
+  },
+  "donate": {
+    "nav_label": "捐赠",
+    "hero_title": "支持项目",
+    "hero_subtitle": "APTOGON 是一个没有风险投资的开源项目。我们正在为人类互联网构建公共基础设施。",
+    "funds_title": "资金去向",
+    "funds": [
+      {
+        "icon": "🧠",
+        "title": "Gonka AI 推理",
+        "desc": "在 Gonka 网络上运行 SapiX — 用于手势生物特征分析的专用 AI 算力",
+        "pct": 45
+      },
+      {
+        "icon": "🖥️",
+        "title": "托管与基础设施",
+        "desc": "FastAPI 后端、Aptos 交易、前端 CDN",
+        "pct": 30
+      },
+      {
+        "icon": "👩‍💻",
+        "title": "开发",
+        "desc": "SDK、文档、新验证功能",
+        "pct": 25
+      }
+    ],
+    "tiers_title": "支持层级",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "咖啡",
+        "desc": "约2,500次验证",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "支持者",
+        "desc": "约10,000次验证",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "合作伙伴",
+        "desc": "贡献者名单 + 优先 API",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "赞助商",
+        "desc": "网站上的徽标 + 直接支持",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "从俄罗斯付款",
+    "russia_desc": "通过 Tinkoff Pay、SBP 或任何俄罗斯银行卡快速转账",
+    "crypto_title": "加密货币",
+    "crypto_eth_desc": "写信至 hello@homosapience.org — 我们会发送地址",
+    "contact_title": "想要合作或集成？",
+    "contact_desc": "我们将讨论条款，提供早期 API 访问权限，并帮助将验证集成到您的产品中",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← 首页"
+  },
+  "verify": {
+    "nav_label": "验证",
+    "hero_badge": "🛡️ Gonka AI · Aptos Testnet",
+    "hero_title": "证明你是",
+    "hero_human": "人类",
+    "hero_subtitle": "无需护照 · 无需摄像头 · 无个人数据",
+    "steps_label": "验证如何工作",
+    "steps": [
+      {
+        "num": "1",
+        "title": "绘制符号",
+        "desc": "任何东西——字母、数字、曲线。AI 观察你如何绘制，而不是绘制什么"
+      },
+      {
+        "num": "2",
+        "title": "Gonka AI",
+        "desc": "分析节奏、速度、停顿。机器人移动太流畅——这暴露了它们"
+      },
+      {
+        "num": "3",
+        "title": "你的 DID",
+        "desc": "在浏览器中创建数字密钥。你的匿名 ID——像护照但没有名字"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "验证事实写入区块链。不是数据——只是密码学证明"
+      }
+    ],
+    "canvas_title": "画些什么",
+    "canvas_subtitle": "用鼠标或手指——任何符号",
+    "tags": [
+      "节奏",
+      "速度",
+      "停顿",
+      "压力",
+      "纠正"
+    ],
+    "analyzing_title": "Gonka AI 正在分析...",
+    "analyzing_subtitle": "模型正在研究您的手势模式",
+    "analyzing_checks": [
+      "速度变化",
+      "停顿熵",
+      "纠正次数",
+      "节奏不规律性",
+      "ExpressionProof 生成"
+    ],
+    "success_title": "您是人类 ✓",
+    "success_subtitle": "Gonka AI 确认了验证",
+    "confidence_label": "AI 置信度",
+    "threshold_0": "0%",
+    "threshold_70": "阈值 70%",
+    "threshold_85": "85%+ 优秀",
+    "threshold_100": "100%",
+    "did_title": "您的数字 ID 已创建",
+    "did_subtitle": "W3C did:key — 国际标准",
+    "did_id_label": "标识符（DID）：",
+    "did_what_label": "这是什么？",
+    "did_what_value": "像护照但是数字的且完全匿名",
+    "did_where_label": "存储在哪里？",
+    "did_where_value": "仅在您的浏览器中（localStorage）。服务器上没有",
+    "did_key_label": "私钥",
+    "did_key_value": "只属于您。没有人可以使用它",
+    "did_gen_label": "生成方式",
+    "did_gen_value": "直接在浏览器中，1毫秒内，无服务器请求",
+    "aptos_title": "记录在 Aptos 区块链上",
+    "aptos_onchain": "链上 ✓",
+    "aptos_local": "本地存储",
+    "aptos_tx_label": "交易哈希：",
+    "aptos_no_key": "凭证已本地保存。添加 APTOS_PRIVATE_KEY 以进行链上记录。",
+    "aptos_note": "📌 链上只记录验证事实——没有个人数据，只有哈希",
+    "bond_title": "最后一步——担保",
+    "bond_subtitle": "3位经过验证的人类确认您",
+    "bond_desc": "这可以防范通过手势测试的机器人。担保人是来自 HSI 网络的真实人类，他们用自己的声誉担保。",
+    "bond_cta": "🤝 请求担保 →",
+    "bonding_title": "等待担保人...",
+    "bonding_subtitle": "Gonka BondMatcher 正在按网络声誉选择人员",
+    "bonding_vouched": "已担保",
+    "bonding_waiting": "...",
+    "bonding_progress": "共3位",
+    "complete_title": "验证完成！",
+    "complete_subtitle": "您是 HSI 网络的正式成员",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "Gonka AI",
+        "desc": "手势已验证"
+      },
+      {
+        "emoji": "🔑",
+        "title": "DID 已创建",
+        "desc": "在浏览器中"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "事实已记录"
+      }
+    ],
+    "stored_title": "浏览器中保存的内容",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "您的匿名标识符"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "私钥（只属于您）"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "验证确认"
+      }
+    ],
+    "cta_chat": "💬 安全聊天",
+    "cta_bond": "🤝 担保",
+    "failed_title": "未通过",
+    "failed_tip": "💡 提示：绘制时间更长（1–3秒），在点之间暂停——节奏不规律性是人类的信号",
+    "fallback_label": "（备用）",
+    "debug_title": "🔬 模式数据（调试）",
+    "error_backend": "后端不可用",
+    "footer_note": "🔒 坐标在浏览器中销毁 · 只有数学发送到网络 · 无生物特征"
+  },
+  "chat": {
+    "nav_label": "聊天",
+    "channels": "频道",
+    "room_tech_label": "技术",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "治理",
+    "room_gov_desc": "HSI 投票",
+    "room_phil_label": "哲学",
+    "room_phil_desc": "宣言 · 理念",
+    "verified_only": "仅已验证的人类可以发言",
+    "verify_link": "立即验证",
+    "placeholder": "在 #{{room}} 中发消息…",
+    "ai_moderator": "AI 版主",
+    "ai_active": "🛡️ 已启用",
+    "filter_spam": "垃圾过滤",
+    "filter_toxic": "毒性检测",
+    "filter_flood": "刷屏控制",
+    "filter_did": "DID 验证",
+    "rules": "规则",
+    "rule_respect": "尊重参与者",
+    "rule_humans": "仅限真实人类",
+    "rule_no_spam": "禁止垃圾或广告",
+    "rule_no_toxic": "禁止毒性或侮辱",
+    "rule_no_bots": "禁止机器人或自动化",
+    "welcome_msg": "🛡️ 欢迎来到 APTOGON Chat — 专为已验证人类设计的空间。",
+    "tech_welcome": "⚡ 技术讨论频道：Aptos、did:key、Gonka AI、WebSocket。",
+    "trust_levels": "信任等级",
+    "trust_trusted_desc": "7+ 次担保",
+    "trust_community_desc": "3–6 次担保",
+    "trust_newcomer_desc": "最多 3 次担保",
+    "privacy_title": "🔒 隐私",
+    "privacy_desc": "您的 DID 从不公开。仅显示哈希值的最后 8 个字符。",
+    "online_count": "位已验证在线",
+    "read_mode": "只读模式",
+    "read_mode_banner": "只读模式 — 需要验证才能参与",
+    "reaction": "反应",
+    "reply": "回复",
+    "room_agora_label": "Main",
+    "room_agora_desc": "公共频道",
+    "offline_demo": "演示模式 — 后端不可用。显示的消息仅为示例。",
+    "loading_msgs": "正在加载消息…",
+    "empty_room": "暂无消息",
+    "empty_room_hint": "来第一个发言吧！"
+  },
+  "lang_switcher": {
+    "label": "语言"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — P2P 担保",
+    "hero_subtitle": "经过验证的人相互担保。社会信任变得可以加密验证。",
+    "cta_verify_short": "✍️ 立即验证",
+    "cta_request": "🤝 申请担保 ↓",
+    "how_title": "担保如何运作",
+    "how_subtitle": "从新手到可信网络成员的三步骤",
+    "step1_title": "完成验证",
+    "step1_desc": "画一个手势 — Gonka AI 确认您是人类。获得 DID 和 trust_score 10%。",
+    "step2_title": "申请担保",
+    "step2_desc": "3 位已验证网络成员确认您。信任分数增至 50%。",
+    "step3_title": "成为担保人",
+    "step3_desc": "trust_score ≥ 50% 时，您可以为他人担保。帮助网络成长。",
+    "trust_algo_title": "信任分数算法",
+    "trust_algo_subtitle": "每次担保信任度增长",
+    "after_bonds": "{n} 次担保后",
+    "level_newcomer": "新手",
+    "level_community": "社区认可",
+    "level_trusted": "可信",
+    "risks_title": "⚠️ 担保人风险",
+    "risks_note": "只有 trust_score ≥ 50%（3+ bonds）的成员才能担保。这创造了只推荐真实人的经济激励。",
+    "penalty1": "在您担保的人中发现机器人",
+    "penalty2": "同一担保人的重复机器人",
+    "reward1": "新的成功担保",
+    "reward2": "您的被担保人自己达到了 100%",
+    "incoming_title": "🔔 收到的请求",
+    "incoming_subtitle": "有人请求您成为他们的担保人",
+    "vouch_btn": "✓ 担保",
+    "requester_role": "👤 申请人",
+    "you_guarantor": "🤝 您",
+    "ask_placeholder": "提问…",
+    "request_title": "申请担保",
+    "request_subtitle_1": "选择",
+    "request_subtitle_2": "10+ 名成员",
+    "request_subtitle_3": "— 需要获得其中 3 人同意",
+    "selected": " 已选择",
+    "send_requests": "🤝 发送请求",
+    "privacy_title": "🔒 匿名与隐私",
+    "privacy_body": "担保人只能看到匿名 DID 哈希和 AI 信任级别。姓名、邮件、IP — 不与任何人共享。",
+    "manifest_link": "📜 宣言",
+    "home_link": "← 首页",
+    "done_title": "担保已收到！",
+    "done_auto_msg": "✅ AI 信任度高 — 系统担保人自动批准",
+    "done_human_msg": "3 人为您担保",
+    "done_blockchain": "HumanCredential 已记录到 Aptos 区块链",
+    "done_chat": "💬 进入聊天",
+    "failed_title": "无法收集担保",
+    "failed_desc_1": "所有",
+    "failed_desc_2": "次发送尝试已用完。当前在线担保人较少。",
+    "failed_hint": "稍后再试，或在 Telegram 联系我们 — 我们将手动提供帮助。",
+    "retry_btn": "🔄 重试",
+    "waiting_sending": "正在发送请求…",
+    "waiting_ai": "✅ AI 正在确认…",
+    "waiting_title": "等待担保人",
+    "retry_label": "重新发送 #{n}",
+    "requests_sent": "请求已发送给 HSI 网络成员",
+    "vouched": "已担保",
+    "awaiting": "等待中",
+    "vouches_needed": "/3 次担保",
+    "ai_auto_approve": "Gonka AI：信任度 ≥ 95% — 自动批准",
+    "anon_chat": "💬 与担保人的匿名聊天",
+    "write_placeholder": "给担保人写信…",
+    "you_requester": "👤 您",
+    "days_ago": "{n} 天前",
+    "no_candidates_title": "暂无在线担保人",
+    "no_candidates_hint": "你的请求将自动发送给创始 Gold Members——无需任何操作。",
+    "cancel": "取消",
+    "days_short": "天",
+    "known_dids_title": "💌 认识我的人",
+    "known_dids_subtitle": "如果有 HSI 成员认识您本人，请输入他们的 DID — 他们将收到为您担保的直接邀请。",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "可选 · 最多 3 个 · 必须以 did:key:z6Mk 开头"
+  },
+  "governance": {
+    "home_link": "← 首页",
+    "subtitle": "1 位验证人类 = 1 票",
+    "create_btn": "+ 创建提案",
+    "new_proposal": "新提案",
+    "title_placeholder": "提案标题",
+    "desc_placeholder": "详细描述...",
+    "create": "创建",
+    "creating": "创建中...",
+    "cancel": "取消",
+    "vote_btn": "🗳 投票",
+    "vote_cancel": "取消",
+    "vote_yes": "✓ 赞成",
+    "vote_no": "✗ 反对",
+    "vote_abstain": "— 弃权",
+    "vote_veto": "⚡ 否决",
+    "yes_label": "✓ 赞成",
+    "no_label": "✗ 反对",
+    "veto_label": "⚡ 否决",
+    "total_label": "总计",
+    "supporters_of": "支持: {count}/100 开始投票",
+    "voting_status": "🗳 投票中 · {days}天",
+    "type_text": "文字",
+    "type_parameter": "参数",
+    "type_ai_model": "AI 模型",
+    "type_upgrade": "升级",
+    "type_constitution": "宪法",
+    "days_unit": "天"
+  }
+}

@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "הוכח שאתה אנושי — עם מחווה. ללא סיסמה, ללא אימייל, ללא מעקב."
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "פרויקט",
+    "community": "קהילה",
+    "copyright": "© 2025 Homo Sapience Internet · קוד פתוח · רישיון MIT",
+    "version": "v0.2.0 · Gonka AI · Aptos Testnet",
+    "links": {
+      "manifest": "מניפסט",
+      "developers": "מפתחים",
+      "donate": "תרומה",
+      "verify": "אימות"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · Gonka AI · did:key · Aptos Testnet",
+    "headline": "חומת האש האנושית לאינטרנט",
+    "subheadline": "הוכח שאתה אנושי — עם מחווה. ללא סיסמה, ללא אימייל, ללא מעקב.",
+    "cta_verify": "✍️ אמת עכשיו",
+    "cta_chat": "💬 צ'אט",
+    "tech_title": "טכנולוגיות",
+    "tech_subtitle": "לחץ על כרטיס לפרטים נוספים",
+    "how_title": "איך עובד האימות",
+    "how_subtitle": "4 שלבים · 10 שניות · אפס נתונים אישיים",
+    "step": "שלב",
+    "join_title": "הצטרף",
+    "join_subtitle": "אנחנו בונים תשתית ציבורית לאינטרנט אנושי",
+    "cards": {
+      "gesture": {
+        "title": "מחווה",
+        "subtitle": "ביטוי אנושי",
+        "modal_title": "מחווה כהוכחה",
+        "modal_body": "אתה מצייר קו בעכבר או באצבע. ה-AI מנתח לא את הצורה אלא את פרמטרי התנועה הביומטריים: שונות מהירות, עצירות, תיקונים, אי-סדירות קצב. בוטים זזים בצורה מושלמת — בני אדם לא."
+      },
+      "ai": {
+        "title": "Gonka AI",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "ניתוח דפוסים",
+        "modal_body": "Qwen3-14B (דרך OpenRouter) מקבל רק את וקטור המחווה הסטטיסטי — ללא קואורדינטות, ללא נתונים אישיים. מעריך 8 פרמטרים ומחזיר: is_human, confidence (0–1), reasoning. סף: 85%."
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "תקן W3C",
+        "modal_title": "מזהה מבוזר",
+        "modal_body": "זוג מפתחות Ed25519 נוצר בדפדפן. המפתח הציבורי מקודד כ-did:key בהתאם לתקן W3C. ללא שרתים, ללא הרשמה — המפתח חי רק ב-localStorage של הדפדפן שלך."
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "בלוקצ'יין",
+        "modal_title": "רשומה על-שרשרת",
+        "modal_body": "גיבוב SHA3-256 של ההוכחה (ExpressionProof) נכתב לחוזה חכם Move על Aptos. הגיבוב אינו מכיל נתונים אישיים — רק סטטיסטיקות מחווה, session_id ודלי זמן של שעה אחת. בלתי ניתן לשינוי ובר-אימות."
+      },
+      "privacy": {
+        "title": "פרטיות",
+        "subtitle": "אפס PII",
+        "modal_title": "אפס נתונים אישיים",
+        "modal_body": "קואורדינטות גולמיות מעובדות על המכשיר בלבד. רק הוקטור הסטטיסטי (8 מספרים) נשלח לשרת. רק הגיבוב עולה לשרשרת. לא נאסף או נשמר שם, אימייל או IP."
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "רשת אנושית",
+        "modal_title": "מערכת קשר אנושי",
+        "modal_body": "בני אדם מאומתים יכולים להמליץ זה על זה דרך HSI Bond. כל המלצה מחזקת את HumanCredential. בוטים לא יכולים לקבל המלצות מאנשים אמיתיים — זוהי שכבת הגנה נוספת."
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "צייר מחווה",
+        "desc": "קו או צורה על המסך — מהירות, עצירות, קצב"
+      },
+      "s02": {
+        "title": "Gonka AI מנתח",
+        "desc": "8 פרמטרים ביומטריים — בוטים זזים בצורה מושלמת"
+      },
+      "s03": {
+        "title": "DID נוצר",
+        "desc": "מפתח Ed25519 בדפדפן שלך — ללא שרתים"
+      },
+      "s04": {
+        "title": "נרשם ב-Aptos",
+        "desc": "גיבוב ExpressionProof — אנונימי וקבוע"
+      }
+    },
+    "manifest_card": {
+      "title": "מניפסט",
+      "body": "למה אנחנו בונים את HSI, איך זה ישנה את האינטרנט ומה יהיה מקומו של כל אדם בו.",
+      "cta": "קרא →"
+    },
+    "developers_card": {
+      "title": "מפתחים",
+      "body": "REST API, SDK, דוגמאות שילוב. הוסף אימות אנושי לאפליקציה שלך תוך שעה.",
+      "cta": "תיעוד →"
+    },
+    "donate_card": {
+      "title": "תמיכה",
+      "body": "פרויקט פתוח ללא מימון הון סיכון. עזור לנו לפתח תשתית ציבורית.",
+      "cta": "תרום →"
+    }
+  },
+  "manifest": {
+    "nav_label": "מניפסט",
+    "hero_label": "homosapience.org",
+    "hero_title": "מניפסט Homo Sapience",
+    "hero_subtitle": "האינטרנט נבנה על ידי אנשים — עבור אנשים. הגיע הזמן להגן על כך.",
+    "s1_title": "הבעיה",
+    "s1_p1": "עד 2025, רוב תעבורת האינטרנט אינה מופקת על ידי בני אדם. בוטים כותבים תגובות, מנפחים קולות, משאירים ביקורות, רושמים חשבונות, משתתפים בסקרים. המרחב הדיגיטלי איבד את תכונתו המרכזית — הוא חדל להיות אנושי.",
+    "s1_p2": "הבעיה עמוקה יותר ממה שנראה. הפתרונות הקיימים — CAPTCHA, אימות SMS, KYC — או שהם עוקפים בקלות, או שהם דורשים חשיפת זהות. אין שום תקן פתוח המאפשר הוכחת אנושיות באופן אנונימי.",
+    "s1_p3": "כל אחד יכול ליצור אלף חשבונות. כל בוט יכול לכתוב 'אני אנושי'. שום שירות כיום לא יכול לאמת טענה זו — ללא דרכון, ללא מעקב, ללא מסד נתונים מרכזי.",
+    "s2_title": "פתרון: HSI כפרוטוקול",
+    "s2_p1": "HSI (Homo Sapience Internet) אינו תחליף לאינטרנט. זהו פרוטוקול מעל IP, כמו HTTPS מעל HTTP. הוא מוסיף פרימיטיב חדש אחד: HumanCredential — הוכחה מאומתת קריפטוגרפית שאדם חי עומד מאחורי פעולה.",
+    "s2_p2": "האימות מבוסס על ביומטריית תנועה, לא על זהות. ה-AI מנתח את המחווה — לא קואורדינטות, לא צורה, אלא סטטיסטיקות: שונות מהירות, אנטרופיית הפסקות, מספר תיקונים, אי-סדירות קצב. זה מה שבוטים לא יכולים לחקות מספיק טוב.",
+    "s2_how_label": "כיצד זה עובד",
+    "s2_steps": [
+      "המשתמש מצייר מחווה → סטטיסטיקות מעובדות על המכשיר",
+      "וקטור מאפיינים אנונימי (ללא קואורדינטות) נשלח ל-SapiX ברשת Gonka",
+      "תוצאה: is_human + confidence — ללא נתונים אישיים",
+      "בהצלחה, Ed25519 DID נוצר בדפדפן",
+      "גיבוב SHA3-256 של ההוכחה נכתב ל-Aptos"
+    ],
+    "s3_title": "יישומים מעשיים",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "פורומים ופלטפורמות",
+        "desc": "SDK משתלב ב-2 שורות קוד. הספאם נעלם — לא כי הוא חסום, אלא כי אין מי שיכתוב אותו. דירוגים, קולות ולייקים שוב משקפים דעה אנושית אמיתית."
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAO והצבעות",
+        "desc": "אדם אחד, קול אחד. ללא התקפות Sybil, ללא זיוף קולות. אסימוני ממשל מוגנים לא רק בכמות, אלא גם בהוכחת אנושיות."
+      },
+      {
+        "icon": "💬",
+        "title": "צ'אטים ותגובות",
+        "desc": "תג Human מאומת מופיע עבור אנשים אמיתיים. איכות הדיון משתנה מיידית — לא דרך צנזורה, אלא דרך אמון במקור."
+      },
+      {
+        "icon": "🛒",
+        "title": "שווקים",
+        "desc": "ביקורות מושארות על ידי קונים אמיתיים, לא בוטים של מתחרים. דירוגים שוב פועלים כמדד איכות."
+      },
+      {
+        "icon": "🎓",
+        "title": "חינוך",
+        "desc": "הבחינה נעברה על ידי אדם, לא GPT. תעודה מקוונת הגיוניות כשיש הוכחה מי קיבל אותה."
+      },
+      {
+        "icon": "🤖",
+        "title": "סוכני AI",
+        "desc": "פרדוקס: HSI עוזר לסוכני AI לפעול נכון. סוכן יכול להוכיח שהוא פועל בשם אדם מאומת — עם אישורו המפורש."
+      }
+    ],
+    "s4_title": "מונטיזציה וקיימות",
+    "s4_p1": "HSI קיים כפרוטוקול פתוח עם מספר רמות. אימות לבני אדם הוא תמיד חינמי. זהו עיקרון: אדם לא צריך לשלם כדי להוכיח את אנושיותו.",
+    "tiers": [
+      {
+        "title": "חינמי",
+        "sub": "לבני אדם",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "לפלטפורמות",
+        "icon": "🔌"
+      },
+      {
+        "title": "Enterprise",
+        "sub": "SDK מקומי",
+        "icon": "🏢"
+      },
+      {
+        "title": "אסימון GNK",
+        "sub": "ממשל",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "פלטפורמות משלמות עבור אימות המשתמשים שלהן — בדיוק כמו שהן משלמות עכשיו עבור reCAPTCHA וזיהוי הונאות, אך ביושר, שקיפות ובלי שיתוף נתונים עם צדדים שלישיים.",
+    "s5_title": "גדילת הקהילה",
+    "s5_p1": "המאמצים הראשונים הם קהילות שכבר סובלות מבוטים. מפתחים ב-GitHub, סופרים ב-Reddit, חברי DAO ב-Web3, מנחי פורומים. עבורם, אימות הוא לא מחסום — אלא זכות יתר.",
+    "s5_p2": "תג Verified Human בפרופיל הוא סימן ההמלצה הכחול החדש שלא ניתן לקנות. לא ניתן לזייף אותו או להעביר אותו. הוא מוכיח לא פרסום — אלא קיום.",
+    "s5_p3": "הרשת גדלה דרך HSI Bond: בני אדם מאומתים ערֵבים זה לזה ומחזקים את האישורים שלהם. APTOGON Chat הוא הפריסה החיה הראשונה — מרחב אמת-זמן לבני אדם בלבד עם חדרים, הודעות פרטיות ושיתוף קבצים, נגיש עם ה-HumanCredential שלך.",
+    "quote": "\"האינטרנט לא שבור — הוא פשוט לא יודע מי אתה. APTOGON מתקן את זה.\"",
+    "cta_verify": "✍️ אמת",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ מפתחים",
+    "cta_home": "← בית"
+  },
+  "developers": {
+    "nav_label": "מפתחים",
+    "hero_title": "למפתחים",
+    "hero_subtitle": "Add human verification to your app with a drop-in snippet. Create a key in the console, embed the verifier, and confirm each session server-side with your secret key.",
+    "quickstart_title": "התחלה מהירה",
+    "quickstart_subtitle": "אינטגרציה מינימלית — 3 שלבים",
+    "step1_title": "הטמע GestureCanvas",
+    "step2_title": "שלח מחווה לאימות",
+    "step3_title": "השתמש ב-HumanCredential + גישה ל-Chat",
+    "api_title": "עיון API",
+    "ep1_desc": "אימות מחווה. מחזיר HumanCredential.",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "סטטוס אימות לפי DID.",
+    "ep2_params": "did (query)",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "ניסיונות אימות אחרונים (לניפוי שגיאות).",
+    "ep3_params": "last=20 (query)",
+    "ep3_returns": "attempts[] עם דפוס מחווה ותוצאת AI",
+    "ep4_desc": "צור DID ללא אימות (לבדיקות).",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "תכונות",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "אפס PII",
+        "desc": "קואורדינטות מחווה גולמיות לעולם לא עוזבות את הדפדפן. רק סטטיסטיקות הולכות לשרת."
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "תואם לתקן did:key. עובד עם כל מערכת זהות."
+      },
+      {
+        "icon": "⛓️",
+        "title": "הוכחה על-שרשרת",
+        "desc": "חוזה Move על Aptos. אימות ללא השרת שלנו — מבוזר לחלוטין."
+      },
+      {
+        "icon": "♿",
+        "title": "נגישות",
+        "desc": "מתחשב בלקויות מוטוריות. אנשים עם רעידות לעולם אינם חסומים."
+      },
+      {
+        "icon": "⚡",
+        "title": "מהיר",
+        "desc": "חציון 800ms. Gonka AI עם חלופה — עובד גם כשהשירות אינו זמין."
+      },
+      {
+        "icon": "📋",
+        "title": "אישור ניתן לאימות",
+        "desc": "פורמט W3C VC. חתום עם Ed25519. פג תוך 30 יום, מתחדש אוטומטית."
+      }
+    ],
+    "cta_title": "מוכן לאינטגרציה?",
+    "cta_subtitle": "Create a key in the console to get started. Contact us for higher quotas or enterprise integration.",
+    "cta_email": "📩 שלח לנו אימייל",
+    "cta_try": "🧪 נסה בשידור חי",
+    "cta_home": "← בית",
+    "ep_chat_msg_desc": "Fetch recent messages from a chat room (public rooms require no auth)",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "Upload a file to a room (max 10 MB). File is stored 5 days then auto-deleted.",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — real-time room stream. Connect and receive/send JSON messages.",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "יצירת בקשת ערבות — 3 חברי זהב יערבו עבור המשתמש החדש.",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "סקירת סטטוס בקשת ערבות. סקור כל 2–5 שניות עד status = approved.",
+    "ep_bond_st_params": "request_id (נתיב)",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "הערב מאשר את בקשת הערבות (נדרשת חתימת Ed25519).",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash (בהגעה לסף)"
+  },
+  "donate": {
+    "nav_label": "תרומה",
+    "hero_title": "תמוך בפרויקט",
+    "hero_subtitle": "APTOGON הוא פרויקט פתוח ללא מימון הון סיכון. אנחנו בונים תשתית ציבורית לאינטרנט אנושי.",
+    "funds_title": "לאן הולכים הכספים",
+    "funds": [
+      {
+        "icon": "🧠",
+        "title": "הסקה של Gonka AI",
+        "desc": "הסקה של SapiX על רשת Gonka — מחשוב AI ייעודי לניתוח ביומטריקת תנועות",
+        "pct": 45
+      },
+      {
+        "icon": "🖥️",
+        "title": "אירוח ותשתית",
+        "desc": "backend FastAPI, עסקאות Aptos, CDN לפרונטאנד",
+        "pct": 30
+      },
+      {
+        "icon": "👩‍💻",
+        "title": "פיתוח",
+        "desc": "SDK, תיעוד, תכונות אימות חדשות",
+        "pct": 25
+      }
+    ],
+    "tiers_title": "רמות תמיכה",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "קפה",
+        "desc": "~2,500 אימותים",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "תומך",
+        "desc": "~10,000 אימותים",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "שותף",
+        "desc": "שם במשתתפים + API בעדיפות",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "נותן חסות",
+        "desc": "לוגו באתר + תמיכה ישירה",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "תשלום מרוסיה",
+    "russia_desc": "העברה מהירה דרך Tinkoff Pay, SBP או כל כרטיס בנקאי רוסי",
+    "crypto_title": "מטבע קריפטוגרפי",
+    "crypto_eth_desc": "כתוב ל-hello@homosapience.org — נשלח את הכתובת",
+    "contact_title": "רוצה שותפות או אינטגרציה?",
+    "contact_desc": "נדון בתנאים, נספק גישה מוקדמת ל-API ונעזור לשלב אימות במוצר שלך",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← בית"
+  },
+  "verify": {
+    "nav_label": "אימות",
+    "hero_badge": "🛡️ Gonka AI · Aptos Testnet",
+    "hero_title": "הוכח שאתה",
+    "hero_human": "אנושי",
+    "hero_subtitle": "ללא דרכון · ללא מצלמה · ללא נתונים אישיים",
+    "steps_label": "כיצד עובד האימות",
+    "steps": [
+      {
+        "num": "1",
+        "title": "צייר סמל",
+        "desc": "כל דבר — אות, ספרה, עקומה. ה-AI מתבונן כיצד אתה מצייר, לא מה"
+      },
+      {
+        "num": "2",
+        "title": "Gonka AI",
+        "desc": "מנתח קצב, מהירות, הפסקות. בוטים זזים בצורה חלקה מדי — זה מבגיד בהם"
+      },
+      {
+        "num": "3",
+        "title": "ה-DID שלך",
+        "desc": "מפתח דיגיטלי נוצר בדפדפן שלך. המזהה האנונימי שלך — כמו דרכון אבל ללא שם"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "עובדת האימות נכתבת לבלוקצ'יין. לא נתונים — רק הוכחה קריפטוגרפית"
+      }
+    ],
+    "canvas_title": "צייר משהו",
+    "canvas_subtitle": "עם עכבר או אצבע — כל סמל",
+    "tags": [
+      "קצב",
+      "מהירות",
+      "הפסקות",
+      "לחץ",
+      "תיקונים"
+    ],
+    "analyzing_title": "Gonka AI מנתח...",
+    "analyzing_subtitle": "המודל לומד את דפוס המחווה שלך",
+    "analyzing_checks": [
+      "שונות מהירות",
+      "אנטרופיית הפסקות",
+      "מספר תיקונים",
+      "אי-סדירות קצב",
+      "יצירת ExpressionProof"
+    ],
+    "success_title": "אתה אנושי ✓",
+    "success_subtitle": "Gonka AI אישר את האימות",
+    "confidence_label": "ביטחון ה-AI",
+    "threshold_0": "0%",
+    "threshold_70": "סף 70%",
+    "threshold_85": "85%+ מצוין",
+    "threshold_100": "100%",
+    "did_title": "ה-ID הדיגיטלי שלך נוצר",
+    "did_subtitle": "W3C did:key — תקן בינלאומי",
+    "did_id_label": "מזהה (DID):",
+    "did_what_label": "מה זה?",
+    "did_what_value": "כמו דרכון אבל דיגיטלי ואנונימי לחלוטין",
+    "did_where_label": "היכן מאוחסן?",
+    "did_where_value": "רק בדפדפן שלך (localStorage). בשום מקום על שרתים",
+    "did_key_label": "מפתח פרטי",
+    "did_key_value": "שלך בלבד. אף אחד לא יכול להשתמש בו",
+    "did_gen_label": "נוצר",
+    "did_gen_value": "ישירות בדפדפן, תוך 1ms, ללא בקשת שרת",
+    "aptos_title": "רישום בבלוקצ'יין Aptos",
+    "aptos_onchain": "על-שרשרת ✓",
+    "aptos_local": "אחסון מקומי",
+    "aptos_tx_label": "גיבוב עסקה:",
+    "aptos_no_key": "Credential נשמר מקומית. הוסף APTOS_PRIVATE_KEY לרישום על-שרשרת.",
+    "aptos_note": "📌 רק עובדת האימות נרשמת על-שרשרת — ללא נתונים אישיים, רק גיבוב",
+    "bond_title": "שלב אחרון — ערבות",
+    "bond_subtitle": "3 בני אדם מאומתים מאשרים אותך",
+    "bond_desc": "זה מגן מפני בוטים שעברו את בחינת המחווה. הערבים הם אנשים אמיתיים מרשת HSI הערבים עם המוניטין שלהם.",
+    "bond_cta": "🤝 בקש ערבות →",
+    "bonding_title": "ממתין לערבים...",
+    "bonding_subtitle": "Gonka BondMatcher בוחר אנשים לפי מוניטין ברשת",
+    "bonding_vouched": "ניתנה ערבות",
+    "bonding_waiting": "...",
+    "bonding_progress": "מתוך 3",
+    "complete_title": "האימות הושלם!",
+    "complete_subtitle": "אתה חבר מן המניין ברשת HSI",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "Gonka AI",
+        "desc": "מחווה אומתה"
+      },
+      {
+        "emoji": "🔑",
+        "title": "DID נוצר",
+        "desc": "בדפדפן"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "עובדה נרשמה"
+      }
+    ],
+    "stored_title": "מה נשמר בדפדפן",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "המזהה האנונימי שלך"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "מפתח פרטי (שלך בלבד)"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "אישור אימות"
+      }
+    ],
+    "cta_chat": "💬 צ'אט מאובטח",
+    "cta_bond": "🤝 ערוב",
+    "failed_title": "לא עבר",
+    "failed_tip": "💡 טיפ: צייר זמן ארוך יותר (1–3 שניות), עצור בין נקודות — אי-סדירות קצב מסמנת אדם",
+    "fallback_label": "(חלופה)",
+    "debug_title": "🔬 נתוני דפוס (ניפוי שגיאות)",
+    "error_backend": "ה-backend אינו זמין",
+    "footer_note": "🔒 קואורדינטות מושמדות בדפדפן · רק מתמטיקה הולכת לרשת · ללא ביומטריה"
+  },
+  "chat": {
+    "nav_label": "צ'אט",
+    "channels": "ערוצים",
+    "room_tech_label": "טכנולוגיה",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "ממשל",
+    "room_gov_desc": "הצבעות HSI",
+    "room_phil_label": "פילוסופיה",
+    "room_phil_desc": "מניפסט · רעיונות",
+    "verified_only": "רק בני אדם מאומתים יכולים לכתוב",
+    "verify_link": "לאימות",
+    "placeholder": "הודעה ב-#{{room}}…",
+    "ai_moderator": "מנחה AI",
+    "ai_active": "🛡️ פעיל",
+    "filter_spam": "סינון ספאם",
+    "filter_toxic": "רעילות",
+    "filter_flood": "בקרת הצפה",
+    "filter_did": "אימות DID",
+    "rules": "כללים",
+    "rule_respect": "כבוד למשתתפים",
+    "rule_humans": "בני אדם אמיתיים בלבד",
+    "rule_no_spam": "אין ספאם או פרסומות",
+    "rule_no_toxic": "אין רעילות או עלבונות",
+    "rule_no_bots": "אין בוטים או אוטומציה",
+    "welcome_msg": "🛡️ ברוכים הבאים ל-APTOGON Chat — מרחב לבני אדם מאומתים בלבד.",
+    "tech_welcome": "⚡ ערוץ לדיונים טכניים: Aptos, did:key, Gonka AI, WebSocket.",
+    "trust_levels": "רמות אמון",
+    "trust_trusted_desc": "7+ המלצות",
+    "trust_community_desc": "3–6 המלצות",
+    "trust_newcomer_desc": "עד 3 המלצות",
+    "privacy_title": "🔒 פרטיות",
+    "privacy_desc": "ה-DID שלך לעולם אינו נחשף. מוצגים רק 8 התווים האחרונים של הגיבוב.",
+    "online_count": "מאומתים מחוברים",
+    "read_mode": "מצב קריאה בלבד",
+    "read_mode_banner": "מצב קריאה — נדרש אימות להשתתפות",
+    "reaction": "תגובה",
+    "reply": "השב",
+    "room_agora_label": "Main",
+    "room_agora_desc": "ערוץ כללי",
+    "offline_demo": "מצב הדגמה — השרת אינו זמין. ההודעות המוצגות הן דוגמאות בלבד.",
+    "loading_msgs": "טוען הודעות…",
+    "empty_room": "אין הודעות עדיין",
+    "empty_room_hint": "היה הראשון לכתוב!"
+  },
+  "lang_switcher": {
+    "label": "שפה"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — ערבות P2P",
+    "hero_subtitle": "בני אדם מאומתים ערבים אחד לשני. אמון חברתי הופך לניתן לאימות קריפטוגרפי.",
+    "cta_verify_short": "✍️ לאמת",
+    "cta_request": "🤝 לבקש ערבות ↓",
+    "how_title": "איך הערבות עובדת",
+    "how_subtitle": "שלושה צעדים מחדש לחבר רשת מהימן",
+    "step1_title": "לאמת",
+    "step1_desc": "צייר מחווה — Gonka AI מאשר שאתה אדם. אתה מקבל DID ו trust_score 10%.",
+    "step2_title": "לבקש ערבויות",
+    "step2_desc": "3 חברי רשת מאומתים מאשרים אותך. Trust score עולה ל-50%.",
+    "step3_title": "להיות ערב",
+    "step3_desc": "עם trust_score ≥ 50% אתה יכול לערוב לאחרים. עזור לרשת לגדול.",
+    "trust_algo_title": "אלגוריתם Trust Score",
+    "trust_algo_subtitle": "האמון גדל עם כל ערבות",
+    "after_bonds": "אחרי {n} ערבויות",
+    "level_newcomer": "חדש",
+    "level_community": "מוכר על ידי הקהילה",
+    "level_trusted": "מהימן",
+    "risks_title": "⚠️ סיכוני הערב",
+    "risks_note": "רק חברים עם trust_score ≥ 50% (3+ bonds) יכולים לערוב. זה יוצר תמריץ כלכלי להמליץ רק על אנשים אמיתיים.",
+    "penalty1": "בוט זוהה בין מי שערבת להם",
+    "penalty2": "בוט חוזר מאותו ערב",
+    "reward1": "ערבות מוצלחת חדשה",
+    "reward2": "החניך שלך הגיע ל-100% בעצמו",
+    "incoming_title": "🔔 בקשות נכנסות",
+    "incoming_subtitle": "אנשים מבקשים ממך להיות הערב שלהם",
+    "vouch_btn": "✓ לערוב",
+    "requester_role": "👤 מבקש",
+    "you_guarantor": "🤝 אתה",
+    "ask_placeholder": "לשאול שאלה…",
+    "request_title": "לבקש ערבות",
+    "request_subtitle_1": "בחר",
+    "request_subtitle_2": "10+ חברים",
+    "request_subtitle_3": "— צריך הסכמה של 3 מהם",
+    "selected": " נבחרו",
+    "send_requests": "🤝 שלח בקשות",
+    "privacy_title": "🔒 אנונימיות ופרטיות",
+    "privacy_body": "ערבים רואים רק האש DID אנונימי ורמת ביטחון AI. שם, אימייל, IP — לא משותף עם אף אחד.",
+    "manifest_link": "📜 מניפסט",
+    "home_link": "← בית",
+    "done_title": "קיבלת ערבות!",
+    "done_auto_msg": "✅ ביטחון AI גבוה — אושר אוטומטית על ידי ערבי מערכת",
+    "done_human_msg": "3 אנשים ערבו בשבילך",
+    "done_blockchain": "HumanCredential נרשם בבלוקצ'יין Aptos",
+    "done_chat": "💬 להיכנס לצ'אט",
+    "failed_title": "לא הצלחנו לאסוף ערבויות",
+    "failed_desc_1": "כל",
+    "failed_desc_2": "ניסיונות השליחה הסתיימו. מעט ערבים מחוברים כעת.",
+    "failed_hint": "נסה מאוחר יותר או צור קשר ב-Telegram — נעזור ידנית.",
+    "retry_btn": "🔄 לנסות שוב",
+    "waiting_sending": "שולח בקשות…",
+    "waiting_ai": "✅ AI מאשר…",
+    "waiting_title": "ממתין לערבים",
+    "retry_label": "שליחה חוזרת #{n}",
+    "requests_sent": "בקשות נשלחו לחברי רשת HSI",
+    "vouched": "ערב",
+    "awaiting": "ממתין",
+    "vouches_needed": "/3 ערבויות",
+    "ai_auto_approve": "Gonka AI: ביטחון ≥ 95% — אישור אוטומטי",
+    "anon_chat": "💬 צ'אט אנונימי עם ערבים",
+    "write_placeholder": "כתוב לערבים…",
+    "you_requester": "👤 אתה",
+    "days_ago": "לפני {n}ימים",
+    "no_candidates_title": "אין עדיין ערבים מחוברים",
+    "no_candidates_hint": "הבקשה שלך תישלח אוטומטית ל-Gold Members המייסדים — אין צורך לעשות דבר.",
+    "cancel": "ביטול",
+    "days_short": "ימ",
+    "known_dids_title": "💌 אנשים שמכירים אותי",
+    "known_dids_subtitle": "אם יש חברי HSI שמכירים אותך אישית, הזן את ה-DID שלהם — הם יקבלו הזמנה ישירה לערוב לך.",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "אופציונלי · עד 3 · חייב להתחיל ב-did:key:z6Mk"
+  },
+  "governance": {
+    "home_link": "← בית",
+    "subtitle": "1 אדם מאומת = 1 קול",
+    "create_btn": "+ צור הצעה",
+    "new_proposal": "הצעה חדשה",
+    "title_placeholder": "כותרת ההצעה",
+    "desc_placeholder": "תיאור מפורט...",
+    "create": "צור",
+    "creating": "יוצר...",
+    "cancel": "ביטול",
+    "vote_btn": "🗳 הצבע",
+    "vote_cancel": "ביטול",
+    "vote_yes": "✓ כן",
+    "vote_no": "✗ לא",
+    "vote_abstain": "— נמנע",
+    "vote_veto": "⚡ וטו",
+    "yes_label": "✓ כן",
+    "no_label": "✗ לא",
+    "veto_label": "⚡ וטו",
+    "total_label": "סה\"כ",
+    "supporters_of": "תומכים: {count}/100 להתחלת הצבעה",
+    "voting_status": "🗳 הצבעה · {days}ימ",
+    "type_text": "טקסט",
+    "type_parameter": "פרמטרים",
+    "type_ai_model": "מודל AI",
+    "type_upgrade": "עדכון",
+    "type_constitution": "חוקה",
+    "days_unit": "ימ"
+  }
+}

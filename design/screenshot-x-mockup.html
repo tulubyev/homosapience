@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 800px; overflow: hidden;
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    background: #000;
+    color: #e7e9ea;
+    display: flex;
+  }
+
+  /* Left sidebar */
+  .sidebar {
+    width: 275px; flex-shrink: 0;
+    padding: 8px 12px;
+    border-right: 1px solid #2f3336;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .x-logo { padding: 12px 16px; margin-bottom: 4px; }
+  .x-logo svg { width: 30px; height: 30px; fill: #e7e9ea; }
+  .nav-item {
+    display: flex; align-items: center; gap: 20px;
+    padding: 12px 16px; border-radius: 99px;
+    font-size: 20px; color: #e7e9ea; cursor: pointer;
+  }
+  .nav-item:hover { background: rgba(255,255,255,0.08); }
+  .nav-item .label { font-size: 20px; font-weight: 400; }
+  .nav-item.active .label { font-weight: 700; }
+  .nav-icon { width: 26px; text-align: center; font-size: 22px; }
+  .post-btn {
+    margin: 16px 12px 0;
+    background: #1d9bf0;
+    color: white; font-size: 17px; font-weight: 700;
+    padding: 16px; border-radius: 99px; text-align: center;
+  }
+  .sidebar-user {
+    margin-top: auto; display: flex; align-items: center; gap: 12px;
+    padding: 12px 16px; border-radius: 99px;
+  }
+  .sidebar-user:hover { background: rgba(255,255,255,0.08); }
+  .sidebar-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 800; color: white; flex-shrink: 0;
+  }
+  .sidebar-name { font-weight: 700; font-size: 15px; }
+  .sidebar-handle { color: #71767b; font-size: 15px; }
+
+  /* Main feed */
+  .feed {
+    flex: 1; overflow: hidden;
+    border-right: 1px solid #2f3336;
+  }
+  .feed-header {
+    padding: 16px 20px;
+    font-size: 20px; font-weight: 700;
+    border-bottom: 1px solid #2f3336;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.85);
+  }
+  .feed-tabs {
+    display: flex; border-bottom: 1px solid #2f3336;
+  }
+  .tab {
+    flex: 1; text-align: center; padding: 16px;
+    font-size: 15px; color: #71767b; cursor: pointer;
+  }
+  .tab.active {
+    color: #e7e9ea; font-weight: 700;
+    border-bottom: 2px solid #1d9bf0;
+  }
+
+  /* Tweet */
+  .tweet {
+    display: flex; gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #2f3336;
+    cursor: pointer;
+  }
+  .tweet:hover { background: rgba(255,255,255,0.03); }
+  .avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    flex-shrink: 0; overflow: hidden;
+    background: #2f3336;
+  }
+  .avatar.gradient { background: linear-gradient(135deg, #7c3aed, #06b6d4); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; }
+  .avatar.green { background: linear-gradient(135deg, #059669, #10b981); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; }
+  .avatar.orange { background: linear-gradient(135deg, #d97706, #f59e0b); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; }
+  .tweet-body { flex: 1; }
+  .tweet-header { display: flex; align-items: center; gap: 4px; margin-bottom: 2px; flex-wrap: wrap; }
+  .tweet-name { font-weight: 700; font-size: 15px; color: #e7e9ea; }
+
+  /* THE BADGE */
+  .human-badge {
+    display: inline-flex; align-items: center; gap: 3px;
+    margin-left: 4px;
+    padding: 1px 7px;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    border-radius: 20px;
+    font-size: 10px; font-weight: 700; color: white;
+    vertical-align: middle;
+    box-shadow: 0 1px 6px rgba(124,58,237,0.5);
+    white-space: nowrap;
+    position: relative; top: -1px;
+  }
+
+  .tweet-handle { color: #71767b; font-size: 15px; }
+  .tweet-time { color: #71767b; font-size: 15px; }
+  .tweet-sep { color: #71767b; font-size: 15px; }
+  .tweet-text { font-size: 15px; line-height: 1.5; color: #e7e9ea; margin-bottom: 12px; }
+  .tweet-text a { color: #1d9bf0; text-decoration: none; }
+  .tweet-actions {
+    display: flex; gap: 32px; max-width: 425px;
+  }
+  .action { display: flex; align-items: center; gap: 8px; color: #71767b; font-size: 13px; }
+  .action:hover { color: #1d9bf0; }
+
+  /* Right panel */
+  .right-panel {
+    width: 350px; flex-shrink: 0;
+    padding: 12px 16px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .search-box {
+    background: #202327; border-radius: 99px;
+    padding: 10px 16px; display: flex; align-items: center; gap: 12px;
+    color: #71767b; font-size: 15px;
+  }
+  .trends-box {
+    background: #16181c; border-radius: 16px; padding: 16px;
+  }
+  .trends-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+  .trend { padding: 10px 0; border-bottom: 1px solid #2f3336; }
+  .trend:last-child { border-bottom: none; }
+  .trend-cat { font-size: 13px; color: #71767b; }
+  .trend-name { font-size: 15px; font-weight: 700; }
+  .trend-count { font-size: 13px; color: #71767b; }
+</style>
+</head>
+<body>
+
+<!-- Left Sidebar -->
+<div class="sidebar">
+  <div class="x-logo">
+    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </div>
+  <div class="nav-item active"><span class="nav-icon">🏠</span><span class="label">Home</span></div>
+  <div class="nav-item"><span class="nav-icon">🔍</span><span class="label">Explore</span></div>
+  <div class="nav-item"><span class="nav-icon">🔔</span><span class="label">Notifications</span></div>
+  <div class="nav-item"><span class="nav-icon">✉️</span><span class="label">Messages</span></div>
+  <div class="nav-item"><span class="nav-icon">👤</span><span class="label">Profile</span></div>
+  <div class="post-btn">Post</div>
+  <div class="sidebar-user">
+    <div class="sidebar-avatar">A</div>
+    <div>
+      <div class="sidebar-name">Alex Verified</div>
+      <div class="sidebar-handle">@alex_verified</div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Feed -->
+<div class="feed">
+  <div class="feed-header">Home</div>
+  <div class="feed-tabs">
+    <div class="tab active">For you</div>
+    <div class="tab">Following</div>
+  </div>
+
+  <!-- Tweet 1 — the hero tweet with badge -->
+  <div class="tweet">
+    <div class="avatar gradient">A</div>
+    <div class="tweet-body">
+      <div class="tweet-header">
+        <span class="tweet-name">Alex Verified</span>
+        <span class="human-badge">✦ Human</span>
+        <span class="tweet-handle">@alex_verified</span>
+        <span class="tweet-sep">·</span>
+        <span class="tweet-time">2h</span>
+      </div>
+      <div class="tweet-text">
+        Just set up APTOGON Verified Human extension — now my ✦ Human badge shows everywhere I post. 10 seconds to verify with a gesture, no email, no documents, backed by Aptos blockchain. This is how identity should work in 2026 🛡️<br><br>
+        <a href="#">homosapience.org/verify</a>
+      </div>
+      <div class="tweet-actions">
+        <div class="action">💬 <span>48</span></div>
+        <div class="action">🔁 <span>127</span></div>
+        <div class="action">❤️ <span>891</span></div>
+        <div class="action">📊 <span>24K</span></div>
+        <div class="action">↗</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tweet 2 -->
+  <div class="tweet">
+    <div class="avatar green">M</div>
+    <div class="tweet-body">
+      <div class="tweet-header">
+        <span class="tweet-name">Maya Chen</span>
+        <span class="tweet-handle">@mayachen_dev</span>
+        <span class="tweet-sep">·</span>
+        <span class="tweet-time">5h</span>
+      </div>
+      <div class="tweet-text">
+        The bot problem on here is insane. Replying to a post and you literally can't tell who's real anymore. We need proof-of-humanity at the protocol level, not just blue checkmarks.
+      </div>
+      <div class="tweet-actions">
+        <div class="action">💬 <span>203</span></div>
+        <div class="action">🔁 <span>441</span></div>
+        <div class="action">❤️ <span>2.1K</span></div>
+        <div class="action">📊 <span>89K</span></div>
+        <div class="action">↗</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tweet 3 -->
+  <div class="tweet">
+    <div class="avatar orange">D</div>
+    <div class="tweet-body">
+      <div class="tweet-header">
+        <span class="tweet-name">Dan Crypto</span>
+        <span class="tweet-handle">@dancrypto</span>
+        <span class="tweet-sep">·</span>
+        <span class="tweet-time">8h</span>
+      </div>
+      <div class="tweet-text">
+        Worldcoin requires an iris scan and stores your biometrics. Hard pass. There have to be better ways to prove you're human without handing over your eyeballs to a corporation.
+      </div>
+      <div class="tweet-actions">
+        <div class="action">💬 <span>89</span></div>
+        <div class="action">🔁 <span>318</span></div>
+        <div class="action">❤️ <span>1.4K</span></div>
+        <div class="action">📊 <span>52K</span></div>
+        <div class="action">↗</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Right Panel -->
+<div class="right-panel">
+  <div class="search-box">🔍 Search</div>
+  <div class="trends-box">
+    <div class="trends-title">Trends for you</div>
+    <div class="trend">
+      <div class="trend-cat">Technology · Trending</div>
+      <div class="trend-name">#ProofOfHumanity</div>
+      <div class="trend-count">14.2K posts</div>
+    </div>
+    <div class="trend">
+      <div class="trend-cat">Crypto · Trending</div>
+      <div class="trend-name">#Aptos</div>
+      <div class="trend-count">8.9K posts</div>
+    </div>
+    <div class="trend">
+      <div class="trend-cat">Technology</div>
+      <div class="trend-name">Bot Detection</div>
+      <div class="trend-count">5.1K posts</div>
+    </div>
+    <div class="trend">
+      <div class="trend-cat">Web3 · Trending</div>
+      <div class="trend-name">#DecentralizedID</div>
+      <div class="trend-count">3.4K posts</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

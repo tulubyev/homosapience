@@ -1,0 +1,100 @@
+<!-- Badge v5: Full concept sheet — all variants + sizes + states -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400"
+     style="background:#f8fafc; font-family: Inter, system-ui, sans-serif;">
+
+  <!-- Title -->
+  <text x="300" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">APTOGON — Verified Human Badge · Concept Sheet</text>
+
+  <!-- ── ROW 1: Large badges (120px) ── -->
+
+  <!-- V1: Verified (Green) -->
+  <g transform="translate(30, 50)">
+    <circle cx="60" cy="60" r="57" fill="#f0fdf4" stroke="#16a34a" stroke-width="4"/>
+    <circle cx="57" cy="40" r="16" fill="#16a34a"/>
+    <path d="M 15 118 Q 10 72 57 72 Q 110 72 105 118 Z" fill="#16a34a" clip-path="url(#rc1)"/>
+    <clipPath id="rc1"><circle cx="60" cy="60" r="55"/></clipPath>
+    <circle cx="88" cy="88" r="20" fill="#16a34a" stroke="#fff" stroke-width="3"/>
+    <polyline points="80,88 87,96 99,78" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="60" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#16a34a">✓ Verified</text>
+    <text x="60" y="155" text-anchor="middle" font-size="9" fill="#86efac">green fill</text>
+  </g>
+
+  <!-- V2: Not Verified (strikethrough grey) -->
+  <g transform="translate(175, 50)">
+    <circle cx="60" cy="60" r="57" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="4"/>
+    <circle cx="57" cy="40" r="16" fill="#94a3b8"/>
+    <path d="M 15 118 Q 10 72 57 72 Q 110 72 105 118 Z" fill="#94a3b8" clip-path="url(#rc2)"/>
+    <clipPath id="rc2"><circle cx="60" cy="60" r="55"/></clipPath>
+    <!-- Red diagonal line -->
+    <line x1="14" y1="14" x2="106" y2="106" stroke="#ef4444" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+    <text x="60" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#64748b">Not Verified</text>
+    <text x="60" y="155" text-anchor="middle" font-size="9" fill="#94a3b8">grey + red slash</text>
+  </g>
+
+  <!-- V3: Suspicious/Bot (red fill) -->
+  <g transform="translate(320, 50)">
+    <circle cx="60" cy="60" r="57" fill="#fff1f2" stroke="#ef4444" stroke-width="4"/>
+    <circle cx="57" cy="40" r="16" fill="#ef4444"/>
+    <path d="M 15 118 Q 10 72 57 72 Q 110 72 105 118 Z" fill="#ef4444" clip-path="url(#rc3)"/>
+    <clipPath id="rc3"><circle cx="60" cy="60" r="55"/></clipPath>
+    <circle cx="88" cy="88" r="20" fill="#ef4444" stroke="#fff" stroke-width="3"/>
+    <line x1="80" y1="80" x2="96" y2="96" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="96" y1="80" x2="80" y2="96" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <text x="60" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#ef4444">⚠ Bot/Revoked</text>
+    <text x="60" y="155" text-anchor="middle" font-size="9" fill="#fca5a5">red fill + X</text>
+  </g>
+
+  <!-- V4: Pending (purple) -->
+  <g transform="translate(465, 50)">
+    <circle cx="60" cy="60" r="57" fill="#faf5ff" stroke="#7c3aed" stroke-width="4" stroke-dasharray="8 4"/>
+    <circle cx="57" cy="40" r="16" fill="#7c3aed"/>
+    <path d="M 15 118 Q 10 72 57 72 Q 110 72 105 118 Z" fill="#7c3aed" clip-path="url(#rc4)"/>
+    <clipPath id="rc4"><circle cx="60" cy="60" r="55"/></clipPath>
+    <circle cx="88" cy="88" r="20" fill="#7c3aed" stroke="#fff" stroke-width="3"/>
+    <text x="88" y="95" text-anchor="middle" font-size="18" fill="#fff" font-weight="900">?</text>
+    <text x="60" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">⏳ Pending</text>
+    <text x="60" y="155" text-anchor="middle" font-size="9" fill="#c4b5fd">purple dashed</text>
+  </g>
+
+  <!-- ── ROW 2: Small sizes 32px ── -->
+  <text x="30" y="205" font-size="11" fill="#64748b" font-weight="700">32×32 (browser ext / favicon)</text>
+
+  <!-- 32px verified -->
+  <g transform="translate(30, 215)">
+    <circle cx="16" cy="16" r="15" fill="#16a34a"/>
+    <circle cx="15" cy="10" r="5" fill="white"/>
+    <path d="M 4 32 Q 3 20 15 20 Q 29 20 28 32 Z" fill="white" clip-path="url(#s1)"/>
+    <clipPath id="s1"><circle cx="16" cy="16" r="14"/></clipPath>
+    <circle cx="25" cy="25" r="7" fill="#fff" />
+    <polyline points="22,25 25,28 30,21" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 32px not verified -->
+  <g transform="translate(80, 215)">
+    <circle cx="16" cy="16" r="15" fill="#94a3b8"/>
+    <circle cx="15" cy="10" r="5" fill="white"/>
+    <path d="M 4 32 Q 3 20 15 20 Q 29 20 28 32 Z" fill="white" clip-path="url(#s2)"/>
+    <clipPath id="s2"><circle cx="16" cy="16" r="14"/></clipPath>
+    <line x1="3" y1="3" x2="29" y2="29" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- 32px bot -->
+  <g transform="translate(130, 215)">
+    <circle cx="16" cy="16" r="15" fill="#ef4444"/>
+    <circle cx="15" cy="10" r="5" fill="white"/>
+    <path d="M 4 32 Q 3 20 15 20 Q 29 20 28 32 Z" fill="white" clip-path="url(#s3)"/>
+    <clipPath id="s3"><circle cx="16" cy="16" r="14"/></clipPath>
+    <circle cx="25" cy="25" r="7" fill="#fff"/>
+    <line x1="22" y1="22" x2="28" y2="28" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+    <line x1="28" y1="22" x2="22" y2="28" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ── Notes ── -->
+  <text x="30" y="290" font-size="11" font-weight="700" fill="#475569">Design notes:</text>
+  <text x="30" y="308" font-size="10" fill="#64748b">• Profile silhouette = universally recognizable as "human", not a generic checkmark</text>
+  <text x="30" y="323" font-size="10" fill="#64748b">• Green = verified human    Grey+slash = unknown/not verified    Red = bot/revoked    Purple dashed = pending</text>
+  <text x="30" y="338" font-size="10" fill="#64748b">• Badge (✓/✗/?) in bottom-right corner follows Material Design convention for status overlays</text>
+  <text x="30" y="353" font-size="10" fill="#64748b">• All variants work at 16px, 32px, 64px, 128px — test before finalizing</text>
+  <text x="30" y="368" font-size="10" fill="#64748b">• Prefer V3 (minimal circle) for favicon/extension; V4 (profile right) for feature images</text>
+  <text x="30" y="383" font-size="10" fill="#7c3aed" font-weight="600">• Next step: Pick preferred concept → refine in Figma → export as SVG+PNG set</text>
+</svg>

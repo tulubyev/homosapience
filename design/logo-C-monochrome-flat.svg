@@ -1,0 +1,21 @@
+<!-- Logo variant C — Monochrome flat silhouette
+     Strategy: no background circle, no separate check. Pure silhouette + check folded
+     into a single solid shape (left side = head/body, right side = check tail).
+     Most scalable, most "brand-mark"-like. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="APTOGON verified human">
+  <!-- Head -->
+  <circle cx="36" cy="30" r="14" fill="#16a34a"/>
+
+  <!-- Body + check tail: body curve flows into check arm on the right -->
+  <path d="M 14 86
+           Q 14 52 36 52
+           Q 58 52 58 70
+           L 66 78
+           L 90 46
+           L 84 42
+           L 64 68
+           L 60 66
+           Q 60 72 56 76
+           Q 50 86 36 86 Z"
+        fill="#16a34a"/>
+</svg>

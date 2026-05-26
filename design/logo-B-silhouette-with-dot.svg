@@ -1,0 +1,21 @@
+<!-- Logo variant B — Silhouette with single check-dot
+     Strategy: keep badge-v1's profile + body, but replace the complex check sub-badge
+     with a single solid dot. Less detail = scales better. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="APTOGON verified human">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+
+  <!-- Head -->
+  <circle cx="44" cy="34" r="11" fill="#16a34a"/>
+
+  <!-- Shoulders/body — same profile as badge-v1 but tighter -->
+  <path d="M 22 80
+           Q 22 52 44 52
+           Q 66 52 66 80 Z" fill="#16a34a"/>
+
+  <!-- Single solid check-dot (sybmolic verification mark) — tiny inner check -->
+  <circle cx="74" cy="72" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="3"/>
+  <polyline points="67,72 73,78 81,66"
+            fill="none" stroke="#ffffff" stroke-width="3.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

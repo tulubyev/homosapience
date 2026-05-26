@@ -1,0 +1,28 @@
+<!-- Badge v3: Minimal circle badge — clean, scales well for 16px–256px -->
+<!-- Concept: geometric human head+shoulders in profile, single color fill -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bg-verified" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="bg-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- === Variant A: Purple (brand color) === -->
+  <g transform="translate(0, 0)">
+    <circle cx="50" cy="50" r="48" fill="url(#bg-purple)"/>
+    <!-- Head (circle, upper center) -->
+    <circle cx="50" cy="33" r="13" fill="white" opacity="0.95"/>
+    <!-- Shoulders arc -->
+    <path d="M 12 85 Q 12 58 50 58 Q 88 58 88 85 Z" fill="white" opacity="0.95"
+          clip-path="url(#clip-a)"/>
+    <clipPath id="clip-a"><circle cx="50" cy="50" r="46"/></clipPath>
+    <!-- Small checkmark dot bottom right -->
+    <circle cx="74" cy="74" r="13" fill="#22c55e" stroke="white" stroke-width="2"/>
+    <polyline points="68,74 73,79 81,67" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

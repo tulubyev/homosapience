@@ -1,0 +1,45 @@
+<!-- Badge v4: Human silhouette in RIGHT profile (facing right) — classic "verified human" look -->
+<!-- Clean geometric, works as badge/avatar/icon -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="clip-circle">
+      <circle cx="100" cy="100" r="95"/>
+    </clipPath>
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="100" cy="100" r="98" fill="url(#bg-grad)" stroke="#16a34a" stroke-width="4"/>
+
+  <!-- Human profile silhouette (right-facing) -->
+  <g clip-path="url(#clip-circle)" fill="url(#green-grad)">
+    <!-- Head: ellipse for profile look -->
+    <ellipse cx="92" cy="58" rx="26" ry="28"/>
+    <!-- Chin/jaw extension forward -->
+    <ellipse cx="105" cy="74" rx="14" ry="10"/>
+    <!-- Neck -->
+    <rect x="80" y="80" width="20" height="18" rx="4"/>
+    <!-- Shoulders + chest -->
+    <path d="M 20 200 Q 15 140 70 125 Q 100 118 100 118 Q 100 118 130 125 Q 185 140 180 200 Z"/>
+    <!-- Nose (small protrusion to right) -->
+    <ellipse cx="118" cy="62" rx="7" ry="5" transform="rotate(-15, 118, 62)"/>
+    <!-- Forehead slope -->
+    <path d="M 75 42 Q 82 28 100 32 Q 115 35 116 50 Q 110 40 95 38 Q 82 38 80 48 Z"/>
+  </g>
+
+  <!-- Verification badge — bottom right -->
+  <circle cx="152" cy="152" r="34" fill="#16a34a" stroke="white" stroke-width="5"/>
+  <polyline points="140,152 149,162 165,141"
+            fill="none" stroke="white" stroke-width="6"
+            stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- "VERIFIED" text arc (optional — remove for pure icon) -->
+  <path id="arc-text" d="M 18,100 A 82,82 0 0,1 182,100" fill="none"/>
+</svg>
