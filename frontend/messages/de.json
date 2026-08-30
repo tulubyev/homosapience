@@ -1,0 +1,1731 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "Beweise, dass du ein Mensch bist — mit einer Geste. Kein Passwort, keine E-Mail, kein Tracking."
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "Projekt",
+    "community": "Community",
+    "copyright": "© 2025 Homo Sapience Internet · Open Source · MIT License",
+    "version": "v0.2.0 · SapiX · Aptos Testnet",
+    "links": {
+      "manifest": "Manifest",
+      "developers": "Entwickler",
+      "donate": "Spenden",
+      "verify": "Verifizieren"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · SapiX · did:key · Aptos Testnet",
+    "headline": "Menschliche Firewall für das Internet",
+    "subheadline": "Beweise, dass du ein Mensch bist — mit einer Geste. Kein Passwort, keine E-Mail, kein Tracking.",
+    "cta_verify": "✍️ Jetzt verifizieren",
+    "cta_chat": "💬 Chat",
+    "tech_title": "Technologien",
+    "tech_subtitle": "Klicke auf eine Karte für mehr Details",
+    "how_title": "Wie die Verifizierung funktioniert",
+    "how_subtitle": "4 Schritte · 10 Sekunden · null persönliche Daten",
+    "step": "Schritt",
+    "join_title": "Mitmachen",
+    "join_subtitle": "Wir bauen öffentliche Infrastruktur für ein menschliches Internet",
+    "cards": {
+      "gesture": {
+        "title": "Geste",
+        "subtitle": "Menschlicher Ausdruck",
+        "modal_title": "Geste als Beweis",
+        "modal_body": "Du zeichnest eine Linie mit der Maus oder dem Finger. Die KI analysiert nicht die Form, sondern biometrische Bewegungsparameter: Geschwindigkeitsvariabilität, Pausen, Korrekturen, Rhythmusunregelmäßigkeit. Bots bewegen sich perfekt — Menschen nicht."
+      },
+      "ai": {
+        "title": "SapiX",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "Musteranalyse",
+        "modal_body": "Qwen3-14B (über OpenRouter) erhält nur den statistischen Gestenvektor — keine Koordinaten, keine persönlichen Daten. Bewertet 8 Parameter und gibt zurück: is_human, confidence (0–1), reasoning. Schwellenwert: 85%."
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "W3C-Standard",
+        "modal_title": "Dezentraler Bezeichner",
+        "modal_body": "Im Browser wird ein Ed25519-Schlüsselpaar generiert. Der öffentliche Schlüssel wird gemäß W3C-Standard als did:key kodiert. Keine Server, keine Registrierung — der Schlüssel lebt nur im localStorage deines Browsers."
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "Blockchain",
+        "modal_title": "On-Chain-Eintrag",
+        "modal_body": "Der SHA3-256-Hash des Beweises (ExpressionProof) wird in einen Move-Smart-Contract auf Aptos geschrieben. Der Hash enthält keine persönlichen Daten — nur Gestenstatistiken, session_id und einen 1-Stunden-Zeitraum. Unveränderlich und verifizierbar."
+      },
+      "privacy": {
+        "title": "Datenschutz",
+        "subtitle": "Null PII",
+        "modal_title": "Null persönliche Daten",
+        "modal_body": "Rohe Koordinaten werden nur auf dem Gerät verarbeitet. Nur der statistische Vektor (8 Zahlen) wird an den Server gesendet. Nur der Hash geht on-chain. Kein Name, keine E-Mail und keine IP wird erfasst oder gespeichert."
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "Menschliches Netzwerk",
+        "modal_title": "Menschliches Bürgschaftssystem",
+        "modal_body": "Verifizierte Menschen können sich gegenseitig über HSI Bond verbürgen. Jede Bürgschaft stärkt das HumanCredential. Bots können keine Bürgschaft von echten Menschen erhalten — das ist eine zusätzliche Schutzschicht."
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "Zeichne eine Geste",
+        "desc": "Eine Linie oder Form auf dem Bildschirm — Geschwindigkeit, Pausen, Rhythmus"
+      },
+      "s02": {
+        "title": "SapiX analysiert",
+        "desc": "8 biometrische Parameter — Bots bewegen sich perfekt"
+      },
+      "s03": {
+        "title": "DID generiert",
+        "desc": "Ed25519-Schlüssel in deinem Browser — keine Server"
+      },
+      "s04": {
+        "title": "Auf Aptos gespeichert",
+        "desc": "ExpressionProof-Hash — anonym und dauerhaft"
+      }
+    },
+    "manifest_card": {
+      "title": "Manifest",
+      "body": "Warum wir HSI bauen, wie es das Internet verändern wird und welchen Platz jeder Mensch darin haben wird.",
+      "cta": "Lesen →"
+    },
+    "developers_card": {
+      "title": "Entwickler",
+      "body": "REST API, SDK, Integrationsbeispiele. Füge menschliche Verifizierung in einer Stunde zu deiner App hinzu.",
+      "cta": "Dokumentation →"
+    },
+    "donate_card": {
+      "title": "Unterstützung",
+      "body": "Ein offenes Projekt ohne Risikokapital. Hilf uns, öffentliche Infrastruktur aufzubauen.",
+      "cta": "Spenden →"
+    },
+    "hero_tagline_1": "Das Internet hat ein Bot-Problem.",
+    "hero_tagline_2": "APTOGON löst es.",
+    "badge_states": {
+      "verified": "Mensch bestätigt",
+      "unverified": "Nicht bestätigt",
+      "pending": "Ausstehend",
+      "revoked": "Bot / widerrufen"
+    },
+    "stats": [
+      {
+        "n": "40%",
+        "l": "des Traffics sind Bots",
+        "src": "Imperva"
+      },
+      {
+        "n": "$600B+",
+        "l": "jährlicher Betrugsschaden",
+        "src": "Cybersecurity Ventures"
+      },
+      {
+        "n": "~10 Sek.",
+        "l": "um einen Menschen zu prüfen",
+        "src": "APTOGON-Design"
+      },
+      {
+        "n": "$0",
+        "l": "Biometrie gespeichert",
+        "src": "APTOGON-Design"
+      }
+    ],
+    "verticals": {
+      "title": "Wer APTOGON nutzt",
+      "subtitle": "Ein Protokoll, vier Bereiche — überall dieselbe Zusage: keine personenbezogenen Daten.",
+      "cta": "Lösung ansehen",
+      "items": [
+        {
+          "title": "Marktforschung",
+          "desc": "Keine doppelten Teilnehmer mehr. Eine DID, eine Antwort. Der On-Chain-Nachweis macht die Daten prüfbar."
+        },
+        {
+          "title": "Communities",
+          "desc": "Stoppt Bann-Umgehung und manipulierte Abstimmungen. Deine Community bleibt menschlich — ohne Überwachung."
+        },
+        {
+          "title": "KI-Datenannotation",
+          "desc": "Ein Mensch, ein Annotator. Schützt Trainingsdaten vor Sybil-Vergiftung."
+        },
+        {
+          "title": "Web3 und DAOs",
+          "desc": "Ein Mensch, eine Stimme, on-chain. Der einzige Anbieter mit einem echten HumanCredential auf Aptos."
+        }
+      ]
+    },
+    "why": {
+      "title": "Warum APTOGON überzeugt",
+      "subtitle": "Keine Biometrie. Keine Ausweise. Open Source. Nachweis on-chain.",
+      "rows": [
+        "Keine Biometrie",
+        "Nachweis on-chain",
+        "Open Source",
+        "Preis pro Prüfung"
+      ],
+      "footnote": "* Worldcoin verlangt einen Iris-Scan — das wahrt die Privatsphäre nicht"
+    }
+  },
+  "manifest": {
+    "nav_label": "Manifest",
+    "hero_label": "homosapience.org",
+    "hero_title": "APTOGON-Manifest",
+    "hero_subtitle": "Das Internet wurde von Menschen gebaut — für Menschen. Es ist Zeit, es zu schützen.",
+    "s1_title": "Das Problem",
+    "s1_p1": "Bis 2025 wird der größte Teil des Internetverkehrs nicht von Menschen generiert. Bots schreiben Kommentare, manipulieren Abstimmungen, hinterlassen Bewertungen, registrieren Konten, nehmen an Umfragen teil. Der digitale Raum hat seine wichtigste Eigenschaft verloren — er hat aufgehört, menschlich zu sein.",
+    "s1_p2": "Das Problem ist tiefer, als es erscheint. Bestehende Lösungen — CAPTCHA, SMS-Verifizierung, KYC — werden entweder leicht umgangen oder erfordern die Offenlegung der Identität. Es gibt keinen offenen Standard, der es erlaubt, Menschlichkeit anonym zu beweisen.",
+    "s1_p3": "Jeder kann tausend Konten erstellen. Jeder Bot kann schreiben 'Ich bin ein Mensch'. Kein Dienst kann diese Behauptung heute überprüfen — ohne Reisepass, ohne Überwachung, ohne zentralisierte Datenbank.",
+    "s2_title": "Lösung: APTOGON als Protokoll",
+    "s2_p1": "APTOGON ist kein Ersatz für das Internet. Es ist ein Protokoll über IP, wie HTTPS über HTTP. Es fügt ein neues Primitiv hinzu: HumanCredential — einen kryptografisch verifizierten Beweis, dass ein lebender Mensch hinter einer Aktion steckt.",
+    "s2_p2": "Die Verifizierung basiert auf Bewegungsbiometrie, nicht auf Identität. Die KI analysiert die Geste — keine Koordinaten, keine Form, sondern Statistiken: Geschwindigkeitsvariabilität, Pausenentropie, Anzahl der Korrekturen, Rhythmusunregelmäßigkeit. Das können Bots nicht gut genug imitieren.",
+    "s2_how_label": "So funktioniert es",
+    "s2_steps": [
+      "Benutzer zeichnet Geste → Statistiken werden auf dem Gerät verarbeitet",
+      "Anonymer Merkmalsvector (keine Koordinaten) wird an das Backend gesendet",
+      "Ergebnis: is_human + confidence — keine persönlichen Daten",
+      "Bei Erfolg wird Ed25519 DID im Browser generiert",
+      "SHA3-256-Hash des Beweises wird in Aptos geschrieben"
+    ],
+    "s3_title": "Praktische Anwendungen",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "Foren & Plattformen",
+        "desc": "SDK integriert sich in 2 Codezeilen. Spam verschwindet — nicht weil er blockiert wird, sondern weil niemand da ist, der ihn schreibt."
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAO & Abstimmung",
+        "desc": "Ein Mensch, eine Stimme. Keine Sybil-Angriffe, keine Stimmenfälschung. Governance-Token durch Menschlichkeitsbeweis geschützt."
+      },
+      {
+        "icon": "💬",
+        "title": "Chats & Kommentare",
+        "desc": "Ein verifiziertes Human-Abzeichen erscheint für echte Menschen. Die Diskussionsqualität ändert sich sofort — nicht durch Zensur, sondern durch Vertrauen in die Quelle."
+      },
+      {
+        "icon": "🛒",
+        "title": "Marktplätze",
+        "desc": "Bewertungen werden von echten Käufern hinterlassen, nicht von Bots der Konkurrenz. Bewertungen funktionieren wieder als Qualitätsindikator."
+      },
+      {
+        "icon": "🎓",
+        "title": "Bildung",
+        "desc": "Die Prüfung wurde von einem Menschen bestanden, nicht von GPT. Ein Online-Diplom hat Sinn, wenn es Beweis gibt, wer es erworben hat."
+      },
+      {
+        "icon": "🤖",
+        "title": "KI-Agenten",
+        "desc": "Paradox: APTOGON hilft KI-Agenten, korrekt zu handeln. Ein Agent kann beweisen, dass er im Namen eines verifizierten Menschen handelt — mit dessen ausdrücklicher Erlaubnis."
+      }
+    ],
+    "s4_title": "Monetarisierung & Nachhaltigkeit",
+    "s4_p1": "APTOGON existiert als offenes Protokoll mit mehreren Stufen. Die Verifizierung für Menschen ist immer kostenlos. Dies ist ein Prinzip: ein Mensch sollte nicht dafür zahlen, seine Menschlichkeit zu beweisen.",
+    "tiers": [
+      {
+        "title": "Kostenlos",
+        "sub": "für Menschen",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "für Plattformen",
+        "icon": "🔌"
+      },
+      {
+        "title": "Enterprise",
+        "sub": "On-Premise SDK",
+        "icon": "🏢"
+      },
+      {
+        "title": "GNK Token",
+        "sub": "Governance",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "Plattformen zahlen für die Verifizierung ihrer Nutzer — genauso wie sie jetzt für reCAPTCHA und Betrugserkennung zahlen, aber ehrlicher, transparenter und ohne Datenweitergabe an Dritte.",
+    "s5_title": "Die Community aufbauen",
+    "s5_p1": "Frühe Anwender sind Communities, die bereits unter Bots leiden. Entwickler auf GitHub, Autoren auf Reddit, DAO-Mitglieder in Web3, Forum-Moderatoren. Für sie ist Verifizierung keine Hürde — sondern ein Privileg.",
+    "s5_p2": "Das Verified Human-Abzeichen ist kein blaues Häkchen, das man kaufen kann — sondern ein grünes, das sich weder kaufen noch fälschen noch übertragen lässt. Es beweist nicht Bekanntheit — sondern Existenz.",
+    "s5_p3": "Das Netzwerk wächst durch HSI Bond: Verifizierte Menschen bürgen füreinander und stärken ihre Credentials. APTOGON Chat ist die erste Live-Implementierung — ein Echtzeit-Raum nur für Menschen mit Räumen, Direktnachrichten und Dateifreigabe, zugänglich mit Ihrem HumanCredential.",
+    "quote": "\"Das Internet ist nicht kaputt — es weiß nur nicht, wer du bist. APTOGON löst das.\"",
+    "cta_verify": "✍️ Verifizieren",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ Entwickler",
+    "cta_home": "← Startseite"
+  },
+  "developers": {
+    "nav_label": "Entwickler",
+    "hero_title": "Für Entwickler",
+    "hero_subtitle": "Füge deiner App mit einem fertigen Code-Snippet die Verifizierung menschlicher Nutzer hinzu. Erstelle einen Schlüssel in der Konsole, binde den Verifier ein und bestätige jede Sitzung serverseitig mit deinem geheimen Schlüssel.",
+    "quickstart_title": "Schnellstart",
+    "quickstart_subtitle": "Minimale Integration — 3 Schritte",
+    "step1_title": "GestureCanvas einbetten",
+    "step2_title": "Geste zur Verifizierung senden",
+    "step3_title": "HumanCredential nutzen + Chat öffnen",
+    "api_title": "API-Referenz",
+    "ep1_desc": "Gestenverifizierung. Gibt HumanCredential zurück.",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "Verifizierungsstatus per DID.",
+    "ep2_params": "did (query)",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "Letzte Verifizierungsversuche (zum Debuggen).",
+    "ep3_params": "last=20 (query)",
+    "ep3_returns": "attempts[] mit Gestenmuster und KI-Ergebnis",
+    "ep4_desc": "DID ohne Verifizierung erstellen (zum Testen).",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "Funktionen",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "Zero PII",
+        "desc": "Rohe Gestenkoordinaten verlassen den Browser nie. Nur Statistiken gehen zum Server."
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "Kompatibel mit dem did:key-Standard. Funktioniert mit jedem Identitätssystem."
+      },
+      {
+        "icon": "⛓️",
+        "title": "On-Chain-Beweis",
+        "desc": "Move-Vertrag auf Aptos. Verifizierung ohne unseren Server — vollständig dezentralisiert."
+      },
+      {
+        "icon": "♿",
+        "title": "Barrierefreiheit",
+        "desc": "Berücksichtigt motorische Beeinträchtigungen. Menschen mit Tremor werden nie blockiert."
+      },
+      {
+        "icon": "⚡",
+        "title": "Schnell",
+        "desc": "Median 800ms. SapiX mit Fallback — funktioniert auch wenn der Dienst nicht verfügbar ist."
+      },
+      {
+        "icon": "📋",
+        "title": "Verifiable Credential",
+        "desc": "W3C VC-Format. Signiert mit Ed25519. Läuft in 30 Tagen ab, wird automatisch erneuert."
+      }
+    ],
+    "cta_title": "Bereit zur Integration?",
+    "cta_subtitle": "Erstelle einen Schlüssel in der Konsole, um loszulegen. Kontaktiere uns für höhere Kontingente oder Unternehmensintegration.",
+    "cta_email": "📩 Schreib uns",
+    "cta_try": "🧪 Live testen",
+    "cta_home": "← Startseite",
+    "ep_chat_msg_desc": "Ruft aktuelle Nachrichten aus einem Chatraum ab (öffentliche Räume erfordern keine Authentifizierung)",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "Lädt eine Datei in einen Raum hoch (max. 10 MB). Die Datei wird 5 Tage gespeichert und dann automatisch gelöscht.",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — Echtzeit-Stream des Raums. Verbinde dich und empfange/sende JSON-Nachrichten.",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "Bond-Anfrage erstellen — 3 Gold-Mitglieder bürgen für den neuen Nutzer.",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "Bond-Anfragestatus abfragen. Alle 2–5s abfragen bis status = approved.",
+    "ep_bond_st_params": "request_id (Pfad)",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "Bürge genehmigt Bond-Anfrage (Ed25519-Signatur erforderlich).",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash (bei Erreichen des Schwellenwerts)"
+  },
+  "donate": {
+    "nav_label": "Spenden",
+    "hero_title": "Projekt unterstützen",
+    "hero_subtitle": "APTOGON ist ein offenes Projekt ohne Risikokapital. Wir bauen öffentliche Infrastruktur für ein menschliches Internet.",
+    "funds_title": "Wohin die Mittel fließen",
+    "funds": [
+      {
+        "icon": "👩‍💻",
+        "title": "Entwicklung",
+        "desc": "SDK, Dokumentation, neue Verifizierungsfunktionen",
+        "pct": 50
+      },
+      {
+        "icon": "🖥️",
+        "title": "Hosting & Infrastruktur",
+        "desc": "FastAPI-Backend, Aptos-Transaktionen, CDN für Frontend",
+        "pct": 30
+      },
+      {
+        "icon": "🧠",
+        "title": "SapiX Inferenz",
+        "desc": "Dedizierte KI-Rechenleistung zur Analyse von Gestenmustern auf LLM-Modellen",
+        "pct": 20
+      }
+    ],
+    "tiers_title": "Unterstützungsstufen",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "Kaffee",
+        "desc": "~2.500 Verifizierungen",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "Unterstützer",
+        "desc": "~10.000 Verifizierungen",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "Partner",
+        "desc": "Name in den Mitwirkenden + Priority API",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "Sponsor",
+        "desc": "Logo auf der Website + direkte Unterstützung",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "Zahlung aus Russland",
+    "russia_desc": "Schnelle Überweisung via Tinkoff Pay, SBP oder beliebige russische Bankkarte",
+    "crypto_title": "Kryptowährung",
+    "crypto_eth_desc": "Schreibe an hello@homosapience.org — wir senden die Adresse",
+    "contact_title": "Partnerschaft oder Integration gewünscht?",
+    "contact_desc": "Wir besprechen die Bedingungen, bieten frühen API-Zugang und helfen bei der Integration der Verifizierung in dein Produkt",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← Startseite",
+    "support_btn": "Unterstützen →",
+    "russia_btn": "Zur Zahlung →",
+    "crypto_wallets_title": "🪙 Krypto-Spenden",
+    "crypto_wallets_subtitle": "Sende einen beliebigen Betrag direkt an die Wallet. Keine Zwischenhändler, keine Gebühren.",
+    "crypto_wallets_warning": "⚠️ Überprüfe vor dem Senden immer das Netzwerk. Das Senden an das falsche Netzwerk kann zum dauerhaften Verlust der Gelder führen.",
+    "venture_from": "ab $5.000",
+    "venture_label": "Venture-Partner",
+    "venture_benefits": [
+      "APTOGON-Token beim Launch",
+      "Sitz im Tech-Council",
+      "Direkter Roadmap-Zugang",
+      "Co-Branding auf der Website"
+    ],
+    "venture_cta": "Konditionen besprechen →"
+  },
+  "verify": {
+    "nav_label": "Verifizieren",
+    "hero_badge": "🛡️ SapiX · Aptos Testnet",
+    "hero_title": "Beweise, dass du ein",
+    "hero_human": "Mensch bist",
+    "hero_subtitle": "Kein Reisepass · Keine Kamera · Keine persönlichen Daten",
+    "steps_label": "So funktioniert die Verifizierung",
+    "steps": [
+      {
+        "num": "1",
+        "title": "Zeichne ein Symbol",
+        "desc": "Irgendetwas — einen Buchstaben, eine Zahl, eine Spirale. Die KI beobachtet wie du zeichnest, nicht was"
+      },
+      {
+        "num": "2",
+        "title": "SapiX",
+        "desc": "Analysiert Rhythmus, Geschwindigkeit, Pausen. Bots bewegen sich zu gleichmäßig — das verrät sie"
+      },
+      {
+        "num": "3",
+        "title": "Dein DID",
+        "desc": "Ein digitaler Schlüssel wird in deinem Browser erstellt. Deine anonyme ID — wie ein Reisepass ohne Namen"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "Die Tatsache der Verifizierung wird in die Blockchain geschrieben. Keine Daten — nur ein kryptografischer Beweis"
+      }
+    ],
+    "canvas_title": "Zeichne etwas",
+    "canvas_subtitle": "mit Maus oder Finger — beliebiges Symbol",
+    "canvas_dot_tap": "Tippe auf den Punkt! ({current} von {total})",
+    "canvas_dot_all_done": "✓ Alle {total} Punkte markiert!",
+    "canvas_dot_wait": "Warte auf den nächsten Punkt… ({done} von {total} markiert)",
+    "canvas_keep_drawing": "Weiterzeichnen…",
+    "canvas_release": "✓ Jetzt loslassen",
+    "canvas_tap_hint": "👆 Tippe auf den farbigen Punkt ohne die Hand zu heben!",
+    "canvas_points_done": "✓ {count} Punkte — fertig",
+    "canvas_points_count": "{count} Punkte…",
+    "canvas_draw_hint": "✏️ hier mit Maus oder Finger zeichnen",
+    "canvas_sec": "Sek",
+    "canvas_clear": "löschen",
+    "canvas_lifted": "✋ Pausiert — berühre das Feld erneut, um fortzufahren",
+    "canvas_restarted": "↻ Die Pause war zu lang — wir fangen neu an",
+    "canvas_dot_reminder": "💡 Während des Zeichnens kann ein farbiger Punkt erscheinen — tippe darauf ohne die Hand abzuheben",
+    "tags": [
+      "Rhythmus",
+      "Geschwindigkeit",
+      "Pausen",
+      "Druck",
+      "Korrekturen"
+    ],
+    "analyzing_title": "SapiX analysiert...",
+    "analyzing_subtitle": "Das Modell analysiert dein Gestenmuster",
+    "analyzing_checks": [
+      "Geschwindigkeitsvariabilität",
+      "Pausenentropie",
+      "Anzahl der Korrekturen",
+      "Rhythmusunregelmäßigkeit",
+      "ExpressionProof-Generierung"
+    ],
+    "success_title": "Du bist ein Mensch ✓",
+    "success_subtitle": "SapiX hat die Verifizierung bestätigt",
+    "confidence_label": "KI-Konfidenz",
+    "threshold_0": "0%",
+    "threshold_70": "Schwelle 70%",
+    "threshold_85": "85%+ ausgezeichnet",
+    "threshold_100": "100%",
+    "did_title": "Deine digitale ID erstellt",
+    "did_subtitle": "W3C did:key — internationaler Standard",
+    "did_id_label": "Bezeichner (DID):",
+    "did_what_label": "Was ist das?",
+    "did_what_value": "Wie ein Reisepass, aber digital und völlig anonym",
+    "did_where_label": "Wo gespeichert?",
+    "did_where_value": "Nur in deinem Browser (localStorage). Nirgendwo auf Servern",
+    "did_key_label": "Privater Schlüssel",
+    "did_key_value": "Nur deiner. Niemand kann ihn verwenden",
+    "did_gen_label": "Generiert",
+    "did_gen_value": "Direkt im Browser, in 1ms, ohne Serveranfrage",
+    "aptos_title": "Eintrag in die Aptos-Blockchain",
+    "aptos_onchain": "on-chain ✓",
+    "aptos_local": "lokaler Speicher",
+    "aptos_tx_label": "Transaktions-Hash:",
+    "aptos_no_key": "Credential lokal gespeichert. Füge APTOS_PRIVATE_KEY für On-Chain-Eintrag hinzu.",
+    "aptos_note": "📌 Nur die Tatsache der Verifizierung wird on-chain gespeichert — keine persönlichen Daten, nur ein Hash",
+    "bond_title": "Letzter Schritt — Bürgschaft",
+    "bond_subtitle": "3 verifizierte Menschen bestätigen dich",
+    "bond_desc": "Dies schützt vor Bots, die den Gestentest bestanden haben. Bürgen sind echte Menschen aus dem HSI-Netzwerk, die mit ihrer Reputation bürgen.",
+    "bond_cta": "🤝 Bürgschaft beantragen →",
+    "bonding_title": "Warte auf Bürgen...",
+    "bonding_subtitle": "Gonka BondMatcher wählt Menschen nach Netzwerkreputation aus",
+    "bonding_vouched": "Gebürgt",
+    "bonding_waiting": "...",
+    "bonding_progress": "von 3",
+    "complete_title": "Verifizierung abgeschlossen!",
+    "complete_subtitle": "Du bist vollwertiges Mitglied des HSI-Netzwerks",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "SapiX",
+        "desc": "Geste verifiziert"
+      },
+      {
+        "emoji": "🔑",
+        "title": "DID erstellt",
+        "desc": "im Browser"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "Fakt gespeichert"
+      }
+    ],
+    "stored_title": "Was im Browser gespeichert ist",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "deine anonyme Kennung"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "privater Schlüssel (nur deiner)"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "Verifizierungsbestätigung"
+      }
+    ],
+    "cta_chat": "💬 Sicherer Chat",
+    "cta_bond": "🤝 Bürgen",
+    "failed_title": "Nicht bestanden",
+    "failed_tip": "Diesmal hat es nicht geklappt. Zeichne ganz natürlich, in deinem Tempo — so lange, wie es sich gut anfühlt.",
+    "fallback_label": "(Fallback)",
+    "debug_title": "🔬 Musterdaten (Debug)",
+    "error_already_verified": "Sie wurden in diesem Browser auf diesem Gerät bereits als Mensch verifiziert.",
+    "device_bound_title": "Dieses Gerät hat bereits einen Schlüssel",
+    "device_bound_body": "Pro Gerät gibt es eine Identität — erneutes Zeichnen erzeugt keine zweite. Stelle den vorhandenen Schlüssel wieder her: aus deiner Sicherungsdatei oder indem du dieses Gerät von einem anderen aus verbindest, auf dem du noch angemeldet bist.",
+    "device_bound_restore": "Aus Sicherung wiederherstellen",
+    "device_bound_pair": "Ich habe ein anderes Gerät",
+    "error_backend": "Backend nicht verfügbar",
+    "consent": {
+      "title": "Bevor du beginnst",
+      "subtitle": "Bitte lies, wie deine Daten verwendet werden",
+      "items": [
+        {
+          "icon": "✏️",
+          "title": "Gestenaufzeichnung",
+          "desc": "Deine Zeichenbewegung (Touch-/Maus-Ereignisse) wird ~10 Sekunden lang aufgezeichnet und zur Analyse menschlicher Muster an unsere KI gesendet."
+        },
+        {
+          "icon": "🤖",
+          "title": "KI-Analyse",
+          "desc": "Die Geste wird von SapiX (Qwen3 über das Gonka-Netzwerk) analysiert. Es werden weder Bild noch Video erfasst — nur Bewegungsvektoren."
+        },
+        {
+          "icon": "🔑",
+          "title": "Anonyme DID",
+          "desc": "Ein kryptografischer Identifikator (DID) wird lokal in deinem Browser erstellt. Er enthält keine personenbezogenen Daten — keinen Namen, keine E-Mail, keine IP."
+        },
+        {
+          "icon": "🗑️",
+          "title": "Datenspeicherung",
+          "desc": "Rohe Gestendaten werden nicht gespeichert. Nur ein anonymisierter SHA-3-Hash des Bewegungsnachweises wird in der Aptos-Blockchain festgehalten."
+        },
+        {
+          "icon": "📍",
+          "title": "Geräte-Fingerabdruck",
+          "desc": "Ein Einweg-Hash deiner Gerätemerkmale (Bildschirm, Sprache, Zeitzone) verhindert Doppelregistrierungen. Wird niemals im Rohformat übertragen."
+        }
+      ],
+      "mode_heading": "Wähle deinen Verifizierungsmodus",
+      "mode_public_title": "Öffentlich",
+      "mode_public_desc": "Zeige ein Verifiziert-Mensch-Abzeichen unter deinen Social-Handles. Reputation gilt über Websites hinweg.",
+      "mode_shielded_title": "Geschützt",
+      "mode_shielded_desc": "Beweise, dass du ein Mensch bist, ohne deine Identität preiszugeben. Frische anonyme DID, keine Handles, keine Gerätebindung.",
+      "gdpr_note": "Wenn du fortfährst, stimmst du der Gestenanalyse gemäß der <link>APTOGON-Datenschutzerklärung</link> zu. Die Verarbeitung beruht auf deiner ausdrücklichen Einwilligung (DSGVO Art. 6(1)(a)). Du kannst sie jederzeit widerrufen, indem du deine Zugangsdaten aus dem Browserspeicher löschst.",
+      "start_button": "✍️ Verstanden — Verifizierung starten",
+      "no_account": "Kein Konto · Keine E-Mail · Kein Reisepass"
+    },
+    "footer_note": "🔒 Koordinaten werden im Browser gelöscht · nur Mathematik geht ins Netzwerk · keine Biometrie",
+    "embed_instruction": "✏️ Ohne Absetzen zeichnen + 2 Punkte antippen",
+    "embed_checking": "Wird geprüft…",
+    "embed_verified": "Bestätigt — Sie sind ein Mensch ✓",
+    "embed_failed": "Konnte nicht bestätigt werden. Bitte erneut versuchen.",
+    "embed_network": "Netzwerkfehler.",
+    "embed_try_again": "Erneut versuchen",
+    "embed_missing_key": "Kein Site-Schlüssel angegeben.",
+    "embed_protected": "Geschützt durch {brand} · kein Tracking, keine Biometrie",
+    "embed_err_invalid_key": "Einrichtungsfehler: unbekannter Site-Schlüssel. Prüfe data-aptogon-key.",
+    "embed_err_origin": "Einrichtungsfehler: Diese Adresse ist für den Schlüssel nicht erlaubt.",
+    "embed_err_expired": "Diese Prüfung ist abgelaufen. Seite neu laden.",
+    "embed_err_automation": "Automatisierung erkannt. Die Prüfung ist für Menschen.",
+    "embed_err_classifier": "Prüfung vorübergehend nicht verfügbar. Später erneut versuchen.",
+    "embed_err_default": "Prüfung nicht verfügbar. Erneut versuchen."
+  },
+  "chat": {
+    "nav_label": "Chat",
+    "channels": "Kanäle",
+    "room_tech_label": "Technologie",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "Governance",
+    "room_gov_desc": "HSI-Abstimmungen",
+    "room_phil_label": "Philosophie",
+    "room_phil_desc": "Manifest · Ideen",
+    "verified_only": "Nur verifizierte Menschen können schreiben",
+    "verify_link": "Verifizieren",
+    "placeholder": "Nachricht in #{{room}}…",
+    "ai_moderator": "KI-Moderator",
+    "ai_active": "🛡️ Aktiv",
+    "filter_spam": "Spam-Filter",
+    "filter_toxic": "Toxizität",
+    "filter_flood": "Flood-Kontrolle",
+    "filter_did": "DID-Verifizierung",
+    "rules": "Regeln",
+    "rule_respect": "Respekt gegenüber Teilnehmern",
+    "rule_humans": "Nur echte Menschen",
+    "rule_no_spam": "Kein Spam oder Werbung",
+    "rule_no_toxic": "Keine Toxizität oder Beleidigungen",
+    "rule_no_bots": "Keine Bots oder Automatisierung",
+    "welcome_msg": "🛡️ Willkommen im APTOGON Chat — ein Raum nur für verifizierte Menschen.",
+    "tech_welcome": "⚡ Kanal für technische Diskussionen: Aptos, did:key, SapiX, WebSocket.",
+    "trust_levels": "Vertrauensstufen",
+    "trust_trusted_desc": "7+ Bürgschaften",
+    "trust_community_desc": "3–6 Bürgschaften",
+    "trust_newcomer_desc": "bis zu 3 Bürgschaften",
+    "privacy_title": "🔒 Datenschutz",
+    "privacy_desc": "Ihre DID wird nie preisgegeben. Es werden nur die letzten 8 Zeichen des Hashes angezeigt.",
+    "online_count": "verifiziert online",
+    "read_mode": "Nur-Lesen-Modus",
+    "read_mode_banner": "Nur-Lesen-Modus — Verifizierung erforderlich zur Teilnahme",
+    "reaction": "Reagieren",
+    "reply": "Antworten",
+    "room_agora_label": "Allgemein",
+    "room_agora_desc": "Allgemeiner Kanal",
+    "offline_demo": "Demo-Modus — Backend nicht verfügbar. Angezeigte Nachrichten sind Beispiele.",
+    "loading_msgs": "Nachrichten werden geladen…",
+    "empty_room": "Noch keine Nachrichten",
+    "empty_room_hint": "Sei der Erste, der schreibt!"
+  },
+  "lang_switcher": {
+    "label": "Sprache"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — P2P Bürgschaft",
+    "hero_subtitle": "Verifizierte Menschen bürgen füreinander. Soziales Vertrauen wird kryptografisch überprüfbar.",
+    "cta_verify_short": "✍️ Verifizieren",
+    "cta_request": "🤝 Bürgschaft anfordern ↓",
+    "how_title": "Wie Bürgschaft funktioniert",
+    "how_subtitle": "Drei Schritte vom Neuling zum vertrauenswürdigen Netzwerkmitglied",
+    "step1_title": "Verifizieren",
+    "step1_desc": "Zeichne eine Geste — SapiX bestätigt, dass du ein Mensch bist. Du erhältst eine DID und trust_score 10%.",
+    "step2_title": "Bürgschaften anfordern",
+    "step2_desc": "3 verifizierte Netzwerkmitglieder bestätigen dich. Trust Score steigt auf 50%.",
+    "step3_title": "Bürge werden",
+    "step3_desc": "Bei trust_score ≥ 50% kannst du für andere bürgen. Hilf dem Netzwerk zu wachsen.",
+    "trust_algo_title": "Trust Score Algorithmus",
+    "trust_algo_subtitle": "Vertrauen wächst mit jeder Bürgschaft",
+    "after_bonds": "nach {n} Bürgschaften",
+    "level_newcomer": "Neuling",
+    "level_community": "Von der Community anerkannt",
+    "level_trusted": "Vertrauenswürdig",
+    "risks_title": "⚠️ Risiken des Bürgen",
+    "risks_note": "Nur Mitglieder mit trust_score ≥ 50% (3+ bonds) können bürgen. Das schafft einen wirtschaftlichen Anreiz, nur echte Menschen zu empfehlen.",
+    "penalty1": "Bot unter denjenigen entdeckt, für die du gebürgt hast",
+    "penalty2": "Wiederholter Bot vom selben Bürgen",
+    "reward1": "Neue erfolgreiche Bürgschaft",
+    "reward2": "Dein Schützling hat selbst 100% erreicht",
+    "incoming_title": "🔔 Eingehende Anfragen",
+    "incoming_subtitle": "Personen bitten dich, ihr Bürge zu werden",
+    "vouch_btn": "✓ Bürgen",
+    "requester_role": "👤 Antragsteller",
+    "you_guarantor": "🤝 Du",
+    "ask_placeholder": "Eine Frage stellen…",
+    "request_title": "Bürgschaft anfordern",
+    "request_subtitle_1": "Wähle",
+    "request_subtitle_2": "10+ Mitglieder",
+    "request_subtitle_3": "— Zustimmung von 3 benötigt",
+    "selected": " ausgewählt",
+    "send_requests": "🤝 Anfragen senden",
+    "privacy_title": "🔒 Anonymität & Datenschutz",
+    "privacy_body": "Bürgen sehen nur den anonymen DID-Hash und das KI-Vertrauensniveau. Name, E-Mail, IP — werden mit niemandem geteilt.",
+    "manifest_link": "📜 Manifest",
+    "home_link": "← Startseite",
+    "done_title": "Bürgschaft erhalten!",
+    "done_auto_msg": "✅ KI-Vertrauen hoch — automatisch von Systembürgen genehmigt",
+    "done_human_msg": "3 Personen haben für dich gebürgt",
+    "done_blockchain": "HumanCredential auf der Aptos-Blockchain gespeichert",
+    "done_chat": "💬 In den Chat",
+    "failed_title": "Bürgschaften konnten nicht gesammelt werden",
+    "failed_desc_1": "Alle",
+    "failed_desc_2": "Sendeversuche erschöpft. Aktuell wenige Bürgen online.",
+    "failed_hint": "Versuche es später oder kontaktiere uns auf Telegram — wir helfen manuell.",
+    "retry_btn": "🔄 Erneut versuchen",
+    "waiting_sending": "Anfragen werden gesendet…",
+    "waiting_ai": "✅ KI bestätigt…",
+    "waiting_title": "Warte auf Bürgen",
+    "retry_label": "Erneuter Versand #{n}",
+    "requests_sent": "Anfragen an HSI-Netzwerkmitglieder gesendet",
+    "vouched": "Gebürgt",
+    "awaiting": "Warten",
+    "vouches_needed": "/3 Bürgschaften",
+    "ai_auto_approve": "SapiX: Vertrauen ≥ 95% — automatisch genehmigt",
+    "anon_chat": "💬 Anonymer Chat mit Bürgen",
+    "write_placeholder": "An Bürgen schreiben…",
+    "you_requester": "👤 Du",
+    "days_ago": "vor {n}T",
+    "no_candidates_title": "Noch keine Bürgen online",
+    "no_candidates_hint": "Deine Anfrage wird automatisch an die Gründungs-Gold-Members gesendet — nichts weiter zu tun.",
+    "cancel": "Abbrechen",
+    "days_short": "T",
+    "known_dids_title": "💌 Personen, die mich kennen",
+    "known_dids_subtitle": "Wenn HSI-Mitglieder Sie persönlich kennen, geben Sie ihre DIDs ein — sie erhalten eine direkte Einladung, für Sie zu bürgen.",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "Optional · bis zu 3 · muss mit did:key:z6Mk beginnen"
+  },
+  "governance": {
+    "home_link": "← Startseite",
+    "subtitle": "1 verifizierter Mensch = 1 Stimme",
+    "create_btn": "+ Vorschlag erstellen",
+    "new_proposal": "Neuer Vorschlag",
+    "title_placeholder": "Vorschlagstitel",
+    "desc_placeholder": "Ausführliche Beschreibung...",
+    "create": "Erstellen",
+    "creating": "Erstelle...",
+    "cancel": "Abbrechen",
+    "vote_btn": "🗳 Abstimmen",
+    "vote_cancel": "Abbrechen",
+    "vote_yes": "✓ Ja",
+    "vote_no": "✗ Nein",
+    "vote_abstain": "— Enthaltung",
+    "vote_veto": "⚡ Veto",
+    "yes_label": "✓ Ja",
+    "no_label": "✗ Nein",
+    "veto_label": "⚡ Veto",
+    "total_label": "Gesamt",
+    "supporters_of": "Unterstützer: {count}/100 zum Abstimmungsstart",
+    "voting_status": "🗳 Abstimmung · {days}T",
+    "type_text": "Text",
+    "type_parameter": "Parameter",
+    "type_ai_model": "KI-Modell",
+    "type_upgrade": "Update",
+    "type_constitution": "Verfassung",
+    "days_unit": "T"
+  },
+  "stats": {
+    "title": "Angriffsstatistik",
+    "subtitle": "Passive Verifizierungsstatistik: Menschen, Bots und agentische KI-Browser.",
+    "loading": "Wird geladen…",
+    "unavailable": "Statistiken sind noch nicht verfügbar.",
+    "service_down": "Dienst nicht verfügbar",
+    "net_error": "Netzwerkfehler",
+    "card_sessions": "Sitzungen gesamt",
+    "card_humans": "Menschen",
+    "card_bots": "Bots",
+    "card_ai": "KI-Agenten",
+    "card_suspicious": "Verdächtig",
+    "card_blocked": "Blockiert",
+    "of_sessions": "der Sitzungen",
+    "chart_title": "Nach Tag ({count})",
+    "legend_bots": "Bots/KI",
+    "legend_humans": "Menschen",
+    "day_unit": "T",
+    "community_title": "Bürgschaften & Gold-Mitglieder",
+    "vouch_requests": "Bürgschaftsanfragen",
+    "vouch_approved": "Ausgestellt",
+    "vouch_pending": "In Bearbeitung",
+    "vouch_failed": "Nicht genug",
+    "vouches_given": "Bürgschaften gegeben",
+    "vouches_declined": "Abgelehnt",
+    "gold_members": "Gold-Mitglieder",
+    "gold_online": "online",
+    "test_badge": "Test",
+    "test_note": "Vorläufige Daten — das Gold-Mitglieder-Bürgschaftsnetzwerk ist noch nicht aktiv."
+  },
+  "solutions": {
+    "gonka": {
+      "eyebrow": "Infrastruktur",
+      "title": "Auf dezentraler KI gebaut — nicht auf der Blackbox eines Unternehmens",
+      "body": "Jede Geste, die APTOGON analysiert, läuft auf Gonka — einem Netzwerk unabhängiger GPU-Betreiber, nicht auf den Servern eines einzelnen Konzerns. Kein Preis-Lock-in, keine regionalen Abschaltungen, kein Single Point of Failure, der die Verifizierung lahmlegen kann. Dasselbe Prinzip wie bei unserer zero-PII-Identität on-chain: keine einzelne Instanz sollte entscheiden, ob du beweisen darfst, dass du ein Mensch bist.",
+      "bullets": [
+        "Open Source, auditiert (CertiK)",
+        "Kein einzelnes Unternehmen kann den Stecker ziehen",
+        "Dasselbe Anti-Zentralisierungs-Prinzip wie unsere Identitätsschicht"
+      ],
+      "cta": "Mehr über Gonka →"
+    },
+    "deepfake_chip": "Kein Foto, kein Video — nichts zum Deepfaken",
+    "agents": {
+      "title": "KI-Agenten",
+      "headline": "Kenne den Menschen hinter dem Agenten.",
+      "desc": "Jeder KI-Agent erbt sein Trust-Credential von einem verifizierten menschlichen Besitzer. Einmal widerrufen, und der Zugriff stoppt überall — keine anonymen Agenten auf deiner Plattform.",
+      "stats": [
+        {
+          "n": "1 Mensch",
+          "l": "verantwortlich pro Agent"
+        },
+        {
+          "n": "Sofort",
+          "l": "Widerruf → Zugriff stoppt überall"
+        }
+      ]
+    },
+    "hero": {
+      "eyebrow": "Lösungen",
+      "title": "Ein Protokoll. Vier Branchen.",
+      "subtitle": "APTOGON verifiziert einzigartige Menschen — ohne Biometrie, amtliche Ausweise oder invasive Datenerhebung. Zero-PII. On-Chain-Nachweis. Funktioniert für jeden Anwendungsfall, der wissen muss: „Ist das ein einzigartiger Mensch?“"
+    },
+    "verticals": [
+      {
+        "title": "Marktforschung",
+        "headline": "Ihre Daten sind nur so gut wie Ihre Befragten.",
+        "desc": "Beseitigen Sie doppelte Teilnehmer, Klickfarmen und Prämienjäger. Eine DID = eine Antwort. On-Chain-Nachweis = auditierbare Daten.",
+        "stats": [
+          {
+            "n": "20–30%",
+            "l": "der Umfragebudgets gehen durch Betrug verloren"
+          },
+          {
+            "n": "~10 Sek.",
+            "l": "um einen Befragten zu verifizieren"
+          }
+        ]
+      },
+      {
+        "title": "Communities & Plattformen",
+        "headline": "Halten Sie Ihre Community menschlich.",
+        "desc": "Stoppen Sie Ban-Umgeher, Stimmenmanipulation und Bot-Fluten. Eine geräte-gebundene DID bedeutet: Wer gesperrt wird, bleibt gesperrt.",
+        "stats": [
+          {
+            "n": "30–50%",
+            "l": "der neuen Konten könnten Bots sein"
+          },
+          {
+            "n": "0 Sek.",
+            "l": "um nach einer Sperre ein neues Konto zu erstellen"
+          }
+        ]
+      },
+      {
+        "title": "KI-Datenannotation",
+        "headline": "Ihr Modell ist nur so gut wie Ihre Annotatoren.",
+        "desc": "Verhindern Sie Sybil-Angriffe auf Ihre Annotations-Pipeline. Eine Person mit 50 Konten kann Ihren gesamten Trainingsdatensatz vergiften.",
+        "stats": [
+          {
+            "n": "1 Person",
+            "l": "kann 50+ Annotator-Konten kontrollieren"
+          },
+          {
+            "n": "$0",
+            "l": "Kosten, um Ihre Trainingsdaten zu korrumpieren"
+          }
+        ]
+      },
+      {
+        "title": "Web3 & DAOs",
+        "headline": "Ein Mensch. Eine Stimme. On-Chain.",
+        "desc": "Der einzige Anbieter mit einem echten On-Chain-HumanCredential auf Aptos. Sybil-sichere Governance, Airdrops und UBI-Verteilung.",
+        "stats": [
+          {
+            "n": "1 Hand",
+            "l": "kann 1.000 Wallets kontrollieren"
+          },
+          {
+            "n": "~80%",
+            "l": "mancher Airdrops gingen an Bots"
+          }
+        ]
+      }
+    ],
+    "common_guarantee": {
+      "title": "Jede Branche. Dieselbe Garantie.",
+      "desc": "Unabhängig vom Anwendungsfall speichert APTOGON niemals Biometrie, verlangt nie einen amtlichen Ausweis und schreibt immer manipulationssicheren Nachweis auf die Aptos-Blockchain.",
+      "chips": [
+        {
+          "icon": "🛡️",
+          "label": "Keine gespeicherte Biometrie"
+        },
+        {
+          "icon": "🪪",
+          "label": "Kein amtlicher Ausweis nötig"
+        },
+        {
+          "icon": "⛓️",
+          "label": "On-Chain-Nachweis (Aptos)"
+        },
+        {
+          "icon": "🔓",
+          "label": "Open-Source-Protokoll"
+        },
+        {
+          "icon": "🌍",
+          "label": "GDPR-kompatibel"
+        },
+        {
+          "icon": "⚡",
+          "label": "~10 Sek. Verifizierung"
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "Bereit loszulegen?",
+      "desc": "Kostenloser Tarif: 1.000 Verifizierungen/Monat. Keine Kreditkarte.",
+      "start_free": "Kostenlos starten",
+      "view_pricing": "Preise ansehen"
+    },
+    "see_solution": "Lösung ansehen"
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "hero": {
+      "title": "Der Leitfaden zur menschlichen Verifizierung",
+      "subtitle": "Tiefgehende Analysen zu Bot-Betrug, datenschutzfreundlicher Identität und dem Aufbau sybil-resistenter Produkte."
+    },
+    "card": {
+      "read_more": "Artikel lesen",
+      "read": "Lesen"
+    },
+    "series": {
+      "title": "Artikelserie",
+      "count": "{count, plural, one {# Artikel} other {# Artikel}}"
+    },
+    "post": {
+      "back": "Blog",
+      "read_suffix": "Lesezeit",
+      "cta": {
+        "title": "APTOGON kostenlos testen",
+        "desc": "1.000 Verifizierungen/Monat kostenlos. Keine Kreditkarte erforderlich.",
+        "get_started": "Jetzt starten",
+        "api_docs": "API-Dokumentation"
+      },
+      "more_articles": "Weitere Artikel"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "Preise",
+      "title_line1": "Bezahlen pro Verifizierung.",
+      "title_line2": "50–100× günstiger als KYC.",
+      "subtitle": "Keine Einrichtungsgebühren. Keine Mindestabnahme. Kostenlos starten — mit dem Wachstum skalieren. On-Chain-Nachweis inklusive.",
+      "badges": [
+        "Kein amtlicher Ausweis nötig",
+        "Keine Biometrie",
+        "GDPR-konform by design",
+        "Open Source"
+      ]
+    },
+    "most_popular": "Am beliebtesten",
+    "tiers": [
+      {
+        "name": "Developer",
+        "price": "Free",
+        "priceNote": "für immer",
+        "volume": "Bis zu 1.000 Verifizierungen / Monat",
+        "features": [
+          "Voller API-Zugriff (Sandbox + Produktion)",
+          "On-Chain-Nachweis im Aptos-Testnet",
+          "Einfaches Analytics-Dashboard",
+          "Community-Support (Discord)"
+        ],
+        "cta": "Jetzt starten"
+      },
+      {
+        "name": "Starter",
+        "price": "$0.05",
+        "priceNote": "pro Verifizierung",
+        "volume": "Bis zu 10.000 / Monat",
+        "features": [
+          "Alle Developer-Funktionen",
+          "On-Chain-Nachweis im Aptos-Mainnet",
+          "Webhook-Callbacks",
+          "E-Mail-Support (48h)"
+        ],
+        "cta": "Vertrieb kontaktieren"
+      },
+      {
+        "name": "Growth",
+        "price": "$0.03",
+        "priceNote": "pro Verifizierung",
+        "volume": "10.000 – 100.000 / Monat",
+        "features": [
+          "Alle Starter-Funktionen",
+          "White-Label-Widget optional",
+          "Priority-Support (24h)",
+          "SLA 99,5% Verfügbarkeit",
+          "Einbindung per eigener Domain"
+        ],
+        "cta": "Vertrieb kontaktieren"
+      },
+      {
+        "name": "Scale",
+        "price": "$0.01",
+        "priceNote": "pro Verifizierung",
+        "volume": "100.000 – 1.000.000 / Monat",
+        "features": [
+          "Alle Growth-Funktionen",
+          "Dedizierter CSM + Slack-Support",
+          "GDPR/SOC2-Compliance-Report",
+          "SLA 99,9% Verfügbarkeit",
+          "Mengenrabatt verhandelbar"
+        ],
+        "cta": "Vertrieb kontaktieren"
+      }
+    ],
+    "enterprise": {
+      "title": "Enterprise",
+      "desc": "1 Mio.+ Verifizierungen/Monat · Individuelles SLA · Dedizierter CSM · SOC2-Report · White-Label",
+      "cta": "Vertrieb kontaktieren"
+    },
+    "roi": {
+      "title": "ROI-Rechner",
+      "inputs": [
+        {
+          "label": "Verifizierungen / Monat"
+        },
+        {
+          "label": "Betrugs-/Duplikatrate (%)"
+        },
+        {
+          "label": "Wert pro Ereignis ($)"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Betrugsverlust (ohne APTOGON)"
+        },
+        {
+          "label": "APTOGON-Kosten"
+        },
+        {
+          "label": "Ersparnis ggü. KYC-Anbietern"
+        },
+        {
+          "label": "Ersparnis ggü. VerifyYou"
+        }
+      ],
+      "per_month": "pro Monat",
+      "net_benefit_label": "Nettovorteil",
+      "net_benefit_suffix": "durch Vermeidung von Betrugsverlusten bei APTOGON-Kosten",
+      "month_abbr": "Monat",
+      "year_abbr": "Jahr"
+    },
+    "comparison": {
+      "title": "Wie wir abschneiden",
+      "rows": [
+        {
+          "label": "Kosten pro Prüfung",
+          "apt": "~$0,01",
+          "vfy": "$0,01–0,03",
+          "kyc": "$1–10"
+        },
+        {
+          "label": "Biometrie gespeichert",
+          "apt": "✗ Nie",
+          "vfy": "✓ Bis zu 3 Jahre",
+          "kyc": "✓ Erforderlich"
+        },
+        {
+          "label": "Amtlicher Ausweis nötig",
+          "apt": "✗ Nein",
+          "vfy": "~ Optional",
+          "kyc": "✓ Erforderlich"
+        },
+        {
+          "label": "On-Chain-Nachweis",
+          "apt": "✓ Aptos",
+          "vfy": "✗ Nein",
+          "kyc": "✗ Nein"
+        },
+        {
+          "label": "Open Source",
+          "apt": "✓ Ja",
+          "vfy": "✗ Nein",
+          "kyc": "✗ Nein"
+        },
+        {
+          "label": "Verifizierungsgeschwindigkeit",
+          "apt": "~10 Sek.",
+          "vfy": "~15 Sek.",
+          "kyc": "~5 Min."
+        },
+        {
+          "label": "GDPR by design",
+          "apt": "✓ Zero-PII",
+          "vfy": "~ Teilweise",
+          "kyc": "✗ Speichert Daten"
+        },
+        {
+          "label": "Einrichtungsgebühr",
+          "apt": "✗ Keine",
+          "vfy": "✗ Keine",
+          "kyc": "~ Variiert"
+        }
+      ],
+      "footnote": "Vergleich basiert auf öffentlich zugänglicher Dokumentation. Siehe",
+      "methodology_cta": "vollständige Methodik"
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "q": "Was zählt als eine Verifizierung?",
+          "a": "Eine erfolgreiche gestenbasierte Verifizierung, die ein signiertes Credential zurückgibt. Fehlgeschlagene oder abgebrochene Sitzungen werden nicht gezählt."
+        },
+        {
+          "q": "Ist der On-Chain-Nachweis echt?",
+          "a": "Ja. Jede Verifizierung ab Growth-Tarif schreibt eine Transaktion über den human_firewall-Smart-Contract auf die Aptos-Blockchain. Der Tx-Hash wird zurückgegeben und ist im Aptos Explorer verifizierbar."
+        },
+        {
+          "q": "Speichert ihr Biometriedaten?",
+          "a": "Nein. APTOGON nutzt eine gestenbasierte Challenge, keine Gesichtserkennung oder Iris-Scans. Es werden niemals biometrische Daten erfasst, verarbeitet oder gespeichert."
+        },
+        {
+          "q": "Gibt es eine kostenlose Testversion?",
+          "a": "Der Developer-Tarif ist dauerhaft kostenlos mit bis zu 1.000 Verifizierungen/Monat — keine Kreditkarte nötig. Ideal für Integrationstests und MVPs."
+        },
+        {
+          "q": "Wie schneiden die Preise im Vergleich zu KYC-Anbietern ab?",
+          "a": "Klassisches KYC (Onfido, Persona) kostet 1–10 $ pro Prüfung. APTOGON startet bei 0,05 $ und sinkt bei Skalierung auf 0,01 $ — 50–100x günstiger, ohne amtlichen Ausweis."
+        },
+        {
+          "q": "Kann ich APTOGON in meine eigene App einbinden?",
+          "a": "Ja. Browser-Erweiterung, einbettbares Widget und REST-API stehen zur Verfügung. White-Label-Branding ist ab dem Growth-Tarif enthalten."
+        }
+      ]
+    }
+  },
+  "solutions_communities": {
+    "hero": {
+      "eyebrow": "Communities & Plattformen",
+      "title": "Halten Sie Ihre Community menschlich.",
+      "subtitle": "Bots fluten Ihre Abstimmungen. Ban-Umgeher sind in Sekunden zurück. Stimmenmanipulation zerstört Vertrauen. Eine echte Community braucht echte Menschen — nachweislich.",
+      "cta_try": "Kostenlos testen — 1.000 Verifizierungen/Monat",
+      "cta_api": "API-Dokumentation"
+    },
+    "problems": {
+      "title": "Das Bot-Befall-Problem",
+      "subtitle": "Jeder Bann ist in Sekunden umgangen. Jede Abstimmung kann manipuliert werden. Die Plattform zahlt den Preis.",
+      "items": [
+        {
+          "stat": "30–50%",
+          "label": "der neuen Konten auf großen Plattformen sind Bots oder Duplikate",
+          "src": "Plattform-Sicherheitsberichte"
+        },
+        {
+          "stat": "1 Bann",
+          "label": "ist in Sekunden umgangen — einfach ein neues Konto erstellen",
+          "src": "Übliches Missbrauchsmuster"
+        },
+        {
+          "stat": "$0",
+          "label": "Kosten, um 1.000 gefälschte Konten zu erstellen und eine Abstimmung zu fluten",
+          "src": "APTOGON-Analyse"
+        },
+        {
+          "stat": "0",
+          "label": "bestehende CAPTCHA-Tools können beweisen: ein Mensch = ein Konto",
+          "src": "Plattform-Recherche"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "So funktioniert's",
+      "subtitle": "Ein Mensch = eine DID. Eine DID zu bannen bannt den Menschen — nicht nur die E-Mail-Adresse.",
+      "steps": [
+        {
+          "title": "Nutzer tritt Ihrer Community bei",
+          "desc": "Betten Sie das APTOGON-Widget in Ihren Anmelde- oder Zugangsprozess ein. Kein Redirect, kein neues Konto nötig."
+        },
+        {
+          "title": "Gesten-Verifizierung",
+          "desc": "Eine 10-sekündige Gesten-Challenge bestätigt einen Menschen. Gerätesignale entlarven Automatisierungs-Frameworks."
+        },
+        {
+          "title": "Anonyme DID ausgestellt",
+          "desc": "Der Nutzer erhält eine portable, anonyme Identität. Kein Name, keine E-Mail, keine gespeicherte Biometrie."
+        },
+        {
+          "title": "Erkennung von Ban-Umgehern",
+          "desc": "Registriert sich eine gebannte DID neu, meldet Ihr System das. Gleicher Mensch = gleiche DID, auch über IPs hinweg."
+        }
+      ]
+    },
+    "vs": {
+      "title": "APTOGON im Vergleich zu Alternativen",
+      "subtitle": "Jedes andere Tool lässt sich umgehen. Eine geräte-gebundene DID nicht.",
+      "rows": [
+        {
+          "name": "IP-Blocking",
+          "res": "VPN umgeht es in 10 Sekunden",
+          "verdict": "bad"
+        },
+        {
+          "name": "E-Mail-Verifizierung",
+          "res": "Temp-E-Mail-Dienste sind kostenlos und unbegrenzt",
+          "verdict": "bad"
+        },
+        {
+          "name": "Telefon-Verifizierung",
+          "res": "Wegwerf-SIMs kosten < 1 $, verletzen die Privatsphäre",
+          "verdict": "bad"
+        },
+        {
+          "name": "KYC / amtlicher Ausweis",
+          "res": "Hohe Hürde → geringe Akzeptanz → Geisterstadt",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "res": "Geräte-gebundene DID — immer ein Mensch",
+          "verdict": "good"
+        }
+      ]
+    },
+    "differentiator": {
+      "title": "Der APTOGON-Unterschied: von der Community getragenes Vertrauen",
+      "body": "Anders als zentralisierte Verifizierer erlaubt der Bond-Graph von APTOGON, dass Ihre bestehenden Mitglieder für neue bürgen. Community-Veteranen erwerben Vertrauensgewicht. Verbürgte Mitglieder starten mit einem Vorsprung. Vertrauen entsteht innerhalb Ihrer Community — nicht importiert von einem Unternehmen.",
+      "features": [
+        {
+          "title": "Bond-Bürgschaft",
+          "desc": "Mitglieder bürgen für neue Nutzer und erhöhen so das Vertrauensgewicht"
+        },
+        {
+          "title": "Zero-PII",
+          "desc": "Kein Name, keine E-Mail, keine Biometrie werden je gespeichert"
+        },
+        {
+          "title": "On-Chain-Nachweis",
+          "desc": "Verifizierbares HumanCredential auf der Aptos-Blockchain"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihre Community zurückzuerobern?",
+      "desc": "Kostenlos starten mit 1.000 Verifizierungen/Monat. In Minuten eingebunden.",
+      "start_free": "Kostenlos starten",
+      "view_pricing": "Preise ansehen"
+    },
+    "nav": {
+      "other_verticals": "Weitere Branchen:",
+      "links": [
+        {
+          "label": "Marktforschung"
+        },
+        {
+          "label": "KI-Datenannotation"
+        },
+        {
+          "label": "Web3 / DAOs"
+        }
+      ]
+    }
+  },
+  "solutions_web3": {
+    "hero": {
+      "eyebrow": "Web3 & DAOs",
+      "title_line1": "Ein Mensch. Eine Stimme.",
+      "title_line2": "On-Chain.",
+      "subtitle": "Ein einzelner Akteur mit 1.000 Wallets kann Ihre DAO-Governance kapern, Ihren Airdrop leerräumen oder Ihre UBI-Verteilung dominieren. Wallet-Besitz beweist nichts darüber, wer dahintersteht.",
+      "cta_try": "Kostenlos testen — 1K Verifizierungen/Monat",
+      "cta_api": "API-Dokumentation"
+    },
+    "problems": {
+      "title": "Sybil-Angriffe zerstören Web3",
+      "subtitle": "Token-gewichtetes Voting klingt fair. Eine Person mit 1.000 Wallets ist es nicht.",
+      "items": [
+        {
+          "stat": "1 Hand",
+          "label": "kann 1.000 Wallets kontrollieren und eine DAO-Governance-Abstimmung kapern",
+          "src": "Typischer Sybil-Angriff"
+        },
+        {
+          "stat": "$0",
+          "label": "Kosten, um ein neues Wallet zu erstellen und Airdrop-Berechtigung zu beanspruchen",
+          "src": "On-Chain-Analyse"
+        },
+        {
+          "stat": "~80%",
+          "label": "der Airdrop-Empfänger waren bei manchen Protokollen Bots oder Sybils",
+          "src": "Blockchain-Recherche"
+        },
+        {
+          "stat": "0",
+          "label": "bestehende Wallet-basierte Nachweise können einen einzigartigen Menschen dahinter verifizieren",
+          "src": "APTOGON-Analyse"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "So funktioniert's",
+      "subtitle": "Ein verifizierbares, On-Chain-HumanCredential verknüpft Ihr Wallet mit einem einzigartigen Menschen — lesbar von jedem Smart Contract.",
+      "steps": [
+        {
+          "title": "Nutzer verbindet Wallet",
+          "desc": "Ihre dApp oder DAO-Oberfläche zeigt nach der Wallet-Verbindung das APTOGON-Widget an — keine neue Anmeldung nötig."
+        },
+        {
+          "title": "Gesten-Verifizierung",
+          "desc": "Eine 10-sekündige Geste verknüpft das Wallet mit einem physischen Menschen. Gerätesignale blockieren Headless-Automatisierung."
+        },
+        {
+          "title": "HumanCredential auf Aptos",
+          "desc": "Ein signiertes, On-Chain-HumanCredential wird erstellt und verknüpft Wallet mit DID. Von jedem Smart Contract verifizierbar."
+        },
+        {
+          "title": "Ein Mensch, eine Stimme",
+          "desc": "Ihr Governance-Contract liest das HumanCredential aus. Eine Person = ein Stimmgewicht, unabhängig vom Token-Bestand."
+        }
+      ]
+    },
+    "use_cases": {
+      "title": "Was Sie bauen können",
+      "subtitle": "Jedes Protokoll, das „ein Mensch = ein Recht“ braucht, profitiert von einem HumanCredential.",
+      "items": [
+        {
+          "title": "DAO-Governance",
+          "desc": "Verhindern Sie, dass Whale-Sybils Abstimmungen kapern. Gewichtung nach verifizierten Menschen, nicht nur Token-Bestand."
+        },
+        {
+          "title": "Airdrop-Verteilung",
+          "desc": "Vergeben Sie Token an einzigartige Menschen. Lehnen Sie Wallets ohne On-Chain-HumanCredential ab."
+        },
+        {
+          "title": "UBI / DeFi-Belohnungen",
+          "desc": "Verteilen Sie Erträge oder Grundeinkommen an verifizierte, einzigartige Menschen — wie Worldcoin, aber ohne Iris-Scan."
+        },
+        {
+          "title": "Proof-of-Personhood-NFTs",
+          "desc": "Prägen Sie Soulbound-NFTs, die an eine verifizierte menschliche Identität gebunden sind. Keine doppelten Prägungen derselben Person."
+        }
+      ]
+    },
+    "vs_worldcoin": {
+      "title": "APTOGON vs. Worldcoin",
+      "subtitle": "Beide lösen Proof-of-Personhood für Web3. Auf sehr unterschiedliche Weise.",
+      "columns": [
+        {
+          "name": "Worldcoin",
+          "items": [
+            "Iris-Biometrie-Scan erforderlich",
+            "Physisches Orb-Gerät nötig",
+            "Biometrie serverseitig gespeichert",
+            "ZK-Proofs auf Optimism",
+            "Closed-Source-Orb-Hardware",
+            "Nur in ausgewählten Städten verfügbar"
+          ]
+        },
+        {
+          "name": "APTOGON",
+          "items": [
+            "Keine Biometrie — nur Geste",
+            "Funktioniert auf jedem Gerät, überall",
+            "Null gespeicherte Biometrie",
+            "On-Chain-Nachweis auf Aptos",
+            "Open-Source-Erweiterung + API",
+            "Funktioniert weltweit, sofort"
+          ]
+        }
+      ]
+    },
+    "smart_contract": {
+      "title": "Integration mit Ihrem Smart Contract",
+      "subtitle": "Fragen Sie HumanCredential on-chain ab. Ein Move-Aufruf gibt Ihnen verifizierte Menschlichkeit.",
+      "comment_module": "Move-Modul — HumanCredential vor der Abstimmung prüfen",
+      "comment_verify": "Einzigartigen Menschen vor Stimmzählung verifizieren",
+      "comment_record": "Eine Adresse = eine Stimme, on-chain durchgesetzt",
+      "full_docs": "Vollständige Smart-Contract-Dokumentation"
+    },
+    "cta": {
+      "title": "Bereit, Ihr Protokoll sybil-sicher zu machen?",
+      "desc": "Der einzige Anbieter mit einem echten On-Chain-HumanCredential auf Aptos. Kostenlos starten.",
+      "start_free": "Kostenlos starten",
+      "view_pricing": "Preise ansehen",
+      "badges": [
+        "Kein Iris-Scan",
+        "Funktioniert auf Aptos",
+        "Open Source"
+      ]
+    },
+    "nav": {
+      "other_verticals": "Weitere Branchen:",
+      "links": [
+        {
+          "label": "Marktforschung"
+        },
+        {
+          "label": "Communities"
+        },
+        {
+          "label": "KI-Datenannotation"
+        }
+      ]
+    }
+  },
+  "solutions_ai_labeling": {
+    "hero": {
+      "eyebrow": "KI-Datenannotation",
+      "title_line1": "Ihr Modell ist nur so gut",
+      "title_line2": "wie Ihre Annotatoren.",
+      "subtitle": "Eine Person mit 50 Konten vergiftet gerade jetzt Ihre Trainingsdaten. Sybil-Angriffe auf Annotations-Pipelines sind unsichtbar — bis Ihr Modell defekt ausgeliefert wird.",
+      "cta_try": "Kostenlos testen — 1K Verifizierungen/Monat",
+      "cta_api": "API-Dokumentation"
+    },
+    "problems": {
+      "title": "Sybil-Angriffe auf Annotations-Pipelines",
+      "subtitle": "Ihr Inter-Annotator-Agreement-Score kann gesund aussehen, während eine Person 40% der Labels erstellt.",
+      "items": [
+        {
+          "stat": "1 Person",
+          "label": "kann 50+ Annotator-Konten erstellen und Ihren Datensatz dominieren",
+          "src": "Übliches Mechanical-Turk-Missbrauch"
+        },
+        {
+          "stat": "~30%",
+          "label": "der Crowd-Labeling-Aufgaben können von wiederkehrenden Arbeitern eingereicht werden",
+          "src": "Akademische Forschungsschätzungen"
+        },
+        {
+          "stat": "$0",
+          "label": "Kosten für einen Angreifer, um Ihre Trainingsdaten im großen Stil zu vergiften",
+          "src": "APTOGON-Analyse"
+        },
+        {
+          "stat": "∞",
+          "label": "Kosten, ein Modell mit korrumpierten Labels neu zu trainieren",
+          "src": "Branchenerfahrung"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "So funktioniert's",
+      "subtitle": "Eine DID pro Gerät. Mehrere Geräte einer Person bilden einen erkennbaren Cluster.",
+      "steps": [
+        {
+          "title": "Annotator öffnet Aufgabe",
+          "desc": "Ihre Labeling-Plattform bettet das APTOGON-Widget ein, bevor Zugang zu Annotationsaufgaben gewährt wird."
+        },
+        {
+          "title": "Gesten-Verifizierung",
+          "desc": "Eine einzigartige Geste bestätigt einen lebenden Menschen. Gerätesignale verhindern das Durchkommen von Automatisierungsskripten."
+        },
+        {
+          "title": "Einzigartige DID pro Gerät ausgestellt",
+          "desc": "Jedes physische Gerät erhält eine DID. Eine Person mit 10 Telefonen = 10 markierte Konten, nicht 10 Annotatoren."
+        },
+        {
+          "title": "Aggregation auf Personenebene",
+          "desc": "Ihr Backend erkennt, wenn mehrere DIDs denselben Vertrauensgraphen teilen — und deckt Sybil-Cluster auf, bevor sie Labels kontaminieren."
+        }
+      ]
+    },
+    "vs": {
+      "title": "Warum Alternativen scheitern",
+      "subtitle": "Nichts anderes bindet einen Annotator an ein physisches Gerät.",
+      "rows": [
+        {
+          "name": "E-Mail-Verifizierung",
+          "res": "Eine Person, unbegrenzte E-Mail-Adressen",
+          "verdict": "bad"
+        },
+        {
+          "name": "CAPTCHA beim Aufgabenstart",
+          "res": "Bestätigt eine menschliche Sitzung, nicht eine einzigartige Identität",
+          "verdict": "bad"
+        },
+        {
+          "name": "IP-basierte Deduplizierung",
+          "res": "VPNs und geteilte Büros durchbrechen dies sofort",
+          "verdict": "bad"
+        },
+        {
+          "name": "Qualifikationstests",
+          "res": "Teilbare Antworten, per Skript lösbar",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "res": "Geräte-gebundene DID — mathematisch ein Annotator pro Gerät",
+          "verdict": "good"
+        }
+      ]
+    },
+    "quality": {
+      "title": "Was das für Ihr Modell bedeutet",
+      "features": [
+        {
+          "title": "Vielfältige Labels",
+          "desc": "Labels von wirklich unterschiedlichen Menschen, nicht die verstärkte Verzerrung einer Person"
+        },
+        {
+          "title": "Auditierbare Herkunft",
+          "desc": "On-Chain-Nachweis der Menschlichkeit jedes Annotators — zeigen Sie es Kunden oder Regulierungsbehörden"
+        },
+        {
+          "title": "Faire Auszahlungen",
+          "desc": "Bezahlen Sie echte Annotatoren, nicht eine Person mit 50 Wallets, die Ihre Anreize austrickst"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihren Trainingsdaten zu vertrauen?",
+      "desc": "Kostenlos starten mit 1.000 Verifizierungen/Monat. Funktioniert mit jeder Labeling-Plattform per API.",
+      "start_free": "Kostenlos starten",
+      "view_pricing": "Preise ansehen"
+    },
+    "nav": {
+      "other_verticals": "Weitere Branchen:",
+      "links": [
+        {
+          "label": "Marktforschung"
+        },
+        {
+          "label": "Communities"
+        },
+        {
+          "label": "Web3 / DAOs"
+        }
+      ]
+    }
+  },
+  "solutions_surveys": {
+    "hero": {
+      "eyebrow": "Marktforschung",
+      "title_line1": "Ihre Daten sind nur so gut",
+      "title_line2": "wie Ihre Befragten.",
+      "subtitle": "Umfragebetrug untergräbt heimlich Ihre Forschung. Doppelte Teilnehmer, Klickfarmen und Prämienjäger zerstören die Datenqualität — und Ihre Entscheidungen leiden darunter.",
+      "cta_try": "Kostenlos testen — 1K Verifizierungen/Monat",
+      "cta_api": "API-Dokumentation"
+    },
+    "problems": {
+      "title": "Die verborgene Epidemie in der Marktforschung",
+      "subtitle": "CAPTCHAs stoppen Bots. Nichts hindert Menschen daran, zweimal zu antworten — bis jetzt.",
+      "items": [
+        {
+          "stat": "20–30%",
+          "label": "der Umfrageprämien gehen an doppelte Teilnehmer",
+          "src": "Branchenschätzungen"
+        },
+        {
+          "stat": "130 Mrd. $+",
+          "label": "Marktforschungsbranche jährlich von Betrug betroffen",
+          "src": "ESOMAR"
+        },
+        {
+          "stat": "1 Person",
+          "label": "kann 50+ Antworten mit frischen E-Mail-Adressen einreichen",
+          "src": "Übliches Betrugsmuster"
+        },
+        {
+          "stat": "0 Tools",
+          "label": "bestehende CAPTCHA-/Honeypot-Lösungen können Einzigartigkeit garantieren",
+          "src": "APTOGON-Analyse"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "So funktioniert's",
+      "subtitle": "Keine Anmeldung, kein amtlicher Ausweis, keine Biometrie. Nur eine 10-sekündige Geste.",
+      "steps": [
+        {
+          "title": "Befragter öffnet Umfrage",
+          "desc": "Ihr Umfragelink enthält ein APTOGON-Widget — keine Weiterleitungen, keine Reibung."
+        },
+        {
+          "title": "Gesten-Verifizierung (~10 Sek.)",
+          "desc": "Der Befragte zeichnet eine Geste. Geräte-Fingerabdruck + Verhaltenstiming bestätigen einen Menschen."
+        },
+        {
+          "title": "Anonyme DID ausgestellt",
+          "desc": "Eine eindeutige, anonyme dezentrale ID wird zugewiesen. Kein Name, keine E-Mail, keine gespeicherte Biometrie."
+        },
+        {
+          "title": "Eine DID = eine Antwort",
+          "desc": "Ihr Backend lehnt jede zweite Einreichung derselben DID ab. On-Chain-Nachweis wird automatisch erstellt."
+        }
+      ]
+    },
+    "roi": {
+      "section_title": "Berechnen Sie Ihre Ersparnis",
+      "section_subtitle": "Sehen Sie, was Umfragebetrug Sie kostet — und was APTOGON im Gegenzug kostet.",
+      "title": "ROI-Rechner",
+      "sliders": {
+        "volume": "Monatliche Antworten",
+        "fraud": "Geschätzte Betrugsrate",
+        "reward": "Prämie pro Antwort"
+      },
+      "outputs": {
+        "lost": "Durch Betrug verlorene Prämien",
+        "cost": "APTOGON-Kosten",
+        "net": "Nettoersparnis"
+      },
+      "loss_suffix": "Verlust",
+      "free_tier_note": "Developer-Tarif — kostenlos bis zu 1.000 Verifizierungen/Monat",
+      "compare_title": "APTOGON im Vergleich zu Alternativen",
+      "compare_rows": [
+        {
+          "name": "Honeypot-Felder",
+          "fraud": "Wehrt Klickfarmen ab",
+          "privacy": "✓",
+          "cost": "Kostenlos",
+          "verdict": "partial"
+        },
+        {
+          "name": "E-Mail-Deduplizierung",
+          "fraud": "Wird mit neuer E-Mail umgangen",
+          "privacy": "✗",
+          "cost": "Kostenlos",
+          "verdict": "bad"
+        },
+        {
+          "name": "IP-Deduplizierung",
+          "fraud": "Wird mit VPN/Mobilfunk umgangen",
+          "privacy": "~",
+          "cost": "Kostenlos",
+          "verdict": "bad"
+        },
+        {
+          "name": "KYC / ID-Verifizierung",
+          "fraud": "Hohe Hürde, geringe Akzeptanz",
+          "privacy": "✗",
+          "cost": "$1–10/Prüfung",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "fraud": "Garantiert ein einzigartiger Mensch",
+          "privacy": "✓",
+          "cost": "~$0,01/Prüfung",
+          "verdict": "good"
+        }
+      ]
+    },
+    "api": {
+      "title": "In Minuten integriert",
+      "subtitle": "Fügen Sie einen einzigen API-Aufruf in Ihr Umfrage-Backend ein. Das war's.",
+      "comment_verify": "Befragten verifizieren, bevor die Antwort gespeichert wird",
+      "comment_response": "Antwort",
+      "comment_false_note": "false, wenn die DID bereits eingereicht hat",
+      "full_docs": "Vollständige API-Dokumentation"
+    },
+    "cta": {
+      "title": "Bereit, Ihre Daten zu bereinigen?",
+      "desc": "Kostenlos starten mit 1.000 Verifizierungen/Monat. Keine Kreditkarte, kein Vertrag.",
+      "start_free": "Kostenlos starten",
+      "view_pricing": "Preise ansehen",
+      "badges": [
+        "Keine gespeicherte Biometrie",
+        "Kein amtlicher Ausweis nötig",
+        "GDPR-kompatibel"
+      ]
+    },
+    "nav": {
+      "other_verticals": "Weitere Branchen:",
+      "links": [
+        {
+          "label": "Communities"
+        },
+        {
+          "label": "KI-Datenannotation"
+        },
+        {
+          "label": "Web3 / DAOs"
+        }
+      ]
+    }
+  },
+  "solutions_gonka": {
+    "eyebrow": "Infrastruktur",
+    "title": "Was ist Gonka — und warum APTOGON darauf läuft",
+    "subtitle": "Das dezentrale KI-Netzwerk, das jede Geste auf APTOGON analysiert — und die Hälfte unseres eigenen Namens.",
+    "nameTitle": "Woher der Name „APTOGON“ kommt",
+    "nameBody": "APTOGON ist ein Kofferwort: Aptos — die Blockchain, auf der jedes HumanCredential verankert wird — plus Gonka — das dezentrale KI-Netzwerk, das jede Geste klassifiziert. Zwei dezentrale Ebenen, ein Produktname.",
+    "missionTitle": "Warum dezentral, nicht Big Tech",
+    "missionBody": "Die heutige KI-Inferenz läuft fast ausschließlich über vier Unternehmen — OpenAI, Google, Anthropic, Meta. Diese Konzentration schafft ein reales Risiko für jedes Produkt, das davon abhängt: Ein einzelnes Unternehmen kann einseitig die Preise erhöhen, den Zugang nach Region einschränken oder komplett ausfallen und jeden abhängigen Dienst mit sich offline nehmen. Exportbeschränkungen für fortschrittliche GPUs bedeuten zudem, dass ganze Länder physisch von KI-Rechenleistung ausgeschlossen sein können, unabhängig von ihrer Zahlungsfähigkeit. Gonka leitet Inferenz über Tausende unabhängig betriebener GPUs statt über die Rechenzentren eines einzigen Unternehmens — keine einzelne Instanz kann uns die Preise diktieren, uns abschneiden oder uns abschalten.",
+    "missionBullets": [
+      "Preise werden vom Markt bestimmt, nicht von einem Unternehmen",
+      "Keine regionalen Abschaltungen",
+      "Der Ausfall eines einzelnen Unternehmens kann die Verifizierung nicht mit sich reißen",
+      "Funktioniert unabhängig von der Geografie der Exportkontrollen gleich"
+    ],
+    "howTitle": "Wie es tatsächlich funktioniert",
+    "howItems": [
+      {
+        "title": "ML-Nodes",
+        "desc": "GPU-ausgestattete Server führen Inferenz für die Anfrage aus, die ihnen das Netzwerk zuweist."
+      },
+      {
+        "title": "Transfer Agents",
+        "desc": "Vermittelnde Knoten leiten jede Anfrage an verfügbare Rechenleistung weiter, wo auch immer sie sich befindet."
+      },
+      {
+        "title": "Sprint Consensus",
+        "desc": "Das Netzwerk bestätigt in Echtzeit, welche Berechnung tatsächlich stattgefunden hat, während Anfragen bedient werden."
+      },
+      {
+        "title": "Proof of Computation",
+        "desc": "Ein Teil jeder Anfrage wird unabhängig von einem anderen Knoten neu berechnet, um unehrliche Ergebnisse zu erkennen."
+      }
+    ],
+    "securityTitle": "Warum wir ihm etwas Wichtiges anvertrauen",
+    "securityBullets": [
+      "Kryptografische Signaturen verifizieren jede Berechnung in unter 10 Millisekunden.",
+      "Ein beim Betrug erwischter Knoten verliert einen Teil seiner hinterlegten Sicherheit — echte finanzielle Kosten für Unehrlichkeit.",
+      "Das Netzwerk ist vollständig Open Source und wurde unabhängig geprüft (CertiK)."
+    ],
+    "costTitle": "„Günstig“ ist wichtig — nicht nur für uns",
+    "costBody": "Die Inferenzkosten von Gonka liegen bei einem Bruchteil des Listenpreises eines zentralisierten Anbieters für vergleichbare Modelle, weil in jede Anfrage nicht die Marge eines einzelnen Unternehmens eingepreist ist. Das ist speziell für APTOGON wichtig: Die Gestenverifizierung muss im großen Maßstab funktionieren, für Nutzer des kostenlosen Tarifs, ohne dass unsere Kosten im Gleichschritt mit einer Big-Tech-Preisliste steigen, die wir nicht kontrollieren.",
+    "closing": "Das ist auch, nicht zufällig, dasselbe Prinzip, das der eigenen Architektur von APTOGON zugrunde liegt: Zero-PII, On-Chain-Nachweis, kein einzelnes Unternehmen hält die Schlüssel darüber, ob Sie beweisen können, dass Sie ein Mensch sind.",
+    "sourceLabel": "Quelle",
+    "sourceText": "joingonka.ai — What is Gonka",
+    "backCta": "← Zurück zu Solutions"
+  }
+}

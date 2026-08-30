@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APTOGON Verified Human</title>
+  <style>
+    /* Theme tokens — light defaults, dark overrides below.
+       Adjust ONLY values defined here when extending the theme; rules below
+       reference these vars so both themes stay in lockstep. */
+    :root {
+      --bg-body:        #faf5ff;
+      --text-primary:   #111827;
+      --text-secondary: #6b7280;
+      --text-tertiary:  #9ca3af;
+      --text-muted:     #d1d5db;
+
+      --card-valid-bg:    linear-gradient(135deg, #f0fdf4, #ecfdf5);
+      --card-valid-border:#86efac;
+      --card-expired-bg:  #fff7ed;
+      --card-expired-border:#fed7aa;
+      --card-none-bg:     #f9fafb;
+      --card-none-border: #e5e7eb;
+
+      --details-bg:     #ffffff;
+      --details-border: #e9d5ff;
+      --row-border:     #f3e8ff;
+      --detail-value:   #374151;
+
+      --btn-secondary-bg:     #ffffff;
+      --btn-secondary-text:   #7c3aed;
+      --btn-secondary-border: #e9d5ff;
+
+      --footer-text: #d1d5db;
+      --footer-link: #a78bfa;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-body:        #1a1226;
+        --text-primary:   #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-tertiary:  #94a3b8;
+        --text-muted:     #64748b;
+
+        --card-valid-bg:    linear-gradient(135deg, #052e1a, #064e3b);
+        --card-valid-border:#10b981;
+        --card-expired-bg:  #3f2509;
+        --card-expired-border:#b45309;
+        --card-none-bg:     #2a1f3a;
+        --card-none-border: #3a2e4d;
+
+        --details-bg:     #2a1f3a;
+        --details-border: #3a2e4d;
+        --row-border:     #322642;
+        --detail-value:   #e2e8f0;
+
+        --btn-secondary-bg:     #2a1f3a;
+        --btn-secondary-text:   #c4b5fd;
+        --btn-secondary-border: #3a2e4d;
+
+        --footer-text: #64748b;
+        --footer-link: #c4b5fd;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 300px;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg-body);
+      color: var(--text-primary);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #2d1b69, #4c1d95);
+      padding: 20px 18px 16px;
+      text-align: center;
+    }
+    .header .logo {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+    .header h1 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .header .sub {
+      font-size: 10px;
+      color: #c4b5fd;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .body { padding: 16px; }
+
+    /* Status card */
+    .status-card {
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .status-card.valid {
+      background: var(--card-valid-bg);
+      border: 1.5px solid var(--card-valid-border);
+    }
+    .status-card.expired {
+      background: var(--card-expired-bg);
+      border: 1.5px solid var(--card-expired-border);
+    }
+    .status-card.none {
+      background: var(--card-none-bg);
+      border: 1.5px solid var(--card-none-border);
+    }
+
+    .status-icon { font-size: 32px; margin-bottom: 8px; }
+    .status-title { font-weight: 800; font-size: 15px; margin-bottom: 4px; }
+    .status-title.valid   { color: #10b981; }
+    .status-title.expired { color: #f59e0b; }
+    .status-title.none    { color: var(--text-tertiary); }
+    .status-sub { font-size: 11px; color: var(--text-tertiary); line-height: 1.5; }
+
+    /* Details rows */
+    .details {
+      background: var(--details-bg);
+      border-radius: 12px;
+      border: 1px solid var(--details-border);
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 14px;
+      font-size: 12px;
+      border-bottom: 1px solid var(--row-border);
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-label { color: var(--text-tertiary); font-weight: 500; }
+    .detail-value { color: var(--detail-value); font-weight: 600; font-family: monospace; font-size: 11px; }
+    .detail-value.good { color: #10b981; }
+    .detail-value.warn { color: #f59e0b; }
+
+    /* Buttons */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 11px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      margin-bottom: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #06b6d4);
+      color: white;
+    }
+    .btn-secondary {
+      background: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      border: 1.5px solid var(--btn-secondary-border);
+    }
+    .btn:hover { opacity: 0.9; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 10px 16px 14px;
+      font-size: 10px;
+      color: var(--footer-text);
+    }
+    .footer a { color: var(--footer-link); text-decoration: none; }
+
+    /* Loading */
+    .loading { text-align: center; padding: 32px 16px; color: var(--text-tertiary); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo" style="font-size:20px;font-weight:900;letter-spacing:-0.02em;margin-bottom:6px;">
+      <span style="color:#f1f5f9;">APT</span><span style="color:#06b6d4;">O</span><span style="background:linear-gradient(90deg,#7c3aed,#db2777);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">GON</span>
+    </div>
+    <h1>Verified Human</h1>
+    <div class="sub">HUMAN FIREWALL FOR THE INTERNET</div>
+  </div>
+
+  <div class="body" id="body">
+    <div class="loading">Загрузка...</div>
+  </div>
+
+  <div class="footer">
+    <a href="https://homosapience.org" target="_blank">homosapience.org</a>
+    &nbsp;·&nbsp;
+    <a href="https://homosapience.org/verify" target="_blank">Verify</a>
+    &nbsp;·&nbsp;
+    <a href="https://homosapience.org/manifest" target="_blank">Manifest</a>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="qr.js"></script>
+  <script src="crypto.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

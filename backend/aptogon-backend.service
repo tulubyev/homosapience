@@ -1,0 +1,19 @@
+[Unit]
+Description=APTOGON Backend (uvicorn)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=tulubyev
+WorkingDirectory=/var/www/aptogon/backend
+Environment="PATH=/home/tulubyev/.local/bin:/usr/local/bin:/usr/bin:/bin"
+EnvironmentFile=/var/www/aptogon/backend/.env
+ExecStart=/home/tulubyev/.local/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/tulubyev/aptogon-api.log
+StandardError=append:/home/tulubyev/aptogon-api.log
+
+[Install]
+WantedBy=multi-user.target

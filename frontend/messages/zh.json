@@ -1,0 +1,1731 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "用一个手势证明你是人类。无需密码，无需邮箱，无需追踪。"
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "项目",
+    "community": "社区",
+    "copyright": "© 2025 Homo Sapience Internet · 开源 · MIT License",
+    "version": "v0.2.0 · SapiX · Aptos Testnet",
+    "links": {
+      "manifest": "宣言",
+      "developers": "开发者",
+      "donate": "捐赠",
+      "verify": "验证"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · SapiX · did:key · Aptos Testnet",
+    "headline": "互联网的人类防火墙",
+    "subheadline": "用一个手势证明你是人类。无需密码，无需邮箱，无需追踪。",
+    "cta_verify": "✍️ 立即验证",
+    "cta_chat": "💬 聊天",
+    "tech_title": "技术",
+    "tech_subtitle": "点击卡片了解更多",
+    "how_title": "验证如何运作",
+    "how_subtitle": "4步 · 10秒 · 零个人数据",
+    "step": "步骤",
+    "join_title": "加入我们",
+    "join_subtitle": "我们正在为人类互联网构建公共基础设施",
+    "cards": {
+      "gesture": {
+        "title": "手势",
+        "subtitle": "人类表达",
+        "modal_title": "手势作为证明",
+        "modal_body": "你用鼠标或手指画一条线。AI 分析的不是形状，而是生物特征运动参数：速度变化、停顿、纠正、节奏不规律性。机器人移动完美——人类则不然。"
+      },
+      "ai": {
+        "title": "SapiX",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "模式分析",
+        "modal_body": "Qwen3-14B（通过 OpenRouter）只接收统计手势向量——没有坐标，没有个人数据。评估8个参数并返回：is_human、confidence（0–1）、reasoning。阈值：85%。"
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "W3C 标准",
+        "modal_title": "去中心化标识符",
+        "modal_body": "浏览器中生成 Ed25519 密钥对。公钥按照 W3C 标准编码为 did:key。无需服务器，无需注册——密钥仅存在于浏览器的 localStorage 中。"
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "区块链",
+        "modal_title": "链上记录",
+        "modal_body": "证明（ExpressionProof）的 SHA3-256 哈希被写入 Aptos 上的 Move 智能合约。哈希不包含个人数据——仅包含手势统计信息、session_id 和1小时时间桶。不可篡改且可验证。"
+      },
+      "privacy": {
+        "title": "隐私",
+        "subtitle": "零 PII",
+        "modal_title": "零个人数据",
+        "modal_body": "原始坐标仅在设备上处理。只有统计向量（8个数字）发送到服务器。只有哈希上链。不收集或存储姓名、邮箱或 IP。"
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "人类网络",
+        "modal_title": "人类担保系统",
+        "modal_body": "经过验证的人类可以通过 HSI Bond 相互担保。每次担保都会加强 HumanCredential。机器人无法获得真实人类的担保——这是额外的保护层。"
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "画一个手势",
+        "desc": "屏幕上的一条线或形状——速度、停顿、节奏"
+      },
+      "s02": {
+        "title": "SapiX 分析",
+        "desc": "8个生物特征参数——机器人移动完美"
+      },
+      "s03": {
+        "title": "生成 DID",
+        "desc": "浏览器中的 Ed25519 密钥——无需服务器"
+      },
+      "s04": {
+        "title": "记录在 Aptos 上",
+        "desc": "ExpressionProof 哈希——匿名且永久"
+      }
+    },
+    "manifest_card": {
+      "title": "宣言",
+      "body": "我们为什么构建 HSI，它将如何改变互联网，以及每个人在其中的位置。",
+      "cta": "阅读 →"
+    },
+    "developers_card": {
+      "title": "开发者",
+      "body": "REST API、SDK、集成示例。一小时内为您的应用添加人类验证。",
+      "cta": "文档 →"
+    },
+    "donate_card": {
+      "title": "支持",
+      "body": "没有风险投资的开源项目。帮助我们发展公共基础设施。",
+      "cta": "捐赠 →"
+    },
+    "hero_tagline_1": "互联网正被机器人困扰。",
+    "hero_tagline_2": "APTOGON 来解决它。",
+    "badge_states": {
+      "verified": "已验证为真人",
+      "unverified": "未验证",
+      "pending": "等待中",
+      "revoked": "机器人 / 已吊销"
+    },
+    "stats": [
+      {
+        "n": "40%",
+        "l": "的流量来自机器人",
+        "src": "Imperva"
+      },
+      {
+        "n": "$600B+",
+        "l": "每年因欺诈造成的损失",
+        "src": "Cybersecurity Ventures"
+      },
+      {
+        "n": "约10秒",
+        "l": "验证一个真人所需时间",
+        "src": "APTOGON 的设计"
+      },
+      {
+        "n": "$0",
+        "l": "存储的生物特征",
+        "src": "APTOGON 的设计"
+      }
+    ],
+    "verticals": {
+      "title": "谁在使用 APTOGON",
+      "subtitle": "一套协议，四个方向 —— 处处是同一个承诺：不收集个人数据。",
+      "cta": "查看方案",
+      "items": [
+        {
+          "title": "市场调研",
+          "desc": "杜绝重复受访者。一个 DID 对应一份回答。链上证明让数据可核查。"
+        },
+        {
+          "title": "社区",
+          "desc": "阻止封禁规避和刷票。社区保持真人属性 —— 无需监控。"
+        },
+        {
+          "title": "AI 数据标注",
+          "desc": "一个人对应一位标注员。防止训练数据被克隆账号污染。"
+        },
+        {
+          "title": "Web3 与 DAO",
+          "desc": "一人一票，记录在链上。唯一在 Aptos 上拥有真实 HumanCredential 的服务。"
+        }
+      ]
+    },
+    "why": {
+      "title": "APTOGON 的优势",
+      "subtitle": "不用生物特征。不用证件。开源。链上证明。",
+      "rows": [
+        "不用生物特征",
+        "链上证明",
+        "开源",
+        "每次验证价格"
+      ],
+      "footnote": "* Worldcoin 需要扫描虹膜 —— 这并不保护隐私"
+    }
+  },
+  "manifest": {
+    "nav_label": "宣言",
+    "hero_label": "homosapience.org",
+    "hero_title": "APTOGON 宣言",
+    "hero_subtitle": "互联网由人类建造——为人类服务。是时候保护它了。",
+    "s1_title": "问题",
+    "s1_p1": "到2025年，大多数互联网流量不是由人类产生的。机器人写评论、刷票、留评价、注册账户、参与调查。数字空间失去了其主要属性——它已不再是人类的空间。",
+    "s1_p2": "问题比看起来更深。现有解决方案——CAPTCHA、SMS验证、KYC——要么容易被绕过，要么需要披露身份。没有任何开放标准能够匿名证明人类身份。",
+    "s1_p3": "任何人都可以创建一千个账户。任何机器人都可以写\"我是人类\"。今天没有任何服务能够验证这一说法——无需护照、无需监控、无需中央数据库。",
+    "s2_title": "解决方案：APTOGON 作为协议",
+    "s2_p1": "APTOGON（Homo Sapience Internet）不是互联网的替代品。它是IP之上的协议，就像 HTTPS 在 HTTP 之上。它添加了一个新的原语：HumanCredential——一个经过密码学验证的证明，表明某个活生生的人在某个行为背后。",
+    "s2_p2": "验证基于运动生物特征，而非身份。AI 分析手势——不是坐标，不是形状，而是统计数据：速度变化、停顿熵、纠正次数、节奏不规律性。这是机器人无法充分模仿的。",
+    "s2_how_label": "工作原理",
+    "s2_steps": [
+      "用户绘制手势 → 统计数据在设备上处理",
+      "匿名特征向量（无坐标）发送至 Gonka 网络上的 后端",
+      "结果：is_human + confidence — 无个人数据",
+      "成功后，在浏览器中生成 Ed25519 DID",
+      "将证明的 SHA3-256 哈希写入 Aptos"
+    ],
+    "s3_title": "实际应用",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "论坛与平台",
+        "desc": "SDK 2行代码即可集成。垃圾邮件消失——不是因为被屏蔽，而是因为没有人来写。评分、投票和点赞再次反映真实的人类意见。"
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAO 与投票",
+        "desc": "一人一票。没有 Sybil 攻击，没有刷票。治理代币不仅受数量保护，还受人类证明保护。"
+      },
+      {
+        "icon": "💬",
+        "title": "聊天与评论",
+        "desc": "真实人类会出现经过验证的 Human 徽章。讨论质量立即改变——不是通过审查，而是通过对来源的信任。"
+      },
+      {
+        "icon": "🛒",
+        "title": "市场",
+        "desc": "评价由真实买家留下，而非竞争对手的机器人。评分再次作为质量指标发挥作用。"
+      },
+      {
+        "icon": "🎓",
+        "title": "教育",
+        "desc": "考试由人类通过，而非 GPT。当有证明谁获得了在线文凭时，在线文凭才有意义。"
+      },
+      {
+        "icon": "🤖",
+        "title": "AI 代理",
+        "desc": "悖论：APTOGON 帮助 AI 代理正确行动。代理可以证明它代表经过验证的人类行动——经其明确许可。"
+      }
+    ],
+    "s4_title": "货币化与可持续性",
+    "s4_p1": "APTOGON 作为具有多个层级的开放协议存在。对人类的验证始终是免费的。这是一个原则：人类不应该为证明自己的人类身份而付费。",
+    "tiers": [
+      {
+        "title": "免费",
+        "sub": "面向人类",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "面向平台",
+        "icon": "🔌"
+      },
+      {
+        "title": "Enterprise",
+        "sub": "本地部署 SDK",
+        "icon": "🏢"
+      },
+      {
+        "title": "GNK 代币",
+        "sub": "治理",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "平台为验证其用户付费——就像他们现在为 reCAPTCHA 和欺诈检测付费一样，但更诚实、更透明，且不与第三方共享数据。",
+    "s5_title": "发展社区",
+    "s5_p1": "早期采用者是已经受到机器人困扰的社区。GitHub 上的开发者、Reddit 上的作者、Web3 中的 DAO 成员、论坛版主。对他们来说，验证不是障碍——而是特权。",
+    "s5_p2": "Verified Human 徽章不是可以购买的蓝色勾选标记，而是无法购买、伪造或转让的绿色标记。它证明的不是名气——而是存在。",
+    "s5_p3": "网络通过 HSI Bond 成长：经过验证的真实用户相互担保，不断强化各自的凭证。APTOGON Chat 是首个正式上线的应用——一个仅限真人使用的实时空间，支持房间、私信和文件共享，凭您的 HumanCredential 即可访问。",
+    "quote": "\"互联网没有损坏——它只是不知道你是谁。APTOGON 解决了这个问题。\"",
+    "cta_verify": "✍️ 验证",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ 开发者",
+    "cta_home": "← 首页"
+  },
+  "developers": {
+    "nav_label": "开发者",
+    "hero_title": "面向开发者",
+    "hero_subtitle": "通过一段即插即用代码为你的应用添加人类验证。在控制台创建密钥，嵌入验证组件，并使用你的密钥在服务器端确认每个会话。",
+    "quickstart_title": "快速开始",
+    "quickstart_subtitle": "最小集成——3个步骤",
+    "step1_title": "嵌入 GestureCanvas",
+    "step2_title": "发送手势进行验证",
+    "step3_title": "使用 HumanCredential + 访问 Chat",
+    "api_title": "API 参考",
+    "ep1_desc": "手势验证。返回 HumanCredential。",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "通过 DID 查询验证状态。",
+    "ep2_params": "did (query)",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "最近的验证尝试（用于调试）。",
+    "ep3_params": "last=20 (query)",
+    "ep3_returns": "attempts[]，包含手势模式和 AI 结果",
+    "ep4_desc": "无需验证创建 DID（用于测试）。",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "特性",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "零 PII",
+        "desc": "原始手势坐标永远不会离开浏览器。只有统计数据发送到服务器。"
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "兼容 did:key 标准。适用于任何身份系统。"
+      },
+      {
+        "icon": "⛓️",
+        "title": "链上证明",
+        "desc": "Aptos 上的 Move 合约。无需我们的服务器即可验证——完全去中心化。"
+      },
+      {
+        "icon": "♿",
+        "title": "无障碍",
+        "desc": "考虑到运动障碍。有震颤的人永远不会被屏蔽。"
+      },
+      {
+        "icon": "⚡",
+        "title": "快速",
+        "desc": "中位数 800ms。SapiX 带有回退——即使服务不可用也能工作。"
+      },
+      {
+        "icon": "📋",
+        "title": "可验证凭证",
+        "desc": "W3C VC 格式。用 Ed25519 签名。30天后过期，自动续期。"
+      }
+    ],
+    "cta_title": "准备好集成了吗？",
+    "cta_subtitle": "在控制台中创建密钥即可开始。如需更高配额或企业集成，请联系我们。",
+    "cta_email": "📩 发邮件给我们",
+    "cta_try": "🧪 在线试用",
+    "cta_home": "← 首页",
+    "ep_chat_msg_desc": "获取聊天室的最近消息（公开聊天室无需身份验证）",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "向聊天室上传文件（最大 10 MB）。文件保存 5 天后自动删除。",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — 聊天室实时流。连接后可收发 JSON 消息。",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "创建 Bond 请求 — 3 位 Gold Member 为新用户背书。",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "轮询 Bond 请求状态。每 2–5 秒查询一次，直到 status = approved。",
+    "ep_bond_st_params": "request_id（路径参数）",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "担保人批准 Bond 请求（需要 Ed25519 签名）。",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash（达到阈值时）"
+  },
+  "donate": {
+    "nav_label": "捐赠",
+    "hero_title": "支持项目",
+    "hero_subtitle": "APTOGON 是一个没有风险投资的开源项目。我们正在为人类互联网构建公共基础设施。",
+    "funds_title": "资金去向",
+    "funds": [
+      {
+        "icon": "👩‍💻",
+        "title": "开发",
+        "desc": "SDK、文档、新验证功能",
+        "pct": 50
+      },
+      {
+        "icon": "🖥️",
+        "title": "托管与基础设施",
+        "desc": "FastAPI 后端、Aptos 交易、前端 CDN",
+        "pct": 30
+      },
+      {
+        "icon": "🧠",
+        "title": "SapiX 推理",
+        "desc": "用于在 LLM 模型上分析手势模式的专用 AI 算力",
+        "pct": 20
+      }
+    ],
+    "tiers_title": "支持层级",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "咖啡",
+        "desc": "约2,500次验证",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "支持者",
+        "desc": "约10,000次验证",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "合作伙伴",
+        "desc": "贡献者名单 + 优先 API",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "赞助商",
+        "desc": "网站上的徽标 + 直接支持",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "从俄罗斯付款",
+    "russia_desc": "通过 Tinkoff Pay、SBP 或任何俄罗斯银行卡快速转账",
+    "crypto_title": "加密货币",
+    "crypto_eth_desc": "写信至 hello@homosapience.org — 我们会发送地址",
+    "contact_title": "想要合作或集成？",
+    "contact_desc": "我们将讨论条款，提供早期 API 访问权限，并帮助将验证集成到您的产品中",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← 首页",
+    "support_btn": "支持 →",
+    "russia_btn": "前往支付 →",
+    "crypto_wallets_title": "🪙 加密货币捐赠",
+    "crypto_wallets_subtitle": "直接向钱包发送任意金额。无中间商，无手续费。",
+    "crypto_wallets_warning": "⚠️ 发送前请务必再次核对网络。发送到错误的网络可能导致资金永久丢失。",
+    "venture_from": "最低 $5,000 起",
+    "venture_label": "风险合作伙伴",
+    "venture_benefits": [
+      "发布时获得 APTOGON 代币",
+      "技术委员会席位",
+      "直接获取路线图信息",
+      "网站联合品牌展示"
+    ],
+    "venture_cta": "洽谈条款 →"
+  },
+  "verify": {
+    "nav_label": "验证",
+    "hero_badge": "🛡️ SapiX · Aptos Testnet",
+    "hero_title": "证明你是",
+    "hero_human": "人类",
+    "hero_subtitle": "无需护照 · 无需摄像头 · 无个人数据",
+    "steps_label": "验证如何工作",
+    "steps": [
+      {
+        "num": "1",
+        "title": "绘制符号",
+        "desc": "任何东西——字母、数字、曲线。AI 观察你如何绘制，而不是绘制什么"
+      },
+      {
+        "num": "2",
+        "title": "SapiX",
+        "desc": "分析节奏、速度、停顿。机器人移动太流畅——这暴露了它们"
+      },
+      {
+        "num": "3",
+        "title": "你的 DID",
+        "desc": "在浏览器中创建数字密钥。你的匿名 ID——像护照但没有名字"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "验证事实写入区块链。不是数据——只是密码学证明"
+      }
+    ],
+    "canvas_title": "画些什么",
+    "canvas_subtitle": "用鼠标或手指——任何符号",
+    "canvas_dot_tap": "点击圆点！（第 {current}/{total} 个）",
+    "canvas_dot_all_done": "✓ 全部 {total} 个圆点已标记！",
+    "canvas_dot_wait": "等待下一个圆点……（{done}/{total} 已完成）",
+    "canvas_keep_drawing": "继续绘制……",
+    "canvas_release": "✓ 可以松手了",
+    "canvas_tap_hint": "👆 请不要抬手，点击彩色圆点！",
+    "canvas_points_done": "✓ {count} 个点 — 完成",
+    "canvas_points_count": "{count} 个点……",
+    "canvas_draw_hint": "✏️ 在此处用鼠标或手指绘制",
+    "canvas_sec": "秒",
+    "canvas_clear": "清除",
+    "canvas_lifted": "✋ 已暂停 — 再次触摸绘图区即可继续",
+    "canvas_restarted": "↻ 暂停时间过长 — 重新开始",
+    "canvas_dot_reminder": "💡 绘制过程中可能会出现彩色圆点——请不要抬手，直接点击它",
+    "tags": [
+      "节奏",
+      "速度",
+      "停顿",
+      "压力",
+      "纠正"
+    ],
+    "analyzing_title": "SapiX 正在分析...",
+    "analyzing_subtitle": "模型正在研究您的手势模式",
+    "analyzing_checks": [
+      "速度变化",
+      "停顿熵",
+      "纠正次数",
+      "节奏不规律性",
+      "ExpressionProof 生成"
+    ],
+    "success_title": "您是人类 ✓",
+    "success_subtitle": "SapiX 确认了验证",
+    "confidence_label": "AI 置信度",
+    "threshold_0": "0%",
+    "threshold_70": "阈值 70%",
+    "threshold_85": "85%+ 优秀",
+    "threshold_100": "100%",
+    "did_title": "您的数字 ID 已创建",
+    "did_subtitle": "W3C did:key — 国际标准",
+    "did_id_label": "标识符（DID）：",
+    "did_what_label": "这是什么？",
+    "did_what_value": "像护照但是数字的且完全匿名",
+    "did_where_label": "存储在哪里？",
+    "did_where_value": "仅在您的浏览器中（localStorage）。服务器上没有",
+    "did_key_label": "私钥",
+    "did_key_value": "只属于您。没有人可以使用它",
+    "did_gen_label": "生成方式",
+    "did_gen_value": "直接在浏览器中，1毫秒内，无服务器请求",
+    "aptos_title": "记录在 Aptos 区块链上",
+    "aptos_onchain": "链上 ✓",
+    "aptos_local": "本地存储",
+    "aptos_tx_label": "交易哈希：",
+    "aptos_no_key": "凭证已本地保存。添加 APTOS_PRIVATE_KEY 以进行链上记录。",
+    "aptos_note": "📌 链上只记录验证事实——没有个人数据，只有哈希",
+    "bond_title": "最后一步——担保",
+    "bond_subtitle": "3位经过验证的人类确认您",
+    "bond_desc": "这可以防范通过手势测试的机器人。担保人是来自 HSI 网络的真实人类，他们用自己的声誉担保。",
+    "bond_cta": "🤝 请求担保 →",
+    "bonding_title": "等待担保人...",
+    "bonding_subtitle": "Gonka BondMatcher 正在按网络声誉选择人员",
+    "bonding_vouched": "已担保",
+    "bonding_waiting": "...",
+    "bonding_progress": "共3位",
+    "complete_title": "验证完成！",
+    "complete_subtitle": "您是 HSI 网络的正式成员",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "SapiX",
+        "desc": "手势已验证"
+      },
+      {
+        "emoji": "🔑",
+        "title": "DID 已创建",
+        "desc": "在浏览器中"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "事实已记录"
+      }
+    ],
+    "stored_title": "浏览器中保存的内容",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "您的匿名标识符"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "私钥（只属于您）"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "验证确认"
+      }
+    ],
+    "cta_chat": "💬 安全聊天",
+    "cta_bond": "🤝 担保",
+    "failed_title": "未通过",
+    "failed_tip": "这次没有通过。按你自己的节奏自然地绘制，想画多久都可以。",
+    "fallback_label": "（备用）",
+    "debug_title": "🔬 模式数据（调试）",
+    "error_already_verified": "您已在此设备的此浏览器中通过了人类验证。",
+    "device_bound_title": "此设备已有密钥",
+    "device_bound_body": "每台设备对应一个身份，再次绘制不会生成第二个。请恢复已有的密钥 — 从备份文件恢复，或从你仍处于登录状态的另一台设备关联此设备。",
+    "device_bound_restore": "从备份恢复",
+    "device_bound_pair": "我有另一台设备",
+    "error_backend": "后端不可用",
+    "consent": {
+      "title": "开始之前",
+      "subtitle": "请阅读我们如何使用你的数据",
+      "items": [
+        {
+          "icon": "✏️",
+          "title": "手势记录",
+          "desc": "你的绘制动作（触摸／鼠标事件）会被记录约10秒，并发送给我们的AI进行人类模式分析。"
+        },
+        {
+          "icon": "🤖",
+          "title": "AI分析",
+          "desc": "手势由SapiX（经Gonka网络的Qwen3）分析。不采集任何图像或视频——仅使用移动向量。"
+        },
+        {
+          "icon": "🔑",
+          "title": "匿名DID",
+          "desc": "加密标识符（DID）在你的浏览器本地生成。不含任何个人信息——没有姓名、邮箱或IP。"
+        },
+        {
+          "icon": "🗑️",
+          "title": "数据留存",
+          "desc": "原始手势数据不会被存储。仅将动作证明的匿名SHA-3哈希记录到Aptos区块链。"
+        },
+        {
+          "icon": "📍",
+          "title": "设备指纹",
+          "desc": "对设备特征（屏幕、语言、时区）的单向哈希用于防止重复注册，绝不以原始形式传输。"
+        }
+      ],
+      "mode_heading": "选择你的验证模式",
+      "mode_public_title": "公开",
+      "mode_public_desc": "在你的社交账号下显示「已验证人类」徽章。信誉可跨站点通用。",
+      "mode_shielded_title": "隐匿",
+      "mode_shielded_desc": "在隐藏身份的同时证明你是人类。全新匿名DID，无账号、无设备绑定。",
+      "gdpr_note": "继续即表示你同意根据<link>APTOGON隐私政策</link>分析手势。此处理基于你的明确同意（GDPR第6(1)(a)条）。你可随时通过从浏览器存储中删除凭证来撤回同意。",
+      "start_button": "✍️ 我已了解 — 开始验证",
+      "no_account": "无需账号 · 无需邮箱 · 无需护照"
+    },
+    "footer_note": "🔒 坐标在浏览器中销毁 · 只有数学发送到网络 · 无生物特征",
+    "embed_instruction": "✏️ 不抬手绘制 + 点按出现的 2 个点",
+    "embed_checking": "正在验证…",
+    "embed_verified": "已验证 — 你是真人 ✓",
+    "embed_failed": "无法确认，请重试。",
+    "embed_network": "网络错误。",
+    "embed_try_again": "重试",
+    "embed_missing_key": "缺少站点密钥。",
+    "embed_protected": "由 {brand} 保护 · 无追踪、无生物识别",
+    "embed_err_invalid_key": "配置错误：未知的站点密钥。请检查 data-aptogon-key。",
+    "embed_err_origin": "配置错误：该密钥不允许此网址。",
+    "embed_err_expired": "此验证已过期。请刷新页面。",
+    "embed_err_automation": "检测到自动化。验证仅供真人使用。",
+    "embed_err_classifier": "验证暂时不可用，请稍后重试。",
+    "embed_err_default": "验证不可用，请重试。"
+  },
+  "chat": {
+    "nav_label": "聊天",
+    "channels": "频道",
+    "room_tech_label": "技术",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "治理",
+    "room_gov_desc": "HSI 投票",
+    "room_phil_label": "哲学",
+    "room_phil_desc": "宣言 · 理念",
+    "verified_only": "仅已验证的人类可以发言",
+    "verify_link": "立即验证",
+    "placeholder": "在 #{{room}} 中发消息…",
+    "ai_moderator": "AI 版主",
+    "ai_active": "🛡️ 已启用",
+    "filter_spam": "垃圾过滤",
+    "filter_toxic": "毒性检测",
+    "filter_flood": "刷屏控制",
+    "filter_did": "DID 验证",
+    "rules": "规则",
+    "rule_respect": "尊重参与者",
+    "rule_humans": "仅限真实人类",
+    "rule_no_spam": "禁止垃圾或广告",
+    "rule_no_toxic": "禁止毒性或侮辱",
+    "rule_no_bots": "禁止机器人或自动化",
+    "welcome_msg": "🛡️ 欢迎来到 APTOGON Chat — 专为已验证人类设计的空间。",
+    "tech_welcome": "⚡ 技术讨论频道：Aptos、did:key、SapiX、WebSocket。",
+    "trust_levels": "信任等级",
+    "trust_trusted_desc": "7+ 次担保",
+    "trust_community_desc": "3–6 次担保",
+    "trust_newcomer_desc": "最多 3 次担保",
+    "privacy_title": "🔒 隐私",
+    "privacy_desc": "您的 DID 从不公开。仅显示哈希值的最后 8 个字符。",
+    "online_count": "位已验证在线",
+    "read_mode": "只读模式",
+    "read_mode_banner": "只读模式 — 需要验证才能参与",
+    "reaction": "反应",
+    "reply": "回复",
+    "room_agora_label": "主频道",
+    "room_agora_desc": "公共频道",
+    "offline_demo": "演示模式 — 后端不可用。显示的消息仅为示例。",
+    "loading_msgs": "正在加载消息…",
+    "empty_room": "暂无消息",
+    "empty_room_hint": "来第一个发言吧！"
+  },
+  "lang_switcher": {
+    "label": "语言"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — P2P 担保",
+    "hero_subtitle": "经过验证的人相互担保。社会信任变得可以加密验证。",
+    "cta_verify_short": "✍️ 立即验证",
+    "cta_request": "🤝 申请担保 ↓",
+    "how_title": "担保如何运作",
+    "how_subtitle": "从新手到可信网络成员的三步骤",
+    "step1_title": "完成验证",
+    "step1_desc": "画一个手势 — SapiX 确认您是人类。获得 DID 和 trust_score 10%。",
+    "step2_title": "申请担保",
+    "step2_desc": "3 位已验证网络成员确认您。信任分数增至 50%。",
+    "step3_title": "成为担保人",
+    "step3_desc": "trust_score ≥ 50% 时，您可以为他人担保。帮助网络成长。",
+    "trust_algo_title": "信任分数算法",
+    "trust_algo_subtitle": "每次担保信任度增长",
+    "after_bonds": "{n} 次担保后",
+    "level_newcomer": "新手",
+    "level_community": "社区认可",
+    "level_trusted": "可信",
+    "risks_title": "⚠️ 担保人风险",
+    "risks_note": "只有 trust_score ≥ 50%（3+ bonds）的成员才能担保。这创造了只推荐真实人的经济激励。",
+    "penalty1": "在您担保的人中发现机器人",
+    "penalty2": "同一担保人的重复机器人",
+    "reward1": "新的成功担保",
+    "reward2": "您的被担保人自己达到了 100%",
+    "incoming_title": "🔔 收到的请求",
+    "incoming_subtitle": "有人请求您成为他们的担保人",
+    "vouch_btn": "✓ 担保",
+    "requester_role": "👤 申请人",
+    "you_guarantor": "🤝 您",
+    "ask_placeholder": "提问…",
+    "request_title": "申请担保",
+    "request_subtitle_1": "选择",
+    "request_subtitle_2": "10+ 名成员",
+    "request_subtitle_3": "— 需要获得其中 3 人同意",
+    "selected": " 已选择",
+    "send_requests": "🤝 发送请求",
+    "privacy_title": "🔒 匿名与隐私",
+    "privacy_body": "担保人只能看到匿名 DID 哈希和 AI 信任级别。姓名、邮件、IP — 不与任何人共享。",
+    "manifest_link": "📜 宣言",
+    "home_link": "← 首页",
+    "done_title": "担保已收到！",
+    "done_auto_msg": "✅ AI 信任度高 — 系统担保人自动批准",
+    "done_human_msg": "3 人为您担保",
+    "done_blockchain": "HumanCredential 已记录到 Aptos 区块链",
+    "done_chat": "💬 进入聊天",
+    "failed_title": "无法收集担保",
+    "failed_desc_1": "所有",
+    "failed_desc_2": "次发送尝试已用完。当前在线担保人较少。",
+    "failed_hint": "稍后再试，或在 Telegram 联系我们 — 我们将手动提供帮助。",
+    "retry_btn": "🔄 重试",
+    "waiting_sending": "正在发送请求…",
+    "waiting_ai": "✅ AI 正在确认…",
+    "waiting_title": "等待担保人",
+    "retry_label": "重新发送 #{n}",
+    "requests_sent": "请求已发送给 HSI 网络成员",
+    "vouched": "已担保",
+    "awaiting": "等待中",
+    "vouches_needed": "/3 次担保",
+    "ai_auto_approve": "SapiX：信任度 ≥ 95% — 自动批准",
+    "anon_chat": "💬 与担保人的匿名聊天",
+    "write_placeholder": "给担保人写信…",
+    "you_requester": "👤 您",
+    "days_ago": "{n} 天前",
+    "no_candidates_title": "暂无在线担保人",
+    "no_candidates_hint": "你的请求将自动发送给创始 Gold Members——无需任何操作。",
+    "cancel": "取消",
+    "days_short": "天",
+    "known_dids_title": "💌 认识我的人",
+    "known_dids_subtitle": "如果有 HSI 成员认识您本人，请输入他们的 DID — 他们将收到为您担保的直接邀请。",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "可选 · 最多 3 个 · 必须以 did:key:z6Mk 开头"
+  },
+  "governance": {
+    "home_link": "← 首页",
+    "subtitle": "1 位验证人类 = 1 票",
+    "create_btn": "+ 创建提案",
+    "new_proposal": "新提案",
+    "title_placeholder": "提案标题",
+    "desc_placeholder": "详细描述...",
+    "create": "创建",
+    "creating": "创建中...",
+    "cancel": "取消",
+    "vote_btn": "🗳 投票",
+    "vote_cancel": "取消",
+    "vote_yes": "✓ 赞成",
+    "vote_no": "✗ 反对",
+    "vote_abstain": "— 弃权",
+    "vote_veto": "⚡ 否决",
+    "yes_label": "✓ 赞成",
+    "no_label": "✗ 反对",
+    "veto_label": "⚡ 否决",
+    "total_label": "总计",
+    "supporters_of": "支持: {count}/100 开始投票",
+    "voting_status": "🗳 投票中 · {days}天",
+    "type_text": "文字",
+    "type_parameter": "参数",
+    "type_ai_model": "AI 模型",
+    "type_upgrade": "升级",
+    "type_constitution": "宪法",
+    "days_unit": "天"
+  },
+  "stats": {
+    "title": "攻击统计",
+    "subtitle": "被动验证统计：人类、机器人和具自主性的 AI 浏览器。",
+    "loading": "加载中…",
+    "unavailable": "统计数据尚不可用。",
+    "service_down": "服务不可用",
+    "net_error": "网络错误",
+    "card_sessions": "总会话数",
+    "card_humans": "人类",
+    "card_bots": "机器人",
+    "card_ai": "AI 代理",
+    "card_suspicious": "可疑",
+    "card_blocked": "已拦截",
+    "of_sessions": "的会话",
+    "chart_title": "按天（{count}）",
+    "legend_bots": "机器人/AI",
+    "legend_humans": "人类",
+    "day_unit": "天",
+    "community_title": "担保与黄金会员",
+    "vouch_requests": "担保请求",
+    "vouch_approved": "已签发",
+    "vouch_pending": "进行中",
+    "vouch_failed": "不足",
+    "vouches_given": "已提供担保",
+    "vouches_declined": "已拒绝",
+    "gold_members": "黄金会员",
+    "gold_online": "在线",
+    "test_badge": "测试",
+    "test_note": "初步数据 — 黄金会员担保网络尚未上线。"
+  },
+  "solutions": {
+    "gonka": {
+      "eyebrow": "基础设施",
+      "title": "构建于去中心化 AI 之上 — 而非某家公司的黑箱",
+      "body": "APTOGON 分析的每一个手势都运行在 Gonka 上 — 一个由独立 GPU 运营者组成的网络，而非单一公司的服务器。没有价格锁定，没有区域性断供，没有能让验证下线的单点故障。与我们零 PII 的链上身份同样的原则：不应由任何单一实体来决定你能否证明自己是人类。",
+      "bullets": [
+        "开源，已审计（CertiK）",
+        "没有任何一家公司能拔掉插头",
+        "与我们身份层相同的反中心化原则"
+      ],
+      "cta": "了解更多 Gonka →"
+    },
+    "deepfake_chip": "无照片、无视频 — 没有可深度伪造的内容",
+    "agents": {
+      "title": "AI 智能体",
+      "headline": "了解智能体背后的人。",
+      "desc": "每个 AI 智能体都从经过验证的人类所有者继承其信任凭证。撤销一次，访问处处停止 — 你的平台上不会有匿名智能体在行动。",
+      "stats": [
+        {
+          "n": "1名人类",
+          "l": "对每个代理负责"
+        },
+        {
+          "n": "即时",
+          "l": "撤销 → 各处访问立即停止"
+        }
+      ]
+    },
+    "hero": {
+      "eyebrow": "解决方案",
+      "title": "一个协议。四大领域。",
+      "subtitle": "APTOGON验证独特的人类身份——无需生物识别数据、政府身份证件或侵入式数据收集。零个人信息。链上证明。适用于任何需要确认「这是否是一个独特的人」的应用场景。"
+    },
+    "verticals": [
+      {
+        "title": "市场研究",
+        "headline": "你的数据质量取决于受访者的质量。",
+        "desc": "消除重复受访者、点击农场和奖励猎人。一个DID=一个答案。链上证明=可审计的数据。",
+        "stats": [
+          {
+            "n": "20–30%",
+            "l": "的调查预算因欺诈而损失"
+          },
+          {
+            "n": "约10秒",
+            "l": "即可验证一名受访者"
+          }
+        ]
+      },
+      {
+        "title": "社区与平台",
+        "headline": "让你的社区保持真实。",
+        "desc": "阻止封禁规避者、投票操纵和机器人洪流。与设备绑定的DID意味着封禁某人真正能封住他。",
+        "stats": [
+          {
+            "n": "30–50%",
+            "l": "的新账户可能是机器人"
+          },
+          {
+            "n": "0秒",
+            "l": "封禁后即可创建新账户（若无此系统）"
+          }
+        ]
+      },
+      {
+        "title": "AI数据标注",
+        "headline": "你的模型好坏取决于标注者的质量。",
+        "desc": "防止针对标注流程的女巫攻击。一个人拥有50个账户就能污染你的整个训练数据集。",
+        "stats": [
+          {
+            "n": "1人",
+            "l": "可控制50多个标注者账户"
+          },
+          {
+            "n": "$0",
+            "l": "破坏训练数据的成本"
+          }
+        ]
+      },
+      {
+        "title": "Web3与DAO",
+        "headline": "一人一票，链上可查。",
+        "desc": "唯一在Aptos上拥有真实链上HumanCredential的提供商。抗女巫攻击的治理、空投和UBI分配。",
+        "stats": [
+          {
+            "n": "一只手",
+            "l": "可控制1,000个钱包"
+          },
+          {
+            "n": "约80%",
+            "l": "某些空投流向了机器人"
+          }
+        ]
+      }
+    ],
+    "common_guarantee": {
+      "title": "每个领域，同一份保证。",
+      "desc": "无论使用场景如何，APTOGON从不存储生物识别数据，从不要求政府身份证件，并始终将防篡改证明写入Aptos区块链。",
+      "chips": [
+        {
+          "icon": "🛡️",
+          "label": "零生物识别数据存储"
+        },
+        {
+          "icon": "🪪",
+          "label": "无需政府身份证件"
+        },
+        {
+          "icon": "⛓️",
+          "label": "链上证明（Aptos）"
+        },
+        {
+          "icon": "🔓",
+          "label": "开源协议"
+        },
+        {
+          "icon": "🌍",
+          "label": "符合GDPR"
+        },
+        {
+          "icon": "⚡",
+          "label": "约10秒完成验证"
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "准备好开始了吗？",
+      "desc": "免费套餐：每月1,000次验证。无需信用卡。",
+      "start_free": "免费开始",
+      "view_pricing": "查看定价"
+    },
+    "see_solution": "查看解决方案"
+  },
+  "blog": {
+    "eyebrow": "博客",
+    "hero": {
+      "title": "人类验证实战指南",
+      "subtitle": "深入解析机器人欺诈、保护隐私的身份认证，以及如何构建抗女巫攻击的产品。"
+    },
+    "card": {
+      "read_more": "阅读文章",
+      "read": "阅读"
+    },
+    "series": {
+      "title": "文章系列",
+      "count": "{count, plural, one {# 篇文章} other {# 篇文章}}"
+    },
+    "post": {
+      "back": "博客",
+      "read_suffix": "阅读",
+      "cta": {
+        "title": "免费试用 APTOGON",
+        "desc": "每月 1,000 次验证免费。无需信用卡。",
+        "get_started": "立即开始",
+        "api_docs": "API 文档"
+      },
+      "more_articles": "更多文章"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "定价",
+      "title_line1": "按验证次数付费。",
+      "title_line2": "比KYC便宜50–100倍。",
+      "subtitle": "无设置费用。无最低消费承诺。免费开始 — 随业务增长而扩展。包含链上证明。",
+      "badges": [
+        "无需政府身份证件",
+        "零生物识别数据",
+        "设计即符合GDPR",
+        "开源"
+      ]
+    },
+    "most_popular": "最受欢迎",
+    "tiers": [
+      {
+        "name": "Developer",
+        "price": "Free",
+        "priceNote": "永久免费",
+        "volume": "每月最多1,000次验证",
+        "features": [
+          "完整API访问权限（沙盒+生产环境）",
+          "在Aptos测试网上的链上证明",
+          "基础分析仪表盘",
+          "社区支持（Discord）"
+        ],
+        "cta": "立即开始"
+      },
+      {
+        "name": "Starter",
+        "price": "$0.05",
+        "priceNote": "每次验证",
+        "volume": "每月最多10,000次",
+        "features": [
+          "Developer的所有功能",
+          "在Aptos主网上的链上证明",
+          "Webhook回调",
+          "邮件支持（48小时）"
+        ],
+        "cta": "联系销售"
+      },
+      {
+        "name": "Growth",
+        "price": "$0.03",
+        "priceNote": "每次验证",
+        "volume": "每月10,000–100,000次",
+        "features": [
+          "Starter的所有功能",
+          "可选白标小组件",
+          "优先支持（24小时）",
+          "99.5%正常运行时间SLA",
+          "自定义域名嵌入"
+        ],
+        "cta": "联系销售"
+      },
+      {
+        "name": "Scale",
+        "price": "$0.01",
+        "priceNote": "每次验证",
+        "volume": "每月100,000–1,000,000次",
+        "features": [
+          "Growth的所有功能",
+          "专属客户成功经理 + Slack支持",
+          "GDPR/SOC2合规报告",
+          "99.9%正常运行时间SLA",
+          "可协商的批量折扣"
+        ],
+        "cta": "联系销售"
+      }
+    ],
+    "enterprise": {
+      "title": "企业版",
+      "desc": "每月100万+次验证 · 定制SLA · 专属客户成功经理 · SOC2报告 · 白标",
+      "cta": "联系销售"
+    },
+    "roi": {
+      "title": "投资回报率计算器",
+      "inputs": [
+        {
+          "label": "验证次数 / 月"
+        },
+        {
+          "label": "欺诈/重复率（%）"
+        },
+        {
+          "label": "每个事件的价值（$）"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "欺诈损失（未使用APTOGON）"
+        },
+        {
+          "label": "APTOGON成本"
+        },
+        {
+          "label": "相对于KYC供应商的节省"
+        },
+        {
+          "label": "相对于VerifyYou的节省"
+        }
+      ],
+      "per_month": "每月",
+      "net_benefit_label": "净收益",
+      "net_benefit_suffix": "通过以APTOGON的成本消除欺诈损失",
+      "month_abbr": "月",
+      "year_abbr": "年"
+    },
+    "comparison": {
+      "title": "对比一览",
+      "rows": [
+        {
+          "label": "每次检查成本",
+          "apt": "约$0.01",
+          "vfy": "$0.01–0.03",
+          "kyc": "$1–10"
+        },
+        {
+          "label": "存储生物识别数据",
+          "apt": "✗ 从不",
+          "vfy": "✓ 最长3年",
+          "kyc": "✓ 需要"
+        },
+        {
+          "label": "需要政府身份证件",
+          "apt": "✗ 不需要",
+          "vfy": "~ 可选",
+          "kyc": "✓ 需要"
+        },
+        {
+          "label": "链上证明",
+          "apt": "✓ Aptos",
+          "vfy": "✗ 无",
+          "kyc": "✗ 无"
+        },
+        {
+          "label": "开源",
+          "apt": "✓ 是",
+          "vfy": "✗ 否",
+          "kyc": "✗ 否"
+        },
+        {
+          "label": "验证速度",
+          "apt": "约10秒",
+          "vfy": "约15秒",
+          "kyc": "约5分钟"
+        },
+        {
+          "label": "设计即符合GDPR",
+          "apt": "✓ 零个人信息",
+          "vfy": "~ 部分符合",
+          "kyc": "✗ 存储数据"
+        },
+        {
+          "label": "设置费用",
+          "apt": "✗ 无",
+          "vfy": "✗ 无",
+          "kyc": "~ 视情况而定"
+        }
+      ],
+      "footnote": "对比基于公开可用的文档。查看",
+      "methodology_cta": "完整方法论"
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "q": "什么算作一次验证？",
+          "a": "一次成功的、基于手势的人类验证，并返回已签名的凭证。失败或中止的会话不计入统计。"
+        },
+        {
+          "q": "链上证明是真实的吗？",
+          "a": "是的。Growth及以上套餐的每次验证都会通过human_firewall智能合约在Aptos区块链上写入一笔交易。交易哈希会被返回，并可在Aptos浏览器中验证。"
+        },
+        {
+          "q": "你们存储生物识别数据吗？",
+          "a": "不会。APTOGON使用基于手势的挑战，而非面部识别或虹膜扫描。任何生物识别数据都不会被采集、处理或存储 — 永远不会。"
+        },
+        {
+          "q": "有免费试用吗？",
+          "a": "Developer套餐永久免费，每月最多1,000次验证 — 无需信用卡。非常适合集成测试和MVP。"
+        },
+        {
+          "q": "价格与KYC供应商相比如何？",
+          "a": "传统KYC（如Onfido、Persona）每次检查费用为$1–10。APTOGON起价$0.05，规模化后可降至$0.01 — 便宜50到100倍，且无需政府身份证件。"
+        },
+        {
+          "q": "我可以将APTOGON嵌入自己的应用吗？",
+          "a": "可以。浏览器扩展、可嵌入组件和REST API均可使用。白标品牌从Growth套餐起即包含在内。"
+        }
+      ]
+    }
+  },
+  "solutions_communities": {
+    "hero": {
+      "eyebrow": "社区与平台",
+      "title": "让你的社区保持真实。",
+      "subtitle": "机器人淹没你的投票。封禁规避者数秒内卷土重来。投票操纵摧毁信任。真正的社区需要真正的人——且可被证明。",
+      "cta_try": "免费试用 — 每月1K次验证",
+      "cta_api": "API 文档"
+    },
+    "problems": {
+      "title": "机器人泛滥问题",
+      "subtitle": "任何封禁都能在数秒内被规避。任何投票都可能被灌票。平台为此付出代价。",
+      "items": [
+        {
+          "stat": "30–50%",
+          "label": "的大型平台新账户是机器人或重复账户",
+          "src": "平台安全报告"
+        },
+        {
+          "stat": "1次封禁",
+          "label": "数秒内即可规避——只需创建新账户",
+          "src": "常见滥用模式"
+        },
+        {
+          "stat": "$0",
+          "label": "制造1,000个虚假账户并灌票的成本",
+          "src": "APTOGON分析"
+        },
+        {
+          "stat": "0",
+          "label": "现有CAPTCHA工具能证明「一人一账户」",
+          "src": "平台研究"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "工作原理",
+      "subtitle": "一人一个DID。封禁一个DID即封禁该人本身——而不仅仅是邮箱地址。",
+      "steps": [
+        {
+          "title": "用户加入你的社区",
+          "desc": "将APTOGON小组件嵌入你的注册或准入流程。无需跳转，无需新建账户。"
+        },
+        {
+          "title": "手势验证",
+          "desc": "10秒的手势挑战确认其为真人。设备信号可识别自动化框架。"
+        },
+        {
+          "title": "签发匿名DID",
+          "desc": "用户获得可移植的匿名身份。不存储姓名、邮箱或生物识别数据。"
+        },
+        {
+          "title": "封禁规避者检测",
+          "desc": "若被封禁的DID重新注册，系统会标记出来。同一人＝同一DID，即使跨IP也一样。"
+        }
+      ]
+    },
+    "vs": {
+      "title": "APTOGON 对比其他方案",
+      "subtitle": "其他所有工具都能被绕过。与设备绑定的DID不能。",
+      "rows": [
+        {
+          "name": "IP封锁",
+          "res": "VPN可在10秒内绕过",
+          "verdict": "bad"
+        },
+        {
+          "name": "邮箱验证",
+          "res": "临时邮箱服务免费且无限量",
+          "verdict": "bad"
+        },
+        {
+          "name": "电话验证",
+          "res": "一次性SIM卡不到1美元，且侵犯隐私",
+          "verdict": "bad"
+        },
+        {
+          "name": "KYC / 政府身份证件",
+          "res": "高摩擦 → 低采用率 → 社区荒废",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "res": "与设备绑定的DID——始终对应一个真人",
+          "verdict": "good"
+        }
+      ]
+    },
+    "differentiator": {
+      "title": "APTOGON的不同之处：社区拥有的信任",
+      "body": "与中心化验证方不同，APTOGON的信任关系图让你现有的成员可以为新成员担保。社区元老积累信任权重。被担保的成员获得领先优势。信任在你的社区内部积累产生——而非由某家公司输入。",
+      "features": [
+        {
+          "title": "关系担保",
+          "desc": "成员为新用户担保，增加信任权重"
+        },
+        {
+          "title": "零个人信息",
+          "desc": "从不存储姓名、邮箱或生物识别数据"
+        },
+        {
+          "title": "链上证明",
+          "desc": "在Aptos区块链上可验证的HumanCredential"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好夺回你的社区了吗？",
+      "desc": "每月1,000次验证免费开始。几分钟内即可嵌入。",
+      "start_free": "免费开始",
+      "view_pricing": "查看定价"
+    },
+    "nav": {
+      "other_verticals": "其他领域：",
+      "links": [
+        {
+          "label": "市场研究"
+        },
+        {
+          "label": "AI数据标注"
+        },
+        {
+          "label": "Web3 / DAO"
+        }
+      ]
+    }
+  },
+  "solutions_web3": {
+    "hero": {
+      "eyebrow": "Web3与DAO",
+      "title_line1": "一人一票。",
+      "title_line2": "链上可查。",
+      "subtitle": "单一操作者拥有1,000个钱包，就能夺取你的DAO治理权、掏空你的空投，或主导你的UBI分配。钱包所有权无法证明其背后是谁。",
+      "cta_try": "免费试用 — 每月1K次验证",
+      "cta_api": "API 文档"
+    },
+    "problems": {
+      "title": "女巫攻击正在摧毁Web3",
+      "subtitle": "按代币加权投票听起来公平。但拥有1,000个钱包的一个人并不公平。",
+      "items": [
+        {
+          "stat": "一只手",
+          "label": "可控制1,000个钱包并夺取DAO治理投票",
+          "src": "常见的女巫攻击"
+        },
+        {
+          "stat": "$0",
+          "label": "创建新钱包并申领空投资格的成本",
+          "src": "链上分析"
+        },
+        {
+          "stat": "约80%",
+          "label": "某些协议中的空投接收者是机器人或女巫账户",
+          "src": "区块链研究"
+        },
+        {
+          "stat": "0",
+          "label": "现有基于钱包的证明能验证其背后是唯一的人",
+          "src": "APTOGON分析"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "工作原理",
+      "subtitle": "可验证的链上HumanCredential将你的钱包与唯一的人绑定——任何智能合约均可读取。",
+      "steps": [
+        {
+          "title": "用户连接钱包",
+          "desc": "你的dApp或DAO界面在钱包连接后弹出APTOGON小组件——无需新注册。"
+        },
+        {
+          "title": "手势验证",
+          "desc": "10秒的手势将钱包与真实的人绑定。设备信号可阻止无头自动化。"
+        },
+        {
+          "title": "Aptos上的HumanCredential",
+          "desc": "创建已签名的链上HumanCredential，将钱包与DID绑定。任何智能合约均可验证。"
+        },
+        {
+          "title": "一人一票",
+          "desc": "你的治理合约读取HumanCredential。一人＝一票权重，与代币持有量无关。"
+        }
+      ]
+    },
+    "use_cases": {
+      "title": "你能构建什么",
+      "subtitle": "任何需要「一人一权」的协议都能受益于HumanCredential。",
+      "items": [
+        {
+          "title": "DAO治理",
+          "desc": "防止巨鲸女巫账户操纵投票。按已验证的人加权，而非仅按代币持有量。"
+        },
+        {
+          "title": "空投分配",
+          "desc": "向唯一的人发放代币。拒绝没有链上HumanCredential的钱包。"
+        },
+        {
+          "title": "UBI / DeFi奖励",
+          "desc": "向已验证的唯一的人分配收益或基本收入——类似Worldcoin，但无需虹膜扫描。"
+        },
+        {
+          "title": "人格证明NFT",
+          "desc": "铸造与已验证人类身份绑定的灵魂绑定NFT。同一人不能重复铸造。"
+        }
+      ]
+    },
+    "vs_worldcoin": {
+      "title": "APTOGON 对比 Worldcoin",
+      "subtitle": "两者都解决Web3的人格证明问题，但方式截然不同。",
+      "columns": [
+        {
+          "name": "Worldcoin",
+          "items": [
+            "需要虹膜生物识别扫描",
+            "需要实体Orb设备",
+            "生物识别数据存储在服务器端",
+            "在Optimism上的ZK证明",
+            "闭源Orb硬件",
+            "仅在部分城市可用"
+          ]
+        },
+        {
+          "name": "APTOGON",
+          "items": [
+            "无生物识别——仅需手势",
+            "可在任何设备、任何地方使用",
+            "零生物识别数据存储",
+            "Aptos上的链上证明",
+            "开源扩展 + API",
+            "全球即时可用"
+          ]
+        }
+      ]
+    },
+    "smart_contract": {
+      "title": "与你的智能合约集成",
+      "subtitle": "在链上查询HumanCredential。一次Move调用即可获得已验证的人类身份。",
+      "comment_module": "Move模块——投票前检查HumanCredential",
+      "comment_verify": "在计票前验证唯一的人",
+      "comment_record": "一个地址＝一票，链上强制执行",
+      "full_docs": "完整的智能合约文档"
+    },
+    "cta": {
+      "title": "准备好让你的协议防女巫攻击了吗？",
+      "desc": "唯一在Aptos上拥有真实链上HumanCredential的提供商。免费开始。",
+      "start_free": "免费开始",
+      "view_pricing": "查看定价",
+      "badges": [
+        "无需虹膜扫描",
+        "可在Aptos上运行",
+        "开源"
+      ]
+    },
+    "nav": {
+      "other_verticals": "其他领域：",
+      "links": [
+        {
+          "label": "市场研究"
+        },
+        {
+          "label": "社区"
+        },
+        {
+          "label": "AI数据标注"
+        }
+      ]
+    }
+  },
+  "solutions_ai_labeling": {
+    "hero": {
+      "eyebrow": "AI数据标注",
+      "title_line1": "你的模型好坏取决于",
+      "title_line2": "你的标注者。",
+      "subtitle": "此刻，一个拥有50个账户的人正在污染你的训练数据。标注流程上的女巫攻击是隐形的——直到你的模型带着缺陷上线。",
+      "cta_try": "免费试用 — 每月1K次验证",
+      "cta_api": "API 文档"
+    },
+    "problems": {
+      "title": "标注流程上的女巫攻击",
+      "subtitle": "你的标注者间一致性得分可能看起来很健康，而实际上一个人贡献了40%的标签。",
+      "items": [
+        {
+          "stat": "1人",
+          "label": "可创建50多个标注者账户并主导你的数据集",
+          "src": "常见的类Mechanical Turk滥用"
+        },
+        {
+          "stat": "约30%",
+          "label": "的众包标注任务可能由重复工作者提交",
+          "src": "学术研究估计"
+        },
+        {
+          "stat": "$0",
+          "label": "恶意行为者大规模污染训练数据的成本",
+          "src": "APTOGON分析"
+        },
+        {
+          "stat": "∞",
+          "label": "在被污染的标签上重新训练模型的成本",
+          "src": "行业经验"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "工作原理",
+      "subtitle": "每设备一个DID。同一人的多个设备会形成可检测的集群。",
+      "steps": [
+        {
+          "title": "标注者打开任务",
+          "desc": "你的标注平台在授予标注任务访问权限前嵌入APTOGON小组件。"
+        },
+        {
+          "title": "手势验证",
+          "desc": "独特的手势确认为真人在线。设备信号可阻止自动化脚本通过。"
+        },
+        {
+          "title": "每设备签发唯一DID",
+          "desc": "每台物理设备获得一个DID。拥有10部手机的一人＝10个被标记的账户，而非10名标注者。"
+        },
+        {
+          "title": "聚合到个人层面",
+          "desc": "你的后端可以发现多个DID共享同一信任图——在污染标签之前暴露女巫集群。"
+        }
+      ]
+    },
+    "vs": {
+      "title": "为什么替代方案不够用",
+      "subtitle": "没有其他方法能将标注者与物理设备绑定。",
+      "rows": [
+        {
+          "name": "邮箱验证",
+          "res": "一人可拥有无限邮箱地址",
+          "verdict": "bad"
+        },
+        {
+          "name": "任务入口的CAPTCHA",
+          "res": "仅确认人类会话，而非唯一身份",
+          "verdict": "bad"
+        },
+        {
+          "name": "基于IP的去重",
+          "res": "VPN和共享办公室会立刻破解此方法",
+          "verdict": "bad"
+        },
+        {
+          "name": "资格测试",
+          "res": "答案可共享，可被脚本破解",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "res": "与设备绑定的DID——数学上确保每设备一名标注者",
+          "verdict": "good"
+        }
+      ]
+    },
+    "quality": {
+      "title": "这对你的模型意味着什么",
+      "features": [
+        {
+          "title": "多样化标签",
+          "desc": "来自真正不同人的标签，而非放大的单人偏见"
+        },
+        {
+          "title": "可审计的溯源",
+          "desc": "每位标注者人类身份的链上证明——可展示给客户或监管机构"
+        },
+        {
+          "title": "公平的报酬",
+          "desc": "支付给真正的标注者，而不是用50个钱包操纵激励的一个人"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好信任你的训练数据了吗？",
+      "desc": "每月1,000次验证免费开始。通过API可与任何标注平台配合使用。",
+      "start_free": "免费开始",
+      "view_pricing": "查看定价"
+    },
+    "nav": {
+      "other_verticals": "其他领域：",
+      "links": [
+        {
+          "label": "市场研究"
+        },
+        {
+          "label": "社区"
+        },
+        {
+          "label": "Web3 / DAO"
+        }
+      ]
+    }
+  },
+  "solutions_surveys": {
+    "hero": {
+      "eyebrow": "市场研究",
+      "title_line1": "你的数据质量取决于",
+      "title_line2": "你的受访者。",
+      "subtitle": "调查欺诈正在悄悄破坏你的研究。重复受访者、点击农场和奖励猎人摧毁数据质量——你的决策因此受损。",
+      "cta_try": "免费试用 — 每月1K次验证",
+      "cta_api": "API 文档"
+    },
+    "problems": {
+      "title": "市场研究中隐藏的流行病",
+      "subtitle": "CAPTCHA能阻止机器人。但迄今为止，没有什么能阻止人类重复提交。",
+      "items": [
+        {
+          "stat": "20–30%",
+          "label": "的调查激励流向了重复受访者",
+          "src": "行业估算"
+        },
+        {
+          "stat": "1300亿美元+",
+          "label": "市场研究行业每年因欺诈受到影响的规模",
+          "src": "ESOMAR"
+        },
+        {
+          "stat": "1人",
+          "label": "可用全新邮箱地址提交50多份回复",
+          "src": "常见欺诈模式"
+        },
+        {
+          "stat": "0种工具",
+          "label": "现有的CAPTCHA / 蜜罐能保证唯一性",
+          "src": "APTOGON分析"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "工作原理",
+      "subtitle": "无需注册，无需政府身份证件，无需生物识别。只需一个10秒的手势。",
+      "steps": [
+        {
+          "title": "受访者打开调查",
+          "desc": "你的调查链接内嵌APTOGON小组件——无重定向，无摩擦。"
+        },
+        {
+          "title": "手势验证（约10秒）",
+          "desc": "受访者绘制手势。设备指纹加行为节奏共同确认其为真人。"
+        },
+        {
+          "title": "签发匿名DID",
+          "desc": "分配一个唯一的匿名去中心化身份标识。不存储姓名、邮箱或生物识别数据。"
+        },
+        {
+          "title": "一个DID等于一份回复",
+          "desc": "你的后端会拒绝来自同一DID的任何第二次提交。链上证明自动生成。"
+        }
+      ]
+    },
+    "roi": {
+      "section_title": "计算你的节省",
+      "section_subtitle": "看看调查欺诈让你损失多少——以及APTOGON作为回报的成本是多少。",
+      "title": "投资回报率计算器",
+      "sliders": {
+        "volume": "每月回复数",
+        "fraud": "预估欺诈率",
+        "reward": "每份回复的激励"
+      },
+      "outputs": {
+        "lost": "因欺诈损失的激励",
+        "cost": "APTOGON成本",
+        "net": "净节省"
+      },
+      "loss_suffix": "损失",
+      "free_tier_note": "Developer套餐——每月最多1,000次验证免费",
+      "compare_title": "APTOGON 对比其他方案",
+      "compare_rows": [
+        {
+          "name": "蜜罐字段",
+          "fraud": "可击败点击农场",
+          "privacy": "✓",
+          "cost": "免费",
+          "verdict": "partial"
+        },
+        {
+          "name": "邮箱去重",
+          "fraud": "可用新邮箱绕过",
+          "privacy": "✗",
+          "cost": "免费",
+          "verdict": "bad"
+        },
+        {
+          "name": "IP去重",
+          "fraud": "可用VPN/移动网络绕过",
+          "privacy": "~",
+          "cost": "免费",
+          "verdict": "bad"
+        },
+        {
+          "name": "KYC / 身份验证",
+          "fraud": "高摩擦，低采用率",
+          "privacy": "✗",
+          "cost": "每次$1–10",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "fraud": "保证唯一真人",
+          "privacy": "✓",
+          "cost": "每次约$0.01",
+          "verdict": "good"
+        }
+      ]
+    },
+    "api": {
+      "title": "几分钟即可集成",
+      "subtitle": "在你的调查后端中加入一次API调用即可，仅此而已。",
+      "comment_verify": "记录答案前先验证受访者",
+      "comment_response": "响应",
+      "comment_false_note": "如果该DID已提交过，则为false",
+      "full_docs": "完整的API文档"
+    },
+    "cta": {
+      "title": "准备好清理你的数据了吗？",
+      "desc": "每月1,000次验证免费开始。无需信用卡，无需合同。",
+      "start_free": "免费开始",
+      "view_pricing": "查看定价",
+      "badges": [
+        "不存储生物识别数据",
+        "无需政府身份证件",
+        "符合GDPR"
+      ]
+    },
+    "nav": {
+      "other_verticals": "其他领域：",
+      "links": [
+        {
+          "label": "社区"
+        },
+        {
+          "label": "AI数据标注"
+        },
+        {
+          "label": "Web3 / DAO"
+        }
+      ]
+    }
+  },
+  "solutions_gonka": {
+    "eyebrow": "基础设施",
+    "title": "什么是Gonka——为什么APTOGON运行在它之上",
+    "subtitle": "分析APTOGON上每个手势的去中心化AI网络——也是我们自己名字的一半来源。",
+    "nameTitle": "「APTOGON」这个名字的由来",
+    "nameBody": "APTOGON是一个合成词：Aptos——每个HumanCredential锚定的区块链——加上Gonka——为每个手势分类的去中心化AI网络。两个去中心化层，一个产品名称。",
+    "missionTitle": "为什么选择去中心化，而非大型科技公司",
+    "missionBody": "如今的AI推理几乎完全经由四家公司完成——OpenAI、Google、Anthropic、Meta。这种集中化给依赖于它的任何产品都带来了实实在在的风险：单一公司可以单方面涨价、按地区限制访问，或彻底宕机并把所有依赖它的服务一同拖下线。先进GPU的出口管制还意味着，无论支付能力如何，整个国家都可能在物理层面被排除在AI算力之外。Gonka将推理路由到数千个独立运营的GPU，而非某一家公司的数据中心——没有任何单一实体能够对我们哄抬价格、切断访问或将我们关停。",
+    "missionBullets": [
+      "价格由市场决定，而非某一家公司",
+      "没有区域性断供",
+      "任何一家公司的故障都不会拖累验证服务",
+      "无论出口管制的地理范围如何，运行方式始终一致"
+    ],
+    "howTitle": "它究竟是如何运作的",
+    "howItems": [
+      {
+        "title": "ML节点",
+        "desc": "配备GPU的服务器为网络分配给它们的任何请求执行推理。"
+      },
+      {
+        "title": "Transfer Agents（传输代理）",
+        "desc": "中间节点将每个请求路由到可用的算力资源，无论其位于何处。"
+      },
+      {
+        "title": "Sprint Consensus（冲刺共识）",
+        "desc": "网络在处理请求的同时，实时确认实际发生了哪些计算。"
+      },
+      {
+        "title": "Proof of Computation（计算证明）",
+        "desc": "每个请求的一部分会由另一个节点独立重新计算，以捕获不诚实的结果。"
+      }
+    ],
+    "securityTitle": "为什么我们把重要的事托付给它",
+    "securityBullets": [
+      "加密签名在不到10毫秒内验证每一次计算。",
+      "被抓到作弊的节点会损失部分质押的抵押品——不诚实行为要付出真实的经济代价。",
+      "该网络完全开源，并已通过独立审计（CertiK）。"
+    ],
+    "costTitle": "「便宜」很重要——不仅仅是对我们而言",
+    "costBody": "Gonka的推理成本仅为中心化供应商同类模型标价的一小部分，因为每次请求中都没有摊入任何单一公司的利润。这对APTOGON尤为重要：手势验证必须能够大规模运行，服务于免费套餐用户，而不需要我们的成本随着我们无法掌控的大型科技公司价格表同步上涨。",
+    "closing": "这也并非巧合，正是APTOGON自身架构所遵循的同一原则：零个人信息、链上证明，没有任何一家公司掌握着你能否证明自己是人类的钥匙。",
+    "sourceLabel": "来源",
+    "sourceText": "joingonka.ai — What is Gonka",
+    "backCta": "← 返回解决方案"
+  }
+}

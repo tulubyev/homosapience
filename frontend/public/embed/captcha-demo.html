@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APTOGON gesture-CAPTCHA — demo</title>
+  <style>
+    body { font-family: -apple-system, Inter, system-ui, sans-serif; max-width: 520px;
+           margin: 40px auto; padding: 0 20px; color: #0f172a; text-align: center; }
+    h1 { font-size: 1.4rem; } .muted { color: #64748b; font-size: .9rem; line-height: 1.6; }
+    .card { margin-top: 24px; padding: 24px 20px; border: 1px solid #e2e8f0; border-radius: 14px; }
+    .label { font-size: .82rem; font-weight: 700; margin-bottom: 12px; text-align: center; }
+    /* Center the widget the loader injects */
+    [data-aptogon-captcha] { display: flex; justify-content: center; }
+    #out { margin-top: 16px; font-size: .82rem; white-space: pre-wrap; word-break: break-all;
+           color: #334155; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>Gesture CAPTCHA — live demo</h1>
+  <p class="muted">Draw a squiggle instead of picking traffic lights.
+    No image grids, no tracking, no biometrics.</p>
+
+  <div class="card">
+    <div class="label">Verify you're human</div>
+    <!-- Declarative: the loader auto-renders the iframe and calls onVerified on success. -->
+    <div data-aptogon-captcha data-aptogon-key="pk_live_60Vb2zCwVJ2QFDXpzHP4bI9ughvEXZdx" data-callback="onVerified"></div>
+  </div>
+
+  <div id="out"></div>
+
+  <!-- In production, host from https://homosapience.org/embed/v2/aptogon.js -->
+  <script src="/embed/v2/aptogon.js"></script>
+  <script>
+    function onVerified(token, info) {
+      document.getElementById('out').textContent =
+        'Got captcha token (human=' + info.human + ', band=' + info.band + ').\n'
+        + 'Your backend now POSTs it to /api/captcha/siteverify with your sk_live_ key.';
+    }
+  </script>
+</body>
+</html>

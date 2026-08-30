@@ -1,0 +1,1731 @@
+{
+  "meta": {
+    "title": "HSI — Homo Sapience Internet",
+    "description": "ジェスチャーで人間であることを証明する。パスワード不要、メール不要、追跡なし。"
+  },
+  "nav": {
+    "back": "← APTOGON"
+  },
+  "footer": {
+    "project": "プロジェクト",
+    "community": "コミュニティ",
+    "copyright": "© 2025 Homo Sapience Internet · オープンソース · MIT License",
+    "version": "v0.2.0 · SapiX · Aptos Testnet",
+    "links": {
+      "manifest": "マニフェスト",
+      "developers": "開発者",
+      "donate": "寄付",
+      "verify": "認証"
+    },
+    "social": {
+      "telegram": "Telegram",
+      "github": "⭐ GitHub"
+    }
+  },
+  "home": {
+    "badge": "v0.2.0 · SapiX · did:key · Aptos Testnet",
+    "headline": "インターネットのための人間ファイアウォール",
+    "subheadline": "ジェスチャーで人間であることを証明する。パスワード不要、メール不要、追跡なし。",
+    "cta_verify": "✍️ 今すぐ認証",
+    "cta_chat": "💬 チャット",
+    "tech_title": "テクノロジー",
+    "tech_subtitle": "カードをクリックして詳細を確認",
+    "how_title": "認証の仕組み",
+    "how_subtitle": "4ステップ · 10秒 · 個人データゼロ",
+    "step": "ステップ",
+    "join_title": "参加する",
+    "join_subtitle": "人間のためのインターネットの公共インフラを構築しています",
+    "cards": {
+      "gesture": {
+        "title": "ジェスチャー",
+        "subtitle": "人間の表現",
+        "modal_title": "証明としてのジェスチャー",
+        "modal_body": "マウスや指で線を描きます。AIは形ではなく、バイオメトリック運動パラメータを分析します：速度の変動、間隔、修正、リズムの不規則性。ボットは完璧に動く — 人間はそうではない。"
+      },
+      "ai": {
+        "title": "SapiX",
+        "subtitle": "Qwen3-14B",
+        "modal_title": "パターン分析",
+        "modal_body": "Qwen3-14B（OpenRouter経由）は統計的なジェスチャーベクトルのみを受け取ります — 座標なし、個人データなし。8つのパラメータを評価し、is_human、confidence（0–1）、reasoningを返します。閾値：85%。"
+      },
+      "did": {
+        "title": "DID:key",
+        "subtitle": "W3C標準",
+        "modal_title": "分散型識別子",
+        "modal_body": "ブラウザ内でEd25519鍵ペアが生成されます。公開鍵はW3C標準に従ってdid:keyとしてエンコードされます。サーバー不要、登録不要 — 鍵はブラウザのlocalStorageにのみ存在します。"
+      },
+      "aptos": {
+        "title": "Aptos",
+        "subtitle": "ブロックチェーン",
+        "modal_title": "オンチェーン記録",
+        "modal_body": "証明（ExpressionProof）のSHA3-256ハッシュがAptos上のMoveスマートコントラクトに書き込まれます。ハッシュには個人データが含まれません — ジェスチャーの統計情報、session_id、および1時間のタイムバケットのみ。不変かつ検証可能。"
+      },
+      "privacy": {
+        "title": "プライバシー",
+        "subtitle": "ゼロPII",
+        "modal_title": "ゼロ個人データ",
+        "modal_body": "生の座標はデバイス上でのみ処理されます。統計ベクトル（8つの数値）のみがサーバーに送信されます。ハッシュのみがオンチェーンに送られます。名前、メール、IPは収集・保存されません。"
+      },
+      "bond": {
+        "title": "HSI Bond",
+        "subtitle": "人間ネットワーク",
+        "modal_title": "ヒューマンボンドシステム",
+        "modal_body": "認証された人間はHSI Bondを通じて互いに保証できます。各保証はHumanCredentialを強化します。ボットは実在する人物から保証を受けることができません — これは追加の保護レイヤーです。"
+      }
+    },
+    "steps": {
+      "s01": {
+        "title": "ジェスチャーを描く",
+        "desc": "画面上の線または形 — 速度、間隔、リズム"
+      },
+      "s02": {
+        "title": "SapiXが分析",
+        "desc": "8つのバイオメトリックパラメータ — ボットは完璧に動く"
+      },
+      "s03": {
+        "title": "DIDが生成される",
+        "desc": "ブラウザ内のEd25519鍵 — サーバー不要"
+      },
+      "s04": {
+        "title": "Aptosに記録される",
+        "desc": "ExpressionProofハッシュ — 匿名かつ永続的"
+      }
+    },
+    "manifest_card": {
+      "title": "マニフェスト",
+      "body": "HSIを構築する理由、それがインターネットをどう変えるか、そして各人間がそこでどんな役割を持つか。",
+      "cta": "読む →"
+    },
+    "developers_card": {
+      "title": "開発者",
+      "body": "REST API、SDK、統合例。1時間でアプリに人間認証を追加。",
+      "cta": "ドキュメント →"
+    },
+    "donate_card": {
+      "title": "サポート",
+      "body": "ベンチャー資金なしのオープンプロジェクト。公共インフラの開発を支援してください。",
+      "cta": "寄付する →"
+    },
+    "hero_tagline_1": "インターネットはボットに悩まされています。",
+    "hero_tagline_2": "APTOGON がそれを解決します。",
+    "badge_states": {
+      "verified": "人間として確認済み",
+      "unverified": "未確認",
+      "pending": "保留中",
+      "revoked": "ボット / 失効"
+    },
+    "stats": [
+      {
+        "n": "40%",
+        "l": "がボットのトラフィック",
+        "src": "Imperva"
+      },
+      {
+        "n": "$600B+",
+        "l": "年間の詐欺被害額",
+        "src": "Cybersecurity Ventures"
+      },
+      {
+        "n": "約10秒",
+        "l": "人間の確認にかかる時間",
+        "src": "APTOGON の設計"
+      },
+      {
+        "n": "$0",
+        "l": "保存される生体情報",
+        "src": "APTOGON の設計"
+      }
+    ],
+    "verticals": {
+      "title": "APTOGON の利用シーン",
+      "subtitle": "ひとつのプロトコルで4つの領域へ。どこでも同じ約束 — 個人情報はゼロ。",
+      "cta": "活用例を見る",
+      "items": [
+        {
+          "title": "市場調査",
+          "desc": "回答者の重複をなくします。1つのDIDにつき1回答。オンチェーンの証明でデータを検証可能に。"
+        },
+        {
+          "title": "コミュニティ",
+          "desc": "BAN回避と投票操作を防ぎます。監視なしで、コミュニティは人間のままに。"
+        },
+        {
+          "title": "AI データのラベリング",
+          "desc": "1人につき1人のアノテーター。学習データがクローンに汚染されるのを防ぎます。"
+        },
+        {
+          "title": "Web3 / DAO",
+          "desc": "1人1票をオンチェーンで。Aptos 上に本物の HumanCredential を持つ唯一のサービスです。"
+        }
+      ]
+    },
+    "why": {
+      "title": "APTOGON が選ばれる理由",
+      "subtitle": "生体情報なし。身分証なし。オープンソース。証明はオンチェーン。",
+      "rows": [
+        "生体情報なし",
+        "オンチェーンの証明",
+        "オープンソース",
+        "1回あたりの費用"
+      ],
+      "footnote": "※ Worldcoin は虹彩スキャンを必要とします — プライバシーは守られません"
+    }
+  },
+  "manifest": {
+    "nav_label": "マニフェスト",
+    "hero_label": "homosapience.org",
+    "hero_title": "APTOGON マニフェスト",
+    "hero_subtitle": "インターネットは人々によって — 人々のために作られた。守る時が来た。",
+    "s1_title": "問題",
+    "s1_p1": "2025年までに、インターネットトラフィックの大部分は人間ではなく、ボットによって生成されます。ボットはコメントを書き、投票を水増しし、レビューを残し、アカウントを登録し、調査に参加します。デジタル空間はその主要な特性を失いました — 人間的でなくなったのです。",
+    "s1_p2": "問題は見た目より深刻です。既存のソリューション — CAPTCHA、SMS認証、KYC — は簡単に回避されるか、身元の開示が必要です。匿名で人間性を証明できるオープンな標準は存在しません。",
+    "s1_p3": "誰でも千のアカウントを作れます。どんなボットでも「私は人間だ」と書けます。今日どのサービスも、パスポートなし、監視なし、中央集権的なデータベースなしでこの主張を検証できません。",
+    "s2_title": "解決策：プロトコルとしてのAPTOGON",
+    "s2_p1": "APTOGON（Homo Sapience Internet）はインターネットの代替ではありません。HTTPの上のHTTPSのように、IPの上のプロトコルです。新しいプリミティブを一つ追加します：HumanCredential — 生きた人間がアクションの背後にいることの暗号的に検証された証明です。",
+    "s2_p2": "認証は身元ではなく、動作バイオメトリクスに基づいています。AIはジェスチャーを分析します — 座標でも形でもなく、統計を：速度の変動、ポーズのエントロピー、修正の数、リズムの不規則性。これがボットが十分に模倣できないものです。",
+    "s2_how_label": "仕組み",
+    "s2_steps": [
+      "ユーザーがジェスチャーを描く → デバイスで統計処理",
+      "匿名特徴ベクトル（座標なし）がGonka Network上のバックエンドに送信される",
+      "結果：is_human + confidence — 個人データなし",
+      "成功時、ブラウザでEd25519 DIDが生成",
+      "証明のSHA3-256ハッシュをAptosに書き込み"
+    ],
+    "s3_title": "実用的なアプリケーション",
+    "apps": [
+      {
+        "icon": "🌐",
+        "title": "フォーラムとプラットフォーム",
+        "desc": "SDKは2行のコードで統合できます。スパムは消えます — ブロックされるのではなく、書く人がいなくなるから。評価、投票、いいねが再び実際の人間の意見を反映します。"
+      },
+      {
+        "icon": "🗳️",
+        "title": "DAOと投票",
+        "desc": "一人の人間、一票。シビルアタックなし、票の水増しなし。ガバナンストークンは数量だけでなく、人間性の証明によっても保護されます。"
+      },
+      {
+        "icon": "💬",
+        "title": "チャットとコメント",
+        "desc": "実在する人物には認証済みHumanバッジが表示されます。ディスカッションの質が即座に変わります — 検閲ではなく、ソースへの信頼を通じて。"
+      },
+      {
+        "icon": "🛒",
+        "title": "マーケットプレイス",
+        "desc": "レビューは競合他社のボットではなく、実際の購入者によって残されます。評価が品質指標として再び機能します。"
+      },
+      {
+        "icon": "🎓",
+        "title": "教育",
+        "desc": "試験を受けたのはGPTではなく、人間です。誰が取得したかの証明がある場合、オンライン学位に意味があります。"
+      },
+      {
+        "icon": "🤖",
+        "title": "AIエージェント",
+        "desc": "逆説：APTOGONはAIエージェントが正しく行動するのを助けます。エージェントは認証済み人間の代わりに、明示的な許可を得て行動していることを証明できます。"
+      }
+    ],
+    "s4_title": "収益化と持続可能性",
+    "s4_p1": "APTOGONはいくつかの階層を持つオープンプロトコルとして存在します。人間の認証は常に無料です。これは原則です：人間は自分の人間性を証明するために支払うべきではありません。",
+    "tiers": [
+      {
+        "title": "無料",
+        "sub": "人間向け",
+        "icon": "👤"
+      },
+      {
+        "title": "SaaS API",
+        "sub": "プラットフォーム向け",
+        "icon": "🔌"
+      },
+      {
+        "title": "エンタープライズ",
+        "sub": "オンプレミスSDK",
+        "icon": "🏢"
+      },
+      {
+        "title": "GNKトークン",
+        "sub": "ガバナンス",
+        "icon": "🪙"
+      }
+    ],
+    "s4_p2": "プラットフォームはユーザーの認証に対して支払います — 現在reCAPTCHAや不正検出に支払うのと同様ですが、より誠実で透明であり、第三者にデータを共有しません。",
+    "s5_title": "コミュニティの成長",
+    "s5_p1": "アーリーアダプターはすでにボットに悩まされているコミュニティです。GitHubの開発者、Redditの著者、Web3のDAOメンバー、フォーラムのモデレーター。彼らにとって認証は障壁ではなく特権です。",
+    "s5_p2": "認証済みHumanバッジは、購入できる青いチェックマークではなく、購入も偽造も譲渡もできない緑のマークです。名声ではなく — 存在を証明します。",
+    "s5_p3": "ネットワークはHSI Bondを通じて成長します：認証された人間がお互いを保証し合い、資格情報を強化します。APTOGON Chatは最初のライブ展開 — 部屋、DM、ファイル共有を備えた人間専用のリアルタイム空間で、HumanCredentialでアクセスできます。",
+    "quote": "\"インターネットは壊れていない — ただあなたが誰かを知らないだけだ。APTOGONがそれを解決する。\"",
+    "cta_verify": "✍️ 認証",
+    "cta_telegram": "Telegram",
+    "cta_developers": "⚡ 開発者",
+    "cta_home": "← ホーム"
+  },
+  "developers": {
+    "nav_label": "開発者",
+    "hero_title": "開発者向け",
+    "hero_subtitle": "ドロップイン・スニペットでアプリに人間確認を追加しましょう。コンソールでキーを作成し、ベリファイアを埋め込み、シークレットキーでサーバー側で各セッションを確認します。",
+    "quickstart_title": "クイックスタート",
+    "quickstart_subtitle": "最小限の統合 — 3ステップ",
+    "step1_title": "GestureCanvasを埋め込む",
+    "step2_title": "認証のためにジェスチャーを送信",
+    "step3_title": "HumanCredentialを使用 + Chatにアクセス",
+    "api_title": "APIリファレンス",
+    "ep1_desc": "ジェスチャー認証。HumanCredentialを返す。",
+    "ep1_params": "events[] · session_id",
+    "ep1_returns": "passed · confidence · did · expression_proof · tx_hash",
+    "ep2_desc": "DIDによる認証ステータス。",
+    "ep2_params": "did（クエリ）",
+    "ep2_returns": "is_human · valid_until · bond_count",
+    "ep3_desc": "最後の認証試行（デバッグ用）。",
+    "ep3_params": "last=20（クエリ）",
+    "ep3_returns": "ジェスチャーパターンとAI結果を含むattempts[]",
+    "ep4_desc": "認証なしでDIDを作成（テスト用）。",
+    "ep4_params": "—",
+    "ep4_returns": "did · private_key_b64",
+    "features_title": "機能",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "ゼロPII",
+        "desc": "生のジェスチャー座標はブラウザから出ません。統計のみがサーバーに送られます。"
+      },
+      {
+        "icon": "🌐",
+        "title": "W3C DID",
+        "desc": "did:key標準に準拠。あらゆるIDシステムと連携。"
+      },
+      {
+        "icon": "⛓️",
+        "title": "オンチェーン証明",
+        "desc": "Aptos上のMoveコントラクト。当社サーバー不要で検証 — 完全分散型。"
+      },
+      {
+        "icon": "♿",
+        "title": "アクセシビリティ",
+        "desc": "運動障害を考慮。震えのある人もブロックされません。"
+      },
+      {
+        "icon": "⚡",
+        "title": "高速",
+        "desc": "中央値800ms。フォールバック付きSapiX — サービス停止時も動作。"
+      },
+      {
+        "icon": "📋",
+        "title": "検証可能クレデンシャル",
+        "desc": "W3C VCフォーマット。Ed25519署名。30日で期限切れ、自動更新。"
+      }
+    ],
+    "cta_title": "統合する準備はできましたか？",
+    "cta_subtitle": "コンソールでキーを作成して始めましょう。より高いクォータやエンタープライズ統合についてはお問い合わせください。",
+    "cta_email": "📩 メールを送る",
+    "cta_try": "🧪 ライブで試す",
+    "cta_home": "← ホーム",
+    "ep_chat_msg_desc": "チャットルームから最近のメッセージを取得します（公開ルームは認証不要）",
+    "ep_chat_msg_params": "room (string), limit (int, default 50)",
+    "ep_chat_msg_returns": "Array of {id, sender_short, content, timestamp, trust_label, reactions}",
+    "ep_chat_up_desc": "ルームにファイルをアップロードします（最大10MB）。ファイルは5日間保存された後、自動的に削除されます。",
+    "ep_chat_up_params": "multipart/form-data: file, room, sender_short",
+    "ep_chat_up_returns": "{url, name, size, type, expires_at}",
+    "ep_chat_ws_desc": "WebSocket — ルームのリアルタイムストリーム。接続してJSONメッセージを送受信します。",
+    "ep_chat_ws_params": "room: room id (e.g. \"agora\"). No auth required for public rooms.",
+    "ep_chat_ws_returns": "Bidirectional: {content, sender_short, trust_label, timestamp, reactions}",
+    "ep_bond_req_desc": "Bondリクエストを作成 — 3人のGoldメンバーが新しいユーザーを保証します。",
+    "ep_bond_req_params": "requester_did · expression_proof · confidence",
+    "ep_bond_req_returns": "request_id · status · approvals · needed",
+    "ep_bond_st_desc": "Bondリクエストの状態を確認。status = approved になるまで2〜5秒ごとに確認。",
+    "ep_bond_st_params": "request_id（パス）",
+    "ep_bond_st_returns": "status · approvals · needed · tx_hash",
+    "ep_bond_ap_desc": "保証人がBondリクエストを承認します（Ed25519署名が必要）。",
+    "ep_bond_ap_params": "request_id · approver_did · signature · timestamp",
+    "ep_bond_ap_returns": "status · approvals · tx_hash（閾値到達時）"
+  },
+  "donate": {
+    "nav_label": "寄付",
+    "hero_title": "プロジェクトを支援する",
+    "hero_subtitle": "APTOGONはベンチャー資金なしのオープンプロジェクトです。人間のためのインターネットの公共インフラを構築しています。",
+    "funds_title": "資金の使途",
+    "funds": [
+      {
+        "icon": "👩‍💻",
+        "title": "開発",
+        "desc": "SDK、ドキュメント、新しい認証機能",
+        "pct": 50
+      },
+      {
+        "icon": "🖥️",
+        "title": "ホスティングとインフラ",
+        "desc": "FastAPIバックエンド、Aptosトランザクション、フロントエンドCDN",
+        "pct": 30
+      },
+      {
+        "icon": "🧠",
+        "title": "SapiX推論",
+        "desc": "ジェスチャーパターンをLLMモデルで解析するための専用AI計算",
+        "pct": 20
+      }
+    ],
+    "tiers_title": "サポート階層",
+    "tiers": [
+      {
+        "amount": "$5",
+        "label": "コーヒー",
+        "desc": "約2,500回の認証",
+        "icon": "☕"
+      },
+      {
+        "amount": "$20",
+        "label": "サポーター",
+        "desc": "約10,000回の認証",
+        "icon": "🌱"
+      },
+      {
+        "amount": "$100",
+        "label": "パートナー",
+        "desc": "コントリビューターへの記載 + 優先API",
+        "icon": "⭐"
+      },
+      {
+        "amount": "$500",
+        "label": "スポンサー",
+        "desc": "サイトにロゴ掲載 + 直接サポート",
+        "icon": "🏆"
+      }
+    ],
+    "russia_title": "ロシアからの支払い",
+    "russia_desc": "Tinkoff Pay、SBP、またはロシアの銀行カードで素早く送金",
+    "crypto_title": "暗号通貨",
+    "crypto_eth_desc": "hello@homosapience.orgにご連絡ください — アドレスをお送りします",
+    "contact_title": "パートナーシップや統合をご希望ですか？",
+    "contact_desc": "条件について話し合い、早期APIアクセスを提供し、あなたのプロダクトへの認証統合をサポートします",
+    "cta_telegram": "Telegram",
+    "cta_email": "📩 hello@homosapience.org",
+    "cta_home": "← ホーム",
+    "support_btn": "サポートする →",
+    "russia_btn": "支払いに進む →",
+    "crypto_wallets_title": "🪙 暗号資産での寄付",
+    "crypto_wallets_subtitle": "ウォレットに直接任意の金額を送金できます。仲介者なし、手数料なし。",
+    "crypto_wallets_warning": "⚠️ 送金前に必ずネットワークを再確認してください。誤ったネットワークに送金すると資金が永久に失われる可能性があります。",
+    "venture_from": "$5,000から",
+    "venture_label": "ベンチャーパートナー",
+    "venture_benefits": [
+      "ローンチ時のAPTOGONトークン",
+      "テック評議会の議席",
+      "ロードマップへの直接アクセス",
+      "サイトでの共同ブランディング"
+    ],
+    "venture_cta": "条件について相談する →"
+  },
+  "verify": {
+    "nav_label": "認証",
+    "hero_badge": "🛡️ SapiX · Aptos Testnet",
+    "hero_title": "あなたが",
+    "hero_human": "人間",
+    "hero_subtitle": "パスポート不要 · カメラ不要 · 個人データ不要",
+    "steps_label": "認証の仕組み",
+    "steps": [
+      {
+        "num": "1",
+        "title": "記号を描く",
+        "desc": "何でも — 文字、数字、渦巻き。AIは何を描くかではなく、どう描くかを見ます"
+      },
+      {
+        "num": "2",
+        "title": "SapiX",
+        "desc": "リズム、速度、間隔を分析。ボットは動きが滑らかすぎる — それが見破られる理由"
+      },
+      {
+        "num": "3",
+        "title": "あなたのDID",
+        "desc": "ブラウザ内にデジタルキーが作成されます。あなたの匿名ID — 名前のないパスポートのようなもの"
+      },
+      {
+        "num": "4",
+        "title": "Aptos",
+        "desc": "認証の事実がブロックチェーンに書き込まれます。データではなく — 暗号的な証明のみ"
+      }
+    ],
+    "canvas_title": "何かを描いてください",
+    "canvas_subtitle": "マウスまたは指で — どんな記号でも",
+    "canvas_dot_tap": "点をタップ！（{current}/{total}）",
+    "canvas_dot_all_done": "✓ {total}つの点をすべてタップ！",
+    "canvas_dot_wait": "次の点を待ってください…（{done}/{total} 完了）",
+    "canvas_keep_drawing": "描き続けてください…",
+    "canvas_release": "✓ 離してください",
+    "canvas_tap_hint": "👆 手を離さずに色の点をタップしてください！",
+    "canvas_points_done": "✓ {count}点 — 完了",
+    "canvas_points_count": "{count}点…",
+    "canvas_draw_hint": "✏️ マウスまたは指でここに描いてください",
+    "canvas_sec": "秒",
+    "canvas_clear": "クリア",
+    "canvas_lifted": "✋ 一時停止中 — もう一度パッドに触れて続けてください",
+    "canvas_restarted": "↻ 停止が長すぎました — 最初からやり直します",
+    "canvas_dot_reminder": "💡 描いている間に色の点が現れることがあります — 手を離さずにタップしてください",
+    "tags": [
+      "リズム",
+      "速度",
+      "間隔",
+      "筆圧",
+      "修正"
+    ],
+    "analyzing_title": "SapiXが分析中...",
+    "analyzing_subtitle": "モデルがあなたのジェスチャーパターンを解析しています",
+    "analyzing_checks": [
+      "速度の変動",
+      "ポーズのエントロピー",
+      "修正の数",
+      "リズムの不規則性",
+      "ExpressionProof生成"
+    ],
+    "success_title": "あなたは人間です ✓",
+    "success_subtitle": "SapiXが認証を確認しました",
+    "confidence_label": "AI信頼度",
+    "threshold_0": "0%",
+    "threshold_70": "閾値 70%",
+    "threshold_85": "85%+ 優秀",
+    "threshold_100": "100%",
+    "did_title": "あなたのデジタルIDが作成されました",
+    "did_subtitle": "W3C did:key — 国際標準",
+    "did_id_label": "識別子（DID）：",
+    "did_what_label": "これは何？",
+    "did_what_value": "デジタルで完全に匿名なパスポートのようなもの",
+    "did_where_label": "どこに保存？",
+    "did_where_value": "あなたのブラウザのみ（localStorage）。サーバーにはなし",
+    "did_key_label": "秘密鍵",
+    "did_key_value": "あなただけのもの。誰も使用できません",
+    "did_gen_label": "生成場所",
+    "did_gen_value": "ブラウザ内で即時生成、サーバーリクエストなし",
+    "aptos_title": "Aptosブロックチェーンへの記録",
+    "aptos_onchain": "オンチェーン ✓",
+    "aptos_local": "ローカル保存",
+    "aptos_tx_label": "トランザクションハッシュ：",
+    "aptos_no_key": "クレデンシャルはローカルに保存されました。オンチェーン記録にはAPTOS_PRIVATE_KEYを追加してください。",
+    "aptos_note": "📌 オンチェーンに記録されるのは認証の事実のみ — 個人データなし、ハッシュのみ",
+    "bond_title": "最後のステップ — 保証",
+    "bond_subtitle": "3人の認証済み人間があなたを確認します",
+    "bond_desc": "これはジェスチャーテストをパスしたボットから守ります。保証人はHSIネットワークの実在する人物で、自分の評判を賭けて保証します。",
+    "bond_cta": "🤝 保証を依頼する →",
+    "bonding_title": "保証人を待っています...",
+    "bonding_subtitle": "Gonka BondMatcherがネットワーク評判で人物を選定中",
+    "bonding_vouched": "保証済み",
+    "bonding_waiting": "...",
+    "bonding_progress": "/ 3",
+    "complete_title": "認証完了！",
+    "complete_subtitle": "あなたはHSIネットワークの正式メンバーです",
+    "complete_cards": [
+      {
+        "emoji": "🧠",
+        "title": "SapiX",
+        "desc": "ジェスチャー認証済み"
+      },
+      {
+        "emoji": "🔑",
+        "title": "DID作成",
+        "desc": "ブラウザ内で"
+      },
+      {
+        "emoji": "⛓️",
+        "title": "Aptos",
+        "desc": "事実記録済み"
+      }
+    ],
+    "stored_title": "ブラウザに保存されるもの",
+    "stored_items": [
+      {
+        "icon": "🔑",
+        "key": "aptogon_did",
+        "desc": "あなたの匿名識別子"
+      },
+      {
+        "icon": "🔐",
+        "key": "aptogon_key",
+        "desc": "秘密鍵（あなただけのもの）"
+      },
+      {
+        "icon": "⛓️",
+        "key": "HumanCredential",
+        "desc": "認証の確認"
+      }
+    ],
+    "cta_chat": "💬 セキュアチャット",
+    "cta_bond": "🤝 保証する",
+    "failed_title": "不合格",
+    "failed_tip": "今回は通りませんでした。自分のペースで、自然に描いてください。時間は好きなだけかけて大丈夫です。",
+    "fallback_label": "（フォールバック）",
+    "debug_title": "🔬 パターンデータ（デバッグ）",
+    "error_already_verified": "このデバイスのこのブラウザで、すでに人間として認証されています。",
+    "device_bound_title": "この端末にはすでに鍵があります",
+    "device_bound_body": "1台につき1つのIDです。もう一度描いても2つ目は作られません。既存の鍵を復元してください — バックアップファイルから、またはまだサインインしている別の端末からこの端末を連携してください。",
+    "device_bound_restore": "バックアップから復元",
+    "device_bound_pair": "別の端末があります",
+    "error_backend": "バックエンドが利用できません",
+    "consent": {
+      "title": "始める前に",
+      "subtitle": "データの使われ方をご確認ください",
+      "items": [
+        {
+          "icon": "✏️",
+          "title": "ジェスチャーの記録",
+          "desc": "あなたの描画動作（タッチ／マウス操作）を約10秒間記録し、人間らしさのパターン分析のためにAIへ送信します。"
+        },
+        {
+          "icon": "🤖",
+          "title": "AI解析",
+          "desc": "ジェスチャーはSapiX（GonkaネットワークのQwen3）が解析します。画像や動画は取得せず、動きのベクトルのみを扱います。"
+        },
+        {
+          "icon": "🔑",
+          "title": "匿名DID",
+          "desc": "暗号的な識別子（DID）はブラウザ内でローカルに生成されます。氏名・メール・IPなどの個人情報は含みません。"
+        },
+        {
+          "icon": "🗑️",
+          "title": "データの保持",
+          "desc": "生のジェスチャーデータは保存しません。動作証明の匿名化SHA-3ハッシュのみがAptosブロックチェーンに記録されます。"
+        },
+        {
+          "icon": "📍",
+          "title": "端末フィンガープリント",
+          "desc": "端末の特性（画面・言語・タイムゾーン）の一方向ハッシュで重複登録を防ぎます。生の形式で送信されることはありません。"
+        }
+      ],
+      "mode_heading": "検証モードを選択",
+      "mode_public_title": "パブリック",
+      "mode_public_desc": "SNSアカウントの下に「人間認証済み」バッジを表示。評価はサイト間で引き継がれます。",
+      "mode_shielded_title": "シールド",
+      "mode_shielded_desc": "身元を隠したまま人間であることを証明。新しい匿名DIDで、ハンドルや端末との紐付けはありません。",
+      "gdpr_note": "続行すると、<link>APTOGONプライバシーポリシー</link>に基づくジェスチャー解析に同意したことになります。この処理はあなたの明示的な同意（GDPR第6条(1)(a)）に基づきます。ブラウザの保存領域から認証情報を削除すれば、いつでも撤回できます。",
+      "start_button": "✍️ 同意して検証を開始",
+      "no_account": "アカウント不要 · メール不要 · パスポート不要"
+    },
+    "footer_note": "🔒 座標はブラウザで破棄 · 数学のみがネットワークへ · バイオメトリクスなし",
+    "embed_instruction": "✏️ 離さず描いて + 2つの点をタップ",
+    "embed_checking": "確認中…",
+    "embed_verified": "確認完了 — あなたは人間です ✓",
+    "embed_failed": "確認できませんでした。もう一度お試しください。",
+    "embed_network": "ネットワークエラー。",
+    "embed_try_again": "再試行",
+    "embed_missing_key": "サイトキーがありません。",
+    "embed_protected": "{brand} により保護 · 追跡なし・生体情報なし",
+    "embed_err_invalid_key": "設定エラー: 不明なサイトキーです。data-aptogon-key を確認してください。",
+    "embed_err_origin": "設定エラー: このアドレスはこのキーで許可されていません。",
+    "embed_err_expired": "この確認は期限切れです。ページを再読み込みしてください。",
+    "embed_err_automation": "自動化を検出しました。確認は人間のためのものです。",
+    "embed_err_classifier": "確認は一時的に利用できません。しばらくして再試行してください。",
+    "embed_err_default": "確認を利用できません。もう一度お試しください。"
+  },
+  "chat": {
+    "nav_label": "チャット",
+    "channels": "チャンネル",
+    "room_tech_label": "テクノロジー",
+    "room_tech_desc": "Web3 · Aptos · DID",
+    "room_gov_label": "ガバナンス",
+    "room_gov_desc": "HSI 投票",
+    "room_phil_label": "哲学",
+    "room_phil_desc": "マニフェスト · アイデア",
+    "verified_only": "認証済み人間のみ書き込み可能",
+    "verify_link": "認証する",
+    "placeholder": "#{{room}} にメッセージを送信…",
+    "ai_moderator": "AI モデレーター",
+    "ai_active": "🛡️ 有効",
+    "filter_spam": "スパムフィルター",
+    "filter_toxic": "毒性検出",
+    "filter_flood": "フラッド制御",
+    "filter_did": "DID 検証",
+    "rules": "ルール",
+    "rule_respect": "参加者への敬意",
+    "rule_humans": "実在する人間のみ",
+    "rule_no_spam": "スパム・広告禁止",
+    "rule_no_toxic": "暴言・侮辱禁止",
+    "rule_no_bots": "ボット・自動化禁止",
+    "welcome_msg": "🛡️ APTOGON Chat へようこそ — 認証済み人間専用のスペースです。",
+    "tech_welcome": "⚡ 技術的な議論のチャンネル：Aptos、did:key、SapiX、WebSocket。",
+    "trust_levels": "トラストレベル",
+    "trust_trusted_desc": "7件以上の保証",
+    "trust_community_desc": "3〜6件の保証",
+    "trust_newcomer_desc": "最大3件の保証",
+    "privacy_title": "🔒 プライバシー",
+    "privacy_desc": "あなたのDIDは公開されません。ハッシュの末尾8文字のみ表示されます。",
+    "online_count": "人が認証済みでオンライン",
+    "read_mode": "読み取り専用モード",
+    "read_mode_banner": "読み取り専用 — 参加するには認証が必要です",
+    "reaction": "リアクション",
+    "reply": "返信",
+    "room_agora_label": "メイン",
+    "room_agora_desc": "一般チャンネル",
+    "offline_demo": "デモモード — バックエンドが利用できません。表示されているメッセージはサンプルです。",
+    "loading_msgs": "メッセージを読み込み中…",
+    "empty_room": "まだメッセージがありません",
+    "empty_room_hint": "最初に何か書いてみましょう！"
+  },
+  "lang_switcher": {
+    "label": "言語"
+  },
+  "bond": {
+    "hero_title": "HSI Bond — P2P 保証",
+    "hero_subtitle": "認証済みの人間がお互いを保証します。社会的信頼が暗号学的に検証可能になります。",
+    "cta_verify_short": "✍️ 認証する",
+    "cta_request": "🤝 保証をリクエスト ↓",
+    "how_title": "保証の仕組み",
+    "how_subtitle": "初心者から信頼できるネットワークメンバーへの3ステップ",
+    "step1_title": "認証を受ける",
+    "step1_desc": "ジェスチャーを描く — SapiX があなたが人間であることを確認します。DID と trust_score 10% を取得します。",
+    "step2_title": "保証をリクエスト",
+    "step2_desc": "3人の認証済みネットワークメンバーがあなたを確認します。Trust スコアが 50% に上がります。",
+    "step3_title": "保証人になる",
+    "step3_desc": "trust_score ≥ 50% で他の人を保証できます。ネットワークの成長を助けてください。",
+    "trust_algo_title": "Trust Score アルゴリズム",
+    "trust_algo_subtitle": "保証のたびに信頼が高まります",
+    "after_bonds": "{n} 件の保証後",
+    "level_newcomer": "新規メンバー",
+    "level_community": "コミュニティ認定",
+    "level_trusted": "信頼済み",
+    "risks_title": "⚠️ 保証人のリスク",
+    "risks_note": "trust_score ≥ 50%（3+ bonds）のメンバーのみ保証できます。これが実際の人のみを推薦する経済的インセンティブを作ります。",
+    "penalty1": "保証した人の中にボットが検出された",
+    "penalty2": "同じ保証人からの繰り返しボット",
+    "reward1": "新たな成功した保証",
+    "reward2": "あなたの被保証人が自力で 100% に達した",
+    "incoming_title": "🔔 受信リクエスト",
+    "incoming_subtitle": "あなたに保証人になるよう依頼しています",
+    "vouch_btn": "✓ 保証する",
+    "requester_role": "👤 リクエスター",
+    "you_guarantor": "🤝 あなた",
+    "ask_placeholder": "質問する…",
+    "request_title": "保証をリクエスト",
+    "request_subtitle_1": "選択する",
+    "request_subtitle_2": "10人以上のメンバー",
+    "request_subtitle_3": "— そのうち3人の同意が必要",
+    "selected": " 選択済み",
+    "send_requests": "🤝 リクエストを送信",
+    "privacy_title": "🔒 匿名性とプライバシー",
+    "privacy_body": "保証人は匿名の DID ハッシュと AI 信頼レベルのみを見ます。名前、メール、IP — 誰とも共有されません。",
+    "manifest_link": "📜 マニフェスト",
+    "home_link": "← ホーム",
+    "done_title": "保証を受け取りました！",
+    "done_auto_msg": "✅ AI 信頼度が高い — システム保証人による自動承認",
+    "done_human_msg": "3人があなたを保証しました",
+    "done_blockchain": "HumanCredential が Aptos ブロックチェーンに記録されました",
+    "done_chat": "💬 チャットに参加",
+    "failed_title": "保証を集めることができませんでした",
+    "failed_desc_1": "すべての",
+    "failed_desc_2": "回の送信試みが終了しました。現在オンラインの保証人が少ないです。",
+    "failed_hint": "後で試すか、Telegram でお問い合わせください — 手動でサポートします。",
+    "retry_btn": "🔄 もう一度試す",
+    "waiting_sending": "リクエストを送信中…",
+    "waiting_ai": "✅ AI が確認中…",
+    "waiting_title": "保証人を待っています",
+    "retry_label": "再送信 #{n}",
+    "requests_sent": "HSI ネットワークメンバーにリクエストを送信しました",
+    "vouched": "保証済み",
+    "awaiting": "待機中",
+    "vouches_needed": "/3 件の保証",
+    "ai_auto_approve": "SapiX: 信頼度 ≥ 95% — 自動承認",
+    "anon_chat": "💬 保証人との匿名チャット",
+    "write_placeholder": "保証人に書く…",
+    "you_requester": "👤 あなた",
+    "days_ago": "{n}日前",
+    "no_candidates_title": "オンラインの保証人はまだいません",
+    "no_candidates_hint": "リクエストは創設 Gold Members に自動送信されます — 操作は不要です。",
+    "cancel": "キャンセル",
+    "days_short": "日",
+    "known_dids_title": "💌 私を知っている人",
+    "known_dids_subtitle": "HSIのメンバーで個人的にあなたを知っている方がいれば、そのDIDを入力してください — 直接保証の招待が届きます。",
+    "known_dids_placeholder": "did:key:z6Mk…",
+    "known_dids_hint": "任意 · 最大3件 · did:key:z6Mkで始まる必要があります"
+  },
+  "governance": {
+    "home_link": "← ホーム",
+    "subtitle": "1人の認証済み人間 = 1票",
+    "create_btn": "+ 提案を作成",
+    "new_proposal": "新しい提案",
+    "title_placeholder": "提案タイトル",
+    "desc_placeholder": "詳細説明...",
+    "create": "作成",
+    "creating": "作成中...",
+    "cancel": "キャンセル",
+    "vote_btn": "🗳 投票する",
+    "vote_cancel": "キャンセル",
+    "vote_yes": "✓ 賛成",
+    "vote_no": "✗ 反対",
+    "vote_abstain": "— 棄権",
+    "vote_veto": "⚡ 拒否権",
+    "yes_label": "✓ 賛成",
+    "no_label": "✗ 反対",
+    "veto_label": "⚡ 拒否権",
+    "total_label": "合計",
+    "supporters_of": "サポーター: {count}/100 で投票開始",
+    "voting_status": "🗳 投票中 · {days}日",
+    "type_text": "テキスト",
+    "type_parameter": "パラメータ",
+    "type_ai_model": "AIモデル",
+    "type_upgrade": "アップグレード",
+    "type_constitution": "憲法",
+    "days_unit": "日"
+  },
+  "stats": {
+    "title": "攻撃統計",
+    "subtitle": "受動的な検証統計：人間、ボット、エージェント型AIブラウザ。",
+    "loading": "読み込み中…",
+    "unavailable": "統計はまだ利用できません。",
+    "service_down": "サービス利用不可",
+    "net_error": "ネットワークエラー",
+    "card_sessions": "総セッション",
+    "card_humans": "人間",
+    "card_bots": "ボット",
+    "card_ai": "AIエージェント",
+    "card_suspicious": "疑わしい",
+    "card_blocked": "ブロック済み",
+    "of_sessions": "セッション",
+    "chart_title": "日別（{count}）",
+    "legend_bots": "ボット/AI",
+    "legend_humans": "人間",
+    "day_unit": "日",
+    "community_title": "保証とゴールド会員",
+    "vouch_requests": "保証リクエスト",
+    "vouch_approved": "発行済み",
+    "vouch_pending": "進行中",
+    "vouch_failed": "不足",
+    "vouches_given": "提供した保証",
+    "vouches_declined": "拒否",
+    "gold_members": "ゴールド会員",
+    "gold_online": "オンライン",
+    "test_badge": "テスト",
+    "test_note": "暫定データ — ゴールド会員の保証ネットワークはまだ稼働していません。"
+  },
+  "solutions": {
+    "gonka": {
+      "eyebrow": "インフラ",
+      "title": "分散型AIの上に構築 — 一社のブラックボックスではない",
+      "body": "APTOGONが解析するすべてのジェスチャーはGonka上で実行されます — 単一企業のサーバーではなく、独立したGPUオペレーターのネットワークです。価格ロックインなし、地域的な遮断なし、検証を停止させる単一障害点なし。PIIを保存しないオンチェーンIDと同じ原則です：あなたが人間だと証明できるかどうかを、単一の主体が決めるべきではありません。",
+      "bullets": [
+        "オープンソース、監査済み（CertiK）",
+        "どの一社もサービスを止められない",
+        "アイデンティティ層と同じ反中央集権の原則"
+      ],
+      "cta": "Gonkaについて詳しく →"
+    },
+    "deepfake_chip": "写真も動画もなし — ディープフェイクの対象がない",
+    "agents": {
+      "title": "AIエージェント",
+      "headline": "エージェントの背後にいる人間を把握。",
+      "desc": "すべてのAIエージェントは、検証済みの人間オーナーから信頼クレデンシャルを継承します。一度取り消せば、アクセスはどこでも停止 — あなたのプラットフォームで匿名のエージェントが動くことはありません。",
+      "stats": [
+        {
+          "n": "1人の人間",
+          "l": "エージェントごとに責任を負う"
+        },
+        {
+          "n": "即時",
+          "l": "失効 → あらゆる場所でアクセス停止"
+        }
+      ]
+    },
+    "hero": {
+      "eyebrow": "ソリューション",
+      "title": "1つのプロトコル。4つの領域。",
+      "subtitle": "APTOGONは生体情報、政府発行ID、侵襲的なデータ収集なしに、ユニークな人間を検証します。ゼロPII。オンチェーン証明。「これはユニークな人間か？」を知る必要があるあらゆるユースケースで機能します。"
+    },
+    "verticals": [
+      {
+        "title": "市場調査",
+        "headline": "データの質は回答者の質次第です。",
+        "desc": "重複回答者、クリックファーム、インセンティブハンターを排除。1つのDID＝1つの回答。オンチェーン証明＝監査可能なデータ。",
+        "stats": [
+          {
+            "n": "20〜30%",
+            "l": "の調査予算が不正で失われる"
+          },
+          {
+            "n": "約10秒",
+            "l": "で回答者を検証"
+          }
+        ]
+      },
+      {
+        "title": "コミュニティとプラットフォーム",
+        "headline": "コミュニティを人間らしく保つ。",
+        "desc": "BAN逃れ、投票操作、ボットの大量流入を阻止。デバイスに紐づくDIDにより、誰かをBANすれば実際にBANされます。",
+        "stats": [
+          {
+            "n": "30〜50%",
+            "l": "の新規アカウントがボットの可能性"
+          },
+          {
+            "n": "0秒",
+            "l": "でBAN後に新規アカウントを作成"
+          }
+        ]
+      },
+      {
+        "title": "AIデータラベリング",
+        "headline": "モデルの精度はアノテーターの質次第です。",
+        "desc": "ラベリングパイプラインへのSybil攻撃を防止。50個のアカウントを持つ1人がトレーニングデータセット全体を汚染できます。",
+        "stats": [
+          {
+            "n": "1人",
+            "l": "が50以上のアノテーターアカウントを操作可能"
+          },
+          {
+            "n": "$0",
+            "l": "トレーニングデータを汚染するコスト"
+          }
+        ]
+      },
+      {
+        "title": "Web3とDAO",
+        "headline": "1人。1票。オンチェーン。",
+        "desc": "Aptos上に本物のオンチェーンHumanCredentialを持つ唯一のプロバイダー。Sybil耐性のあるガバナンス、エアドロップ、UBI分配。",
+        "stats": [
+          {
+            "n": "片手",
+            "l": "で1,000のウォレットを操作可能"
+          },
+          {
+            "n": "約80%",
+            "l": "のエアドロップがボットに渡った例も"
+          }
+        ]
+      }
+    ],
+    "common_guarantee": {
+      "title": "すべての領域で。同じ保証。",
+      "desc": "ユースケースにかかわらず、APTOGONは生体情報を一切保存せず、政府発行IDを一切要求せず、常に改ざん不可能な証明をAptosブロックチェーンに書き込みます。",
+      "chips": [
+        {
+          "icon": "🛡️",
+          "label": "生体情報の保存ゼロ"
+        },
+        {
+          "icon": "🪪",
+          "label": "政府発行IDは不要"
+        },
+        {
+          "icon": "⛓️",
+          "label": "オンチェーン証明（Aptos）"
+        },
+        {
+          "icon": "🔓",
+          "label": "オープンソースプロトコル"
+        },
+        {
+          "icon": "🌍",
+          "label": "GDPR互換"
+        },
+        {
+          "icon": "⚡",
+          "label": "約10秒で検証"
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "始める準備はできましたか？",
+      "desc": "無料プラン：月1,000回の検証。クレジットカード不要。",
+      "start_free": "無料で始める",
+      "view_pricing": "料金を見る"
+    },
+    "see_solution": "ソリューションを見る"
+  },
+  "blog": {
+    "eyebrow": "ブログ",
+    "hero": {
+      "title": "人間検証プレイブック",
+      "subtitle": "ボット詐欺、プライバシーを守るID、そしてSybil攻撃に強いプロダクト作りについての詳細な記事。"
+    },
+    "card": {
+      "read_more": "記事を読む",
+      "read": "読む"
+    },
+    "series": {
+      "title": "記事シリーズ",
+      "count": "{count, plural, one {# 件の記事} other {# 件の記事}}"
+    },
+    "post": {
+      "back": "ブログ",
+      "read_suffix": "で読了",
+      "cta": {
+        "title": "APTOGONを無料で試す",
+        "desc": "月1,000回の検証が無料。クレジットカード不要。",
+        "get_started": "今すぐ始める",
+        "api_docs": "APIドキュメント"
+      },
+      "more_articles": "他の記事"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "料金",
+      "title_line1": "検証ごとに支払う。",
+      "title_line2": "KYCより50〜100倍安い。",
+      "subtitle": "初期費用なし。最低利用契約なし。無料で始めて、成長に合わせてスケール。オンチェーン証明も含まれます。",
+      "badges": [
+        "政府発行IDは不要",
+        "生体情報ゼロ",
+        "設計段階からGDPR準拠",
+        "オープンソース"
+      ]
+    },
+    "most_popular": "人気No.1",
+    "tiers": [
+      {
+        "name": "Developer",
+        "price": "Free",
+        "priceNote": "永久無料",
+        "volume": "月間1,000回の検証まで",
+        "features": [
+          "フルAPIアクセス（サンドボックス＋本番）",
+          "Aptosテストネット上のオンチェーン証明",
+          "基本的な分析ダッシュボード",
+          "コミュニティサポート（Discord）"
+        ],
+        "cta": "今すぐ始める"
+      },
+      {
+        "name": "Starter",
+        "price": "$0.05",
+        "priceNote": "検証1回あたり",
+        "volume": "月間10,000回まで",
+        "features": [
+          "Developerの全機能",
+          "Aptosメインネット上のオンチェーン証明",
+          "Webhookコールバック",
+          "メールサポート（48時間）"
+        ],
+        "cta": "営業に問い合わせる"
+      },
+      {
+        "name": "Growth",
+        "price": "$0.03",
+        "priceNote": "検証1回あたり",
+        "volume": "月間10,000〜100,000回",
+        "features": [
+          "Starterの全機能",
+          "ホワイトラベルウィジェットオプション",
+          "優先サポート（24時間）",
+          "稼働率99.5%のSLA",
+          "カスタムドメインへの埋め込み"
+        ],
+        "cta": "営業に問い合わせる"
+      },
+      {
+        "name": "Scale",
+        "price": "$0.01",
+        "priceNote": "検証1回あたり",
+        "volume": "月間100,000〜1,000,000回",
+        "features": [
+          "Growthの全機能",
+          "専任CSM + Slackサポート",
+          "GDPR/SOC2準拠レポート",
+          "稼働率99.9%のSLA",
+          "ボリュームディスカウント交渉可能"
+        ],
+        "cta": "営業に問い合わせる"
+      }
+    ],
+    "enterprise": {
+      "title": "エンタープライズ",
+      "desc": "月間100万回以上の検証・カスタムSLA・専任CSM・SOC2レポート・ホワイトラベル",
+      "cta": "営業に問い合わせる"
+    },
+    "roi": {
+      "title": "ROI計算ツール",
+      "inputs": [
+        {
+          "label": "検証数 / 月"
+        },
+        {
+          "label": "不正・重複率（%）"
+        },
+        {
+          "label": "イベントあたりの価値（$）"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "不正による損失（APTOGONなし）"
+        },
+        {
+          "label": "APTOGONのコスト"
+        },
+        {
+          "label": "KYCプロバイダーとの比較での節約額"
+        },
+        {
+          "label": "VerifyYouとの比較での節約額"
+        }
+      ],
+      "per_month": "月あたり",
+      "net_benefit_label": "純利益",
+      "net_benefit_suffix": "APTOGONのコストで不正による損失をなくすことで",
+      "month_abbr": "月",
+      "year_abbr": "年"
+    },
+    "comparison": {
+      "title": "比較",
+      "rows": [
+        {
+          "label": "1回あたりのコスト",
+          "apt": "約$0.01",
+          "vfy": "$0.01〜0.03",
+          "kyc": "$1〜10"
+        },
+        {
+          "label": "生体情報の保存",
+          "apt": "✗ なし",
+          "vfy": "✓ 最大3年間",
+          "kyc": "✓ 必須"
+        },
+        {
+          "label": "政府発行ID",
+          "apt": "✗ 不要",
+          "vfy": "~ 任意",
+          "kyc": "✓ 必須"
+        },
+        {
+          "label": "オンチェーン証明",
+          "apt": "✓ Aptos",
+          "vfy": "✗ なし",
+          "kyc": "✗ なし"
+        },
+        {
+          "label": "オープンソース",
+          "apt": "✓ あり",
+          "vfy": "✗ なし",
+          "kyc": "✗ なし"
+        },
+        {
+          "label": "検証速度",
+          "apt": "約10秒",
+          "vfy": "約15秒",
+          "kyc": "約5分"
+        },
+        {
+          "label": "設計段階からのGDPR準拠",
+          "apt": "✓ ゼロPII",
+          "vfy": "~ 部分的",
+          "kyc": "✗ データを保存"
+        },
+        {
+          "label": "初期費用",
+          "apt": "✗ なし",
+          "vfy": "✗ なし",
+          "kyc": "~ 変動"
+        }
+      ],
+      "footnote": "比較は公開されているドキュメントに基づいています。",
+      "methodology_cta": "詳しい手法はこちら"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "items": [
+        {
+          "q": "1回の検証としてカウントされるのは？",
+          "a": "署名付きクレデンシャルを返す、成功したジェスチャーベースの人間検証です。失敗または中断されたセッションはカウントされません。"
+        },
+        {
+          "q": "オンチェーン証明は本物ですか？",
+          "a": "はい。Growth以上のプランでは、すべての検証がhuman_firewallスマートコントラクトを通じてAptosブロックチェーンにトランザクションを書き込みます。トランザクションハッシュが返却され、Aptos Explorerで検証できます。"
+        },
+        {
+          "q": "生体情報を保存していますか？",
+          "a": "いいえ。APTOGONは顔認証や虹彩スキャンではなく、ジェスチャーベースのチャレンジを使用します。生体データは一切収集・処理・保存されません。"
+        },
+        {
+          "q": "無料トライアルはありますか？",
+          "a": "Developerプランは月間1,000回の検証まで永久無料です — クレジットカード不要。統合テストやMVPに最適です。"
+        },
+        {
+          "q": "従来のKYCプロバイダーと料金はどう違いますか？",
+          "a": "従来のKYC（Onfido、Personaなど）は1回あたり$1〜10かかります。APTOGONは$0.05から始まり、スケールすると$0.01まで下がります — 政府発行IDも不要で、50〜100倍安価です。"
+        },
+        {
+          "q": "自社アプリにAPTOGONを組み込めますか？",
+          "a": "はい。ブラウザ拡張機能、埋め込み可能なウィジェット、REST APIがすべて利用可能です。ホワイトラベルブランディングはGrowthプランから含まれます。"
+        }
+      ]
+    }
+  },
+  "solutions_communities": {
+    "hero": {
+      "eyebrow": "コミュニティとプラットフォーム",
+      "title": "コミュニティを人間らしく保つ。",
+      "subtitle": "ボットが投票を埋め尽くします。BAN逃れは数秒で戻ってきます。投票操作は信頼を破壊します。本物のコミュニティには本物の人間が必要です — 証明可能な形で。",
+      "cta_try": "無料で試す — 月1K件の検証",
+      "cta_api": "APIドキュメント"
+    },
+    "problems": {
+      "title": "ボット侵食問題",
+      "subtitle": "どんなBANも数秒で回避されます。どんな投票も不正操作されえます。プラットフォームがその代償を払います。",
+      "items": [
+        {
+          "stat": "30〜50%",
+          "label": "の大規模プラットフォームの新規アカウントがボットまたは重複",
+          "src": "プラットフォームセキュリティレポート"
+        },
+        {
+          "stat": "1件のBAN",
+          "label": "を回避するのに数秒 — 新規アカウントを作るだけ",
+          "src": "よくある悪用パターン"
+        },
+        {
+          "stat": "$0",
+          "label": "1,000個の偽アカウントを作成して投票を埋め尽くすコスト",
+          "src": "APTOGON分析"
+        },
+        {
+          "stat": "0",
+          "label": "既存のCAPTCHAツールで「1人＝1アカウント」を証明できるものはない",
+          "src": "プラットフォーム調査"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "仕組み",
+      "subtitle": "1人の人間＝1つのDID。DIDをBANすれば人間そのものがBANされます — メールアドレスだけではありません。",
+      "steps": [
+        {
+          "title": "ユーザーがコミュニティに参加",
+          "desc": "サインアップやアクセス制御フローにAPTOGONウィジェットを組み込みます。リダイレクトも新規アカウントも不要です。"
+        },
+        {
+          "title": "ジェスチャー検証",
+          "desc": "10秒のジェスチャーチャレンジで人間であることを確認。デバイス信号が自動化フレームワークを検知します。"
+        },
+        {
+          "title": "匿名DIDの発行",
+          "desc": "ユーザーは持ち運び可能な匿名IDを取得します。名前もメールも生体情報も保存されません。"
+        },
+        {
+          "title": "BAN逃れの検知",
+          "desc": "BANされたDIDが再登録すると、システムがフラグを立てます。同じ人間＝同じDID、IPが変わっても同じです。"
+        }
+      ]
+    },
+    "vs": {
+      "title": "APTOGONと代替手段の比較",
+      "subtitle": "他のツールはすべて回避可能です。デバイスに紐づくDIDだけは回避できません。",
+      "rows": [
+        {
+          "name": "IPブロック",
+          "res": "VPNで10秒で回避される",
+          "verdict": "bad"
+        },
+        {
+          "name": "メール認証",
+          "res": "使い捨てメールサービスは無料かつ無制限",
+          "verdict": "bad"
+        },
+        {
+          "name": "電話認証",
+          "res": "バーナーSIMは1ドル未満で入手可能、プライバシーも侵害",
+          "verdict": "bad"
+        },
+        {
+          "name": "KYC / 政府発行ID",
+          "res": "高い摩擦 → 低い導入率 → ゴーストタウン化",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "res": "デバイスに紐づくDID — 常に1人の人間",
+          "verdict": "good"
+        }
+      ]
+    },
+    "differentiator": {
+      "title": "APTOGONの違い：コミュニティが所有する信頼",
+      "body": "一元管理型の検証システムとは異なり、APTOGONのボンドグラフでは、既存メンバーが新規メンバーを保証できます。コミュニティの古参は信頼の重みを獲得します。保証されたメンバーは有利なスタートを切れます。信頼はコミュニティ内で獲得されるものであり、企業から輸入されるものではありません。",
+      "features": [
+        {
+          "title": "ボンド保証",
+          "desc": "メンバーが新規ユーザーを保証し、信頼の重みを追加"
+        },
+        {
+          "title": "ゼロPII",
+          "desc": "名前、メール、生体情報は一切保存されません"
+        },
+        {
+          "title": "オンチェーン証明",
+          "desc": "Aptosブロックチェーン上で検証可能なHumanCredential"
+        }
+      ]
+    },
+    "cta": {
+      "title": "コミュニティを取り戻す準備はできましたか？",
+      "desc": "月1,000回の検証を無料で開始。数分で組み込めます。",
+      "start_free": "無料で始める",
+      "view_pricing": "料金を見る"
+    },
+    "nav": {
+      "other_verticals": "他の領域：",
+      "links": [
+        {
+          "label": "市場調査"
+        },
+        {
+          "label": "AIデータラベリング"
+        },
+        {
+          "label": "Web3 / DAO"
+        }
+      ]
+    }
+  },
+  "solutions_web3": {
+    "hero": {
+      "eyebrow": "Web3とDAO",
+      "title_line1": "1人。1票。",
+      "title_line2": "オンチェーンで。",
+      "subtitle": "1,000個のウォレットを持つ単一の運営者が、DAOのガバナンスを乗っ取ったり、エアドロップを枯渇させたり、UBI分配を支配したりできます。ウォレットの所有権は、その背後に誰がいるかを何も証明しません。",
+      "cta_try": "無料で試す — 月1K件の検証",
+      "cta_api": "APIドキュメント"
+    },
+    "problems": {
+      "title": "Sybil攻撃がWeb3を破壊している",
+      "subtitle": "トークン加重投票は公平に聞こえます。しかし1,000個のウォレットを持つ1人には当てはまりません。",
+      "items": [
+        {
+          "stat": "片手",
+          "label": "で1,000個のウォレットを操作し、DAOガバナンス投票を乗っ取ることができる",
+          "src": "よくあるSybil攻撃"
+        },
+        {
+          "stat": "$0",
+          "label": "新しいウォレットを作成しエアドロップの資格を主張するコスト",
+          "src": "オンチェーン分析"
+        },
+        {
+          "stat": "約80%",
+          "label": "一部のプロトコルではエアドロップ受給者がボットまたはSybilだった",
+          "src": "ブロックチェーン調査"
+        },
+        {
+          "stat": "0",
+          "label": "既存のウォレットベースの証明で、その背後にいるユニークな人間を検証できるものはない",
+          "src": "APTOGON分析"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "仕組み",
+      "subtitle": "検証可能なオンチェーンHumanCredentialが、あなたのウォレットをユニークな人間に結びつけます — あらゆるスマートコントラクトから読み取り可能です。",
+      "steps": [
+        {
+          "title": "ユーザーがウォレットを接続",
+          "desc": "あなたのdAppやDAOインターフェースが、ウォレット接続後にAPTOGONウィジェットを表示します — 新規登録は不要です。"
+        },
+        {
+          "title": "ジェスチャー検証",
+          "desc": "10秒のジェスチャーがウォレットを物理的な人間に結びつけます。デバイス信号がヘッドレス自動化をブロックします。"
+        },
+        {
+          "title": "Aptos上のHumanCredential",
+          "desc": "署名済みのオンチェーンHumanCredentialが作成され、ウォレットとDIDを結びつけます。あらゆるスマートコントラクトから検証可能です。"
+        },
+        {
+          "title": "1人、1票",
+          "desc": "あなたのガバナンスコントラクトがHumanCredentialを読み取ります。1人＝1票の重み、トークン保有量に関係なく。"
+        }
+      ]
+    },
+    "use_cases": {
+      "title": "構築できるもの",
+      "subtitle": "「1人の人間＝1つの権利」を必要とするあらゆるプロトコルがHumanCredentialの恩恵を受けます。",
+      "items": [
+        {
+          "title": "DAOガバナンス",
+          "desc": "クジラSybilによる投票の乗っ取りを防止。トークン保有量だけでなく検証済みの人間で重み付け。"
+        },
+        {
+          "title": "エアドロップ配布",
+          "desc": "ユニークな人間にトークンを発行。オンチェーンHumanCredentialのないウォレットを拒否。"
+        },
+        {
+          "title": "UBI／DeFi報酬",
+          "desc": "検証済みのユニークな人間に利回りやベーシックインカムを分配 — 虹彩スキャンなしのWorldcoinのようなもの。"
+        },
+        {
+          "title": "人格証明NFT",
+          "desc": "検証済みの人間のアイデンティティに紐づくソウルバウンドNFTをミント。同一人物による重複ミントはなし。"
+        }
+      ]
+    },
+    "vs_worldcoin": {
+      "title": "APTOGON対Worldcoin",
+      "subtitle": "どちらもWeb3の人格証明を解決しますが、方法は大きく異なります。",
+      "columns": [
+        {
+          "name": "Worldcoin",
+          "items": [
+            "虹彩の生体スキャンが必要",
+            "物理的なOrbデバイスが必要",
+            "生体情報はサーバー側に保存",
+            "Optimism上のZK証明",
+            "クローズドソースのOrbハードウェア",
+            "特定の都市でのみ利用可能"
+          ]
+        },
+        {
+          "name": "APTOGON",
+          "items": [
+            "生体情報なし — ジェスチャーのみ",
+            "あらゆるデバイス、あらゆる場所で動作",
+            "生体情報の保存ゼロ",
+            "Aptos上のオンチェーン証明",
+            "オープンソースの拡張機能＋API",
+            "世界中で即座に動作"
+          ]
+        }
+      ]
+    },
+    "smart_contract": {
+      "title": "スマートコントラクトとの統合",
+      "subtitle": "HumanCredentialをオンチェーンでクエリ。1回のMove呼び出しで検証済みの人間性を取得できます。",
+      "comment_module": "Moveモジュール — 投票前にHumanCredentialを確認",
+      "comment_verify": "投票を集計する前にユニークな人間を検証",
+      "comment_record": "1アドレス＝1票、オンチェーンで強制",
+      "full_docs": "完全なスマートコントラクトドキュメント"
+    },
+    "cta": {
+      "title": "プロトコルをSybil耐性にする準備はできましたか？",
+      "desc": "Aptos上に本物のオンチェーンHumanCredentialを持つ唯一のプロバイダー。無料で始めましょう。",
+      "start_free": "無料で始める",
+      "view_pricing": "料金を見る",
+      "badges": [
+        "虹彩スキャン不要",
+        "Aptosで動作",
+        "オープンソース"
+      ]
+    },
+    "nav": {
+      "other_verticals": "他の領域：",
+      "links": [
+        {
+          "label": "市場調査"
+        },
+        {
+          "label": "コミュニティ"
+        },
+        {
+          "label": "AIデータラベリング"
+        }
+      ]
+    }
+  },
+  "solutions_ai_labeling": {
+    "hero": {
+      "eyebrow": "AIデータラベリング",
+      "title_line1": "モデルの精度は",
+      "title_line2": "アノテーターの質次第です。",
+      "subtitle": "50個のアカウントを持つ1人が、まさに今あなたのトレーニングデータを汚染しています。ラベリングパイプラインへのSybil攻撃は見えません — モデルが壊れた状態でリリースされるまでは。",
+      "cta_try": "無料で試す — 月1K件の検証",
+      "cta_api": "APIドキュメント"
+    },
+    "problems": {
+      "title": "ラベリングパイプラインへのSybil攻撃",
+      "subtitle": "アノテーター間一致スコアは健全に見えても、実は1人がラベルの40%を生成していることがあります。",
+      "items": [
+        {
+          "stat": "1人",
+          "label": "が50以上のアノテーターアカウントを作成し、データセットを支配できる",
+          "src": "よくあるMechanical Turk型の悪用"
+        },
+        {
+          "stat": "約30%",
+          "label": "のクラウドラベリングタスクが同じ作業者による繰り返し提出の可能性",
+          "src": "学術研究の推定値"
+        },
+        {
+          "stat": "$0",
+          "label": "悪意ある行為者が大規模にトレーニングデータを汚染するコスト",
+          "src": "APTOGON分析"
+        },
+        {
+          "stat": "∞",
+          "label": "汚染されたラベルでモデルを再トレーニングするコスト",
+          "src": "業界での経験"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "仕組み",
+      "subtitle": "1デバイスにつき1つのDID。1人が複数のデバイスを持つと検出可能なクラスターを形成します。",
+      "steps": [
+        {
+          "title": "アノテーターがタスクを開く",
+          "desc": "あなたのラベリングプラットフォームは、注釈タスクへのアクセスを許可する前にAPTOGONウィジェットを組み込みます。"
+        },
+        {
+          "title": "ジェスチャー検証",
+          "desc": "ユニークなジェスチャーが実在の人間であることを確認します。デバイス信号が自動化スクリプトの通過を防ぎます。"
+        },
+        {
+          "title": "デバイスごとに一意のDIDを発行",
+          "desc": "各物理デバイスは1つのDIDを取得します。10台のスマホを持つ1人＝10個のフラグ付きアカウント、10人のアノテーターではありません。"
+        },
+        {
+          "title": "人物レベルでの集約",
+          "desc": "あなたのバックエンドは複数のDIDが同じ信頼グラフを共有していることを検知でき、ラベルが汚染される前にSybilクラスターを暴きます。"
+        }
+      ]
+    },
+    "vs": {
+      "title": "代替手段が不十分な理由",
+      "subtitle": "アノテーターを物理デバイスに結びつけるものは他にありません。",
+      "rows": [
+        {
+          "name": "メール認証",
+          "res": "1人で無制限のメールアドレスを取得可能",
+          "verdict": "bad"
+        },
+        {
+          "name": "タスク開始時のCAPTCHA",
+          "res": "人間のセッションを確認するだけで、一意のIDは確認しない",
+          "verdict": "bad"
+        },
+        {
+          "name": "IPベースの重複排除",
+          "res": "VPNや共有オフィスで即座に破られる",
+          "verdict": "bad"
+        },
+        {
+          "name": "資格テスト",
+          "res": "回答は共有可能で、スクリプトでも解ける",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "res": "デバイスに紐づくDID — 数学的に1デバイス＝1アノテーター",
+          "verdict": "good"
+        }
+      ]
+    },
+    "quality": {
+      "title": "これがあなたのモデルにとって何を意味するか",
+      "features": [
+        {
+          "title": "多様なラベル",
+          "desc": "1人のバイアスが増幅されたものではなく、本当に異なる人間からのラベル"
+        },
+        {
+          "title": "監査可能な出所",
+          "desc": "各アノテーターの人間性のオンチェーン証明 — 顧客や規制当局に提示できます"
+        },
+        {
+          "title": "公正な報酬",
+          "desc": "50個のウォレットでインセンティブを不正操作する1人ではなく、本物のアノテーターに支払う"
+        }
+      ]
+    },
+    "cta": {
+      "title": "トレーニングデータを信頼する準備はできましたか？",
+      "desc": "月1,000回の検証を無料で開始。APIであらゆるラベリングプラットフォームと連携できます。",
+      "start_free": "無料で始める",
+      "view_pricing": "料金を見る"
+    },
+    "nav": {
+      "other_verticals": "他の領域：",
+      "links": [
+        {
+          "label": "市場調査"
+        },
+        {
+          "label": "コミュニティ"
+        },
+        {
+          "label": "Web3 / DAO"
+        }
+      ]
+    }
+  },
+  "solutions_surveys": {
+    "hero": {
+      "eyebrow": "市場調査",
+      "title_line1": "データの質は",
+      "title_line2": "回答者の質次第です。",
+      "subtitle": "アンケート詐欺はあなたの調査を静かに損ないます。重複回答者、クリックファーム、インセンティブハンターがデータ品質を破壊し、あなたの意思決定に悪影響を及ぼします。",
+      "cta_try": "無料で試す — 月1K件の検証",
+      "cta_api": "APIドキュメント"
+    },
+    "problems": {
+      "title": "市場調査に潜む見えない流行病",
+      "subtitle": "CAPTCHAはボットを止めます。しかし人間が二度答えるのは今まで止められませんでした。",
+      "items": [
+        {
+          "stat": "20〜30%",
+          "label": "のアンケート報酬が重複回答者に渡っている",
+          "src": "業界推定"
+        },
+        {
+          "stat": "1300億ドル以上",
+          "label": "市場調査業界が毎年不正の影響を受けている規模",
+          "src": "ESOMAR"
+        },
+        {
+          "stat": "1人",
+          "label": "が新しいメールアドレスで50件以上の回答を送信できる",
+          "src": "よくある不正パターン"
+        },
+        {
+          "stat": "0個のツール",
+          "label": "既存のCAPTCHA／ハニーポットで一意性を保証できるものはない",
+          "src": "APTOGON分析"
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "仕組み",
+      "subtitle": "サインアップ不要、政府発行ID不要、生体情報不要。必要なのは10秒のジェスチャーだけです。",
+      "steps": [
+        {
+          "title": "回答者がアンケートを開く",
+          "desc": "あなたのアンケートリンクにはAPTOGONウィジェットが含まれます — リダイレクトも摩擦もありません。"
+        },
+        {
+          "title": "ジェスチャー検証（約10秒）",
+          "desc": "回答者がジェスチャーを描きます。デバイスフィンガープリントと行動タイミングが人間であることを確認します。"
+        },
+        {
+          "title": "匿名DIDの発行",
+          "desc": "一意で匿名の分散ID（DID）が割り当てられます。名前もメールも生体情報も保存されません。"
+        },
+        {
+          "title": "1つのDID＝1つの回答",
+          "desc": "バックエンドは同じDIDからの2回目以降の送信を拒否します。オンチェーン証明が自動的に作成されます。"
+        }
+      ]
+    },
+    "roi": {
+      "section_title": "節約額を計算する",
+      "section_subtitle": "アンケート詐欺のコストと、その代わりにかかるAPTOGONのコストを確認しましょう。",
+      "title": "ROI計算ツール",
+      "sliders": {
+        "volume": "月間回答数",
+        "fraud": "推定不正率",
+        "reward": "回答あたりの報酬"
+      },
+      "outputs": {
+        "lost": "不正で失われた報酬",
+        "cost": "APTOGONのコスト",
+        "net": "純節約額"
+      },
+      "loss_suffix": "損失",
+      "free_tier_note": "Developerプラン — 月1,000回の検証まで無料",
+      "compare_title": "APTOGONと代替手段の比較",
+      "compare_rows": [
+        {
+          "name": "ハニーポットフィールド",
+          "fraud": "クリックファーマーを撃退",
+          "privacy": "✓",
+          "cost": "無料",
+          "verdict": "partial"
+        },
+        {
+          "name": "メール重複排除",
+          "fraud": "新しいメールで回避される",
+          "privacy": "✗",
+          "cost": "無料",
+          "verdict": "bad"
+        },
+        {
+          "name": "IP重複排除",
+          "fraud": "VPN／モバイルで回避される",
+          "privacy": "~",
+          "cost": "無料",
+          "verdict": "bad"
+        },
+        {
+          "name": "KYC／身元確認",
+          "fraud": "高い摩擦、低い導入率",
+          "privacy": "✗",
+          "cost": "$1〜10／件",
+          "verdict": "bad"
+        },
+        {
+          "name": "APTOGON",
+          "fraud": "一意な人間を保証",
+          "privacy": "✓",
+          "cost": "約$0.01／件",
+          "verdict": "good"
+        }
+      ]
+    },
+    "api": {
+      "title": "数分で統合",
+      "subtitle": "アンケートのバックエンドにAPIコールを1つ追加するだけです。それだけです。",
+      "comment_verify": "回答を記録する前に回答者を検証",
+      "comment_response": "レスポンス",
+      "comment_false_note": "DIDが既に送信済みの場合はfalse",
+      "full_docs": "完全なAPIドキュメント"
+    },
+    "cta": {
+      "title": "データをクリーンにする準備はできましたか？",
+      "desc": "月1,000回の検証を無料で開始。クレジットカード不要、契約不要。",
+      "start_free": "無料で始める",
+      "view_pricing": "料金を見る",
+      "badges": [
+        "生体情報は保存されません",
+        "政府発行IDは不要です",
+        "GDPR互換"
+      ]
+    },
+    "nav": {
+      "other_verticals": "他の領域：",
+      "links": [
+        {
+          "label": "コミュニティ"
+        },
+        {
+          "label": "AIデータラベリング"
+        },
+        {
+          "label": "Web3 / DAO"
+        }
+      ]
+    }
+  },
+  "solutions_gonka": {
+    "eyebrow": "インフラストラクチャー",
+    "title": "Gonkaとは何か — そしてAPTOGONがその上で動く理由",
+    "subtitle": "APTOGON上のすべてのジェスチャーを分析する分散型AIネットワーク — そして私たち自身の名前の半分。",
+    "nameTitle": "「APTOGON」という名前の由来",
+    "nameBody": "APTOGONはかばん語です：すべてのHumanCredentialが記録されるブロックチェーンであるAptos、そしてすべてのジェスチャーを分類する分散型AIネットワークであるGonka — 二つの分散型レイヤーが、一つのプロダクト名になっています。",
+    "missionTitle": "なぜBig TechではなくDecentralized（分散型）なのか",
+    "missionBody": "現在のAI推論は、ほぼ完全にOpenAI、Google、Anthropic、Metaという4社を通じて行われています。この集中は、それに依存するあらゆるプロダクトにとって現実的なリスクを生み出します。1社が一方的に価格を引き上げたり、地域ごとにアクセスを制限したり、あるいは完全にダウンして依存するすべてのサービスを道連れにオフラインにする可能性があるからです。高性能GPUの輸出規制もまた、支払い能力の有無にかかわらず、国全体が物理的にAI計算資源から締め出される可能性を意味します。Gonkaは、1社のデータセンターではなく、独立して運営される何千ものGPUに推論を分散します — どの単一の主体も、私たちに価格を吊り上げたり、アクセスを遮断したり、シャットダウンしたりすることはできません。",
+    "missionBullets": [
+      "価格は1社ではなく市場が決める",
+      "地域による遮断がない",
+      "1社の障害が検証を道連れにすることはない",
+      "輸出規制の地理条件にかかわらず同じように動作する"
+    ],
+    "howTitle": "実際の仕組み",
+    "howItems": [
+      {
+        "title": "MLノード",
+        "desc": "GPUを搭載したサーバーが、ネットワークから割り当てられたリクエストの推論を実行します。"
+      },
+      {
+        "title": "Transfer Agents（転送エージェント）",
+        "desc": "中継ノードが、利用可能な計算資源へ各リクエストをルーティングします、それがどこにあっても。"
+      },
+      {
+        "title": "Sprint Consensus",
+        "desc": "ネットワークは、リクエストを処理しながらリアルタイムで、実際にどの計算が行われたかを確認します。"
+      },
+      {
+        "title": "Proof of Computation（計算の証明）",
+        "desc": "不正な結果を検出するため、各リクエストの一部が別のノードによって独立して再計算されます。"
+      }
+    ],
+    "securityTitle": "なぜ重要な仕事を任せられるのか",
+    "securityBullets": [
+      "暗号署名が各計算を10ミリ秒未満で検証します。",
+      "不正が発覚したノードはステークした担保の一部を失います — 不正行為には実際の金銭的コストが伴います。",
+      "ネットワークは完全にオープンソースであり、独立監査（CertiK）を受けています。"
+    ],
+    "costTitle": "「安さ」は私たちだけの問題ではありません",
+    "costBody": "Gonkaの推論コストは、同等モデルに対する中央集権型プロバイダーの定価のごく一部です。それは、どの1社のマージンも各リクエストに組み込まれていないためです。これはAPTOGONにとって特に重要です：ジェスチャー検証は、無料プランのユーザー向けに、私たちがコントロールできないBig Techの価格表と歩調を合わせてコストが上昇することなく、大規模に稼働しなければならないからです。",
+    "closing": "これは偶然ではなく、APTOGON自体のアーキテクチャの根底にある原則と同じです：ゼロPII、オンチェーン証明、あなたが人間であることを証明できるかどうかの鍵を、どの1社も握っていません。",
+    "sourceLabel": "出典",
+    "sourceText": "joingonka.ai — What is Gonka",
+    "backCta": "← ソリューションに戻る"
+  }
+}

@@ -1,0 +1,5 @@
+# Capacitor-generated native projects (regenerated via `npx cap add`)
+/ios/
+/android/
+/node_modules/
+package-lock.json
